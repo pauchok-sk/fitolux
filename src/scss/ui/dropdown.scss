@@ -1,0 +1,90 @@
+.dropdown {
+  position: relative;
+
+  &._open {
+    .dropdown__btn svg {
+      transform: rotate(180deg);
+    }
+    .dropdown__body {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.6;
+    }
+    @include desktop {
+      font-size: 14px;
+    }
+
+    svg {
+      width: 8px;
+      height: 8px;
+      transition: transform 0.2s ease;
+    }
+  }
+  &__body {
+    position: absolute;
+    left: -30px;
+    width: fit-content;
+    padding: 20px 30px;
+    border-radius: 8px;
+    background: rgba(17, 40, 38, 0.4);
+    backdrop-filter: blur(10px);
+    margin-top: 33px;
+    z-index: 10;
+
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease,
+      transform 0.4s ease;
+
+    a {
+      position: relative;
+      display: block;
+      white-space: nowrap;
+      width: fit-content;
+      font-size: 15px;
+      font-weight: 300;
+      text-transform: uppercase;
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+      @include desktop {
+        font-size: 14px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition: right 0.4s ease;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
