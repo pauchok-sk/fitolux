@@ -19,9 +19,29 @@
   padding: 20px 40px;
   border-radius: 50px;
   background-color: var(--yellow);
-  transition: background-color .2s ease, color .2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 
   @include hover {
     background-color: var(--yellow-hover);
+  }
+}
+
+.btn-stroke {
+  @include flex-center;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 20px;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: transparent;
+
+  font-size: 16px;
+  font-weight: 400;
+  transition: color .2s ease, background-color .2s ease;
+  @include hover {
+    color: white;
+    background-color: black;
   }
 }
