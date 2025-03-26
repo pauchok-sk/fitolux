@@ -1,5 +1,5 @@
-<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 10 6" fill="none" id="icon-arrow" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1.25L5 4.75L9 1.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 29 16" fill="none" id="icon-arrow" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.5 1.5L14.5 14.5L1.5 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol viewBox="0 0 35 28" fill="none" id="icon-basket" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1H7.84912L12.6404 20.4743M16.6632 22.6044H26.0947M11.8632 17.3757H29.1825L33 4.90718H8.80351M12.6404 20.4743C11.2978 20.8855 10.3193 22.1595 10.3193 23.6674C10.3193 25.5079 11.7771 27 13.5754 27C15.3738 27 16.8316 25.5079 16.8316 23.6674C16.8316 21.8269 15.3738 20.3348 13.5754 20.3348C13.2504 20.3348 12.9366 20.3835 12.6404 20.4743ZM32.4386 23.6674C32.4386 25.5079 30.9808 27 29.1825 27C27.3841 27 25.9263 25.5079 25.9263 23.6674C25.9263 21.8269 27.3841 20.3348 29.1825 20.3348C30.9808 20.3348 32.4386 21.8269 32.4386 23.6674Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="icon-close" xmlns="http://www.w3.org/2000/svg">

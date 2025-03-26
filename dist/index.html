@@ -8,8 +8,9 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250326223745" rel="stylesheet" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250326223745" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250327004337" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250327004337">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250327004337" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -168,6 +169,82 @@
 
 	<main>
 
+		<section class="intro intro-main">
+			<img src="img/intro-main-1.jpg" alt="image" class="intro-main__slide-img _active" />
+			<img src="img/intro-main-2.jpg" alt="image" class="intro-main__slide-img" />
+			<img src="img/intro-main-1.jpg" alt="image" class="intro-main__slide-img" />
+			<div class="container intro__container">
+				<div class="intro-main__wrapper">
+					<div class="swiper intro-main__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide intro-main__slide">
+								<div class="main-title">Фитосбор</div>
+								<div class="sect-title intro-main__slide-subtitle">
+									Tormesis №3 «Фитопеция»
+								</div>
+								<p class="intro-main__slide-content">
+									Останавливает выпадение волос <br />
+									и снимает воспаления кожи
+								</p>
+								<a href="#" class="button intro-main__slide-btn">подробнее</a>
+							</div>
+							<div class="swiper-slide intro-main__slide">
+								<div class="main-title">Фитосбор 2</div>
+								<div class="sect-title intro-main__slide-subtitle">
+									Tormesis №3 «Фитопеция»
+								</div>
+								<p class="intro-main__slide-content">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
+									necessitatibus qui voluptate.
+								</p>
+								<a href="#" class="button intro-main__slide-btn">подробнее</a>
+							</div>
+							<div class="swiper-slide intro-main__slide">
+								<div class="main-title">Фитосбор</div>
+								<div class="sect-title intro-main__slide-subtitle">
+									Tormesis №3 «Фитопеция»
+								</div>
+								<p class="intro-main__slide-content">
+									Останавливает выпадение волос <br />
+									и снимает воспаления кожи
+								</p>
+								<a href="#" class="button intro-main__slide-btn">подробнее</a>
+							</div>
+						</div>
+					</div>
+					<button class="btn-reset intro-main__slider-next">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="swiper intro__adv-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide intro__adv-slide">
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Продукция</span>
+						</div>
+						<div class="swiper-slide intro__adv-slide">
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Акции</span>
+						</div>
+						<div class="swiper-slide intro__adv-slide">
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Где купить</span>
+						</div>
+						<div class="swiper-slide intro__adv-slide">
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Решение проблем</span>
+						</div>
+						<div class="swiper-slide intro__adv-slide">
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Академия Трихологии</span>
+						</div>
+					</div>
+				</div>
+				<div class="intro-main__slider-pagination"></div>
+			</div>
+		</section>
 
 
 	</main>
@@ -175,7 +252,8 @@
 		<div class="container">
 		</div>
 	</footer>
-	<script src="js/app.min.js?_v=20250326223745"></script>
+	<script src="./files/js/swiper.min.js?_v=20250327004337"></script>
+	<script src="js/app.min.js?_v=20250327004337"></script>
 </body>
 
 </html>
