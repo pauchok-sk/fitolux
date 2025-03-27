@@ -1,0 +1,147 @@
+.s-about {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-gray);
+  z-index: 1;
+  &__logo {
+    position: absolute;
+    width: 1330px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -200px;
+    z-index: -1;
+  }
+  &__head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+    .sect-title {
+      margin: 0;
+      max-width: 1000px;
+    }
+    .btn-stroke {
+      flex-shrink: 0;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      .sect-titel {
+        width: 100%;
+      }
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    @include desktop-min {
+      gap: 30px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    grid-column: 1 span;
+    box-sizing: border-box;
+    @include desktop-min {
+      flex-direction: column !important;
+    }
+    @include laptop-min {
+      grid-column: 2 span;
+    }
+
+    &._reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  &__item-gallery {
+    width: 280px;
+    height: 280px;
+    padding: 20px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid var(--green);
+    @include laptop-min {
+      width: 200px;
+      height: 200px;
+      padding: 15px;
+    }
+  }
+  &__item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__item-body {
+    border-radius: 8px;
+    background-color: white;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+    background-color: white;
+    flex: 1;
+    @include desktop-min {
+      flex: none;
+      width: 100%;
+    }
+    @include laptop-middle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include laptop-min {
+      padding: 20px;
+
+      &._hide {
+        p {
+          display: none;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          &:first-child {
+            display: -webkit-box;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__item-more {
+    margin-top: 15px;
+    display: none;
+    font-size: 16px;
+    @include hover {
+      text-decoration: underline;
+    }
+    @include laptop-min {
+      display: block;
+    }
+  }
+  &__adv-slider {
+  }
+  &__adv-slide {
+  }
+  &__adv-title {
+  }
+  &__adv-contetn {
+  }
+}

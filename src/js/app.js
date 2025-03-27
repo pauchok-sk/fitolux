@@ -1,4 +1,5 @@
 import "../scss/style.scss";
+import aboutCardOpen from "./files/aboutCardOpen.js";
 import burger from "./files/burger.js";
 import dropdown from "./files/dropdown.js";
 import productCount from "./files/productCount.js";
@@ -14,3 +15,4 @@ scrollables();
 productCount();
 tab();
 searchToggle();
+aboutCardOpen();

@@ -75,3 +75,46 @@ export default function sliders() {
     });
   }
 }
+  
+const advSlider = document.querySelector(".s-adv__slider");
+
+if (advSlider && window.matchMedia("(max-width: 767px)").matches) {
+  const slider = new Swiper(advSlider, {
+    speed: 700,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3500,
+    },
+  });
+}
+
+const recSlider = document.querySelector(".s-rec__slider");
+
+if (recSlider) {
+  const slider = new Swiper(recSlider, {
+    speed: 700,
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    autoplay: {
+      delay: 3000,
+    },
+    navigation: {
+      nextEl: ".s-rec__slider-btn"
+    },
+    breakpoints: {
+      1680: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      }
+    },
+    pagination: {
+      el: ".s-rec__pagination",
+      clickable: true
+    }
+  });
+}

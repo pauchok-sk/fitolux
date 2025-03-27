@@ -1,0 +1,19 @@
+.slider-pagination {
+  @include flex-center;
+  gap: 16px;
+  width: 100%;
+  margin-top: 30px;
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    opacity: 1 !important;
+    background-color: transparent;
+    border: 2px solid black;
+    margin: 0 !important;
+    transition: background-color 0.2s ease;
+    &.swiper-pagination-bullet-active {
+      background-color: black;
+    }
+  }
+}

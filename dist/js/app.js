@@ -1,5 +1,19 @@
 (() => {
     "use strict";
+    function aboutCardOpen() {
+        const buttons = document.querySelectorAll(".s-about__item-more");
+        if (buttons.length) buttons.forEach((btn => {
+            const currentBody = btn.closest(".s-about__item-body");
+            const lineHeight = +window.getComputedStyle(currentBody).lineHeight.slice(0, -2);
+            const bodyHeight = currentBody.querySelector("p").clientHeight;
+            const countLines = bodyHeight / lineHeight;
+            if (countLines > 5) currentBody.classList.add("_hide"); else btn.remove();
+            btn.addEventListener("click", (() => {
+                currentBody.classList.remove("_hide");
+                btn.remove();
+            }));
+        }));
+    }
     function burger() {
         const burgerOpenBtn = document.querySelector("#burger-open");
         const burgerCloseBtn = document.querySelector("#burger-close");
@@ -184,6 +198,45 @@
             });
         }
     }
+    const advSlider = document.querySelector(".s-adv__slider");
+    if (advSlider && window.matchMedia("(max-width: 767px)").matches) {
+        new Swiper(advSlider, {
+            speed: 700,
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            autoplay: {
+                delay: 3500
+            }
+        });
+    }
+    const recSlider = document.querySelector(".s-rec__slider");
+    if (recSlider) {
+        new Swiper(recSlider, {
+            speed: 700,
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            autoplay: {
+                delay: 3e3
+            },
+            navigation: {
+                nextEl: ".s-rec__slider-btn"
+            },
+            breakpoints: {
+                1680: {
+                    slidesPerView: 5,
+                    spaceBetween: 40
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+            },
+            pagination: {
+                el: ".s-rec__pagination",
+                clickable: true
+            }
+        });
+    }
     function tab() {
         const buttonsTab = document.querySelectorAll("[data-tab-btn]");
         if (buttonsTab.length) buttonsTab.forEach((btn => {
@@ -207,4 +260,5 @@
     productCount();
     tab();
     searchToggle();
+    aboutCardOpen();
 })();

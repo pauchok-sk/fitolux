@@ -101,6 +101,7 @@
   }
   &__form-btn {
     flex: 1;
+    text-transform: none;
   }
   &__pay {
     @include flex-center;
