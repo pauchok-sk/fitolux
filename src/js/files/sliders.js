@@ -39,4 +39,34 @@ export default function sliders() {
       },
     });
   }
+
+  const productsSlider = document.querySelector(".products__slider");
+
+  if (productsSlider && window.matchMedia("(max-width: 1365px)").matches) {
+    const slider = new Swiper(productsSlider, {
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+    });
+  }
+
+  const productsReklamSlider = document.querySelector(
+    ".products__reklam-slider"
+  );
+
+  if (productsReklamSlider) {
+    const slider = new Swiper(productsReklamSlider, {
+      speed: 700,
+      autoplay: {
+        delay: 3000,
+      },
+      navigation: {
+        prevEl: ".products__reklam .slider-btn._prev",
+        nextEl: ".products__reklam .slider-btn._next"
+      }
+    });
+  }
 }

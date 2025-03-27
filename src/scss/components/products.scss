@@ -57,18 +57,87 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    @include laptop {
+      display: flex;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &__slider {
     margin: 0 !important;
     grid-column: 3 span;
+    @include laptop {
+      flex: 1;
+    }
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+      overflow: visible !important;
+    }
 
     .swiper-wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      @include laptop {
+        display: flex;
+        gap: 0px;
+      }
     }
     .product-card {
       box-sizing: border-box;
+      @include laptop {
+        width: 375px !important;
+      }
+      @include tablet-min {
+        width: 340px !important;
+      }
     }
+  }
+  &__reklam {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+    overflow: hidden;
+    @include laptop {
+      flex: 0 1 375px;
+    }
+    @include laptop-min {
+      flex: none;
+      width: 375px !important;
+    }
+    @include mobile-min {
+      width: 100% !important;
+    }
+  }
+  &__reklam-slider {
+    width: 100%;
+    height: 515px;
+    border-radius: 8px 8px 0px 0px;
+    @include desktop {
+      height: 485px;
+    }
+    @include desktop-min {
+      height: 440px;
+    }
+  }
+  &__reklam-slide {
+  }
+  &__reklam-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__reklam-nav {
+    @include flex-center;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 0px 0px 8px 8px;
+    border: 1px solid var(--light);
+    border-top: none;
   }
 }

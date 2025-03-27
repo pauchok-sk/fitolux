@@ -364,6 +364,7 @@ body {
 .product-card {
   display: flex;
   flex-direction: column;
+  border-radius: 8px;
   grid-column: 1 span;
   padding: 30px;
   border: 1px solid var(--light)
@@ -460,6 +461,36 @@ body {
 }
 .product-card__pay img {
   width: 20px
+}
+.slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0);
+  padding: 0;
+  color: #000;
+  border: 1px solid #000;
+  transition: color .2s ease,background-color .2s ease,border-color .2s ease
+}
+.slider-btn._prev {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.slider-btn._next {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg)
+}
+.slider-btn svg {
+  width: 20px;
+  height: 20px
+}
+.slider-btn.swiper-button-disabled {
+  opacity: .5;
+  pointer-events: none
 }
 .burger {
   position: fixed;
@@ -980,6 +1011,35 @@ body {
 .products__slider .product-card {
   box-sizing: border-box
 }
+.products__reklam {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 span;
+  overflow: hidden
+}
+.products__reklam-slider {
+  width: 100%;
+  height: 515px;
+  border-radius: 8px 8px 0 0
+}
+.products__reklam-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.products__reklam-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid var(--light);
+  border-top: none
+}
 @media (min-width:992px) {
   ._scrollable::-webkit-scrollbar {
     width: 0;
@@ -1011,6 +1071,9 @@ body {
   }
   .header__profile span {
     display: none
+  }
+  .products__reklam-slider {
+    height: 485px
   }
 }
 @media (max-width:1539px) {
@@ -1045,6 +1108,9 @@ body {
     width: 28px;
     height: 24px
   }
+  .products__reklam-slider {
+    height: 440px
+  }
 }
 @media (max-width:1365px) {
   .header__contacts-body {
@@ -1059,6 +1125,22 @@ body {
   }
   .intro__adv-slide {
     width: 340px!important
+  }
+  .products__wrapper {
+    display: flex
+  }
+  .products__slider {
+    flex: 1
+  }
+  .products__slider .swiper-wrapper {
+    display: flex;
+    gap: 0
+  }
+  .products__slider .product-card {
+    width: 375px!important
+  }
+  .products__reklam {
+    flex: 0 1 375px
   }
 }
 @media (max-width:1199px) {
@@ -1087,6 +1169,12 @@ body {
   }
   .sect-p {
     padding: 70px 0
+  }
+  .product-card__price {
+    gap: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px
   }
   .header__body {
     padding: 15px 20px
@@ -1124,6 +1212,19 @@ body {
   .products__nav {
     gap: 30px
   }
+  .products__wrapper {
+    flex-wrap: wrap;
+    justify-content: center
+  }
+  .products__slider {
+    flex: none;
+    width: 100%;
+    overflow: visible!important
+  }
+  .products__reklam {
+    flex: none;
+    width: 375px!important
+  }
 }
 @media (max-width:743px) {
   .main-title {
@@ -1138,12 +1239,19 @@ body {
   .sect-p {
     padding: 50px 0
   }
+  .product-card__title {
+    font-size: 18px;
+    margin-bottom: 20px
+  }
   .intro {
     padding-top: 110px
   }
   .intro__adv-slide {
     width: 320px!important;
     padding: 20px
+  }
+  .intro-main__wrapper {
+    margin-bottom: 60px
   }
   .intro-main__slider {
     margin-bottom: 30px
@@ -1160,9 +1268,22 @@ body {
     margin-bottom: 30px
   }
 }
+@media (max-width:576px) {
+  .product-card {
+    padding: 20px
+  }
+  .products__slider .product-card {
+    width: 340px!important
+  }
+}
 @media (max-width:479px) {
   .intro-main__slide-btn {
     width: 100%
+  }
+}
+@media (max-width:419px) {
+  .products__reklam {
+    width: 100%!important
   }
 }
 @media (any-hover:hover) {
@@ -1194,6 +1315,10 @@ body {
   }
   .product-card__pay:hover {
     background-color: var(--light)
+  }
+  .slider-btn:hover {
+    background-color: #000;
+    color: #fff
   }
   .burger__close:hover {
     opacity: .5
@@ -1268,6 +1393,10 @@ body {
   }
   .product-card__pay:active {
     background-color: var(--light)
+  }
+  .slider-btn:active {
+    background-color: #000;
+    color: #fff
   }
   .burger__close:active {
     opacity: .5

@@ -60,6 +60,15 @@
             }
         }
     }
+    function productCount() {
+        const buttons = document.querySelectorAll(".product-card__btn-num");
+        if (buttons.length) buttons.forEach((btn => {
+            const currentInput = btn.closest(".product-card__form-number").querySelector(".product-card__form-input");
+            btn.addEventListener("click", (() => {
+                if (btn.classList.contains("_minus") && currentInput.value > 1) currentInput.value = +currentInput.value - 1; else currentInput.value = +currentInput.value + 1;
+            }));
+        }));
+    }
     class Scrollable {
         constructor(selector, options) {
             let defaultOptions = {
@@ -140,6 +149,30 @@
                 spaceBetween: 20,
                 autoplay: {
                     delay: 2500
+                }
+            });
+        }
+        const productsSlider = document.querySelector(".products__slider");
+        if (productsSlider && window.matchMedia("(max-width: 1365px)").matches) {
+            new Swiper(productsSlider, {
+                speed: 700,
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3500
+                }
+            });
+        }
+        const productsReklamSlider = document.querySelector(".products__reklam-slider");
+        if (productsReklamSlider) {
+            new Swiper(productsReklamSlider, {
+                speed: 700,
+                autoplay: {
+                    delay: 3e3
+                },
+                navigation: {
+                    prevEl: ".products__reklam .slider-btn._prev",
+                    nextEl: ".products__reklam .slider-btn._next"
                 }
             });
         }
@@ -334,4 +367,5 @@
     burger();
     sliders();
     scrollables();
+    productCount();
 })();

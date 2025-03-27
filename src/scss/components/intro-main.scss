@@ -31,6 +31,9 @@
   &__wrapper {
     @include flex-between;
     gap: 30px;
+    @include tablet {
+      margin-bottom: 60px;
+    }
   }
   &__slider {
     position: static;
