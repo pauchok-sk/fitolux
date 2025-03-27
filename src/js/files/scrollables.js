@@ -1,5 +1,5 @@
 import Scrollable from "../lib/Scrollable.js";
 
 export default function scrollables() {
-  new Scrollable(".products__nav");
+  new Scrollable(".s-products__nav");
 }

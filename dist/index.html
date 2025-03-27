@@ -8,9 +8,9 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250327161038" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250327161038">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250327161038" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250327173028" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250327173028">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250327173028" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -99,6 +99,14 @@
 						<div></div>
 					</button>
 				</div>
+				<form action="#" class="search-form" id="search-form">
+					<input type="text" placeholder="Поиск..." class="search-form__input">
+					<button class="btn-reset search-form__btn">
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-search'></use>
+						</svg>
+					</button>
+				</form>
 			</div>
 		</div>
 	</header>
@@ -166,7 +174,6 @@
 			</div>
 		</div>
 	</div>
-
 	<main>
 
 		<section class="intro intro-main">
@@ -246,21 +253,21 @@
 			</div>
 		</section>
 
-		<section class="products sect-p">
-			<div class="container">
+		<section class="s-products sect-p">
+			<div class="container tab-container">
 				<h2 class="sect-title">Наша продукция</h2>
-				<ul class="list products__nav">
-					<li class="products__nav-btn _active">
+				<ul class="list s-products__nav">
+					<li data-tab-btn="products-1" class="s-products__nav-btn _active">
 						Натуральная косметика Ecotriatria ETA
 					</li>
-					<li class="products__nav-btn">
+					<li data-tab-btn="products-2" class="s-products__nav-btn">
 						Профессиональная косметика Ecotriatria Professional Balance
 					</li>
-					<li class="products__nav-btn">Наборы</li>
-					<li class="products__nav-btn">Фитосборы</li>
+					<li data-tab-btn="products-3" class="s-products__nav-btn">Наборы</li>
+					<li data-tab-btn="products-4" class="s-products__nav-btn">Фитосборы</li>
 				</ul>
-				<div class="products__wrapper">
-					<div class="swiper products__slider">
+				<div class="s-products__wrapper">
+					<div data-tab="products-1" class="swiper s-products__slider _open">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide product-card">
 								<a href="#" class="product-card__gallery">
@@ -341,21 +348,264 @@
 							</div>
 						</div>
 					</div>
-					<div class="products__reklam">
-						<div class="swiper products__reklam-slider">
-							<div class="swiper-wrapper">
-								<a href="#" class="swiper-slide products__reklam-slide">
-									<img src="img/reklam.jpg" alt="image" class="products__reklam-img" />
+					<div data-tab="products-2" class="swiper s-products__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product-2.jpg" alt="image" class="product-card__img" />
 								</a>
-								<a href="#" class="swiper-slide products__reklam-slide">
-									<img src="img/reklam.jpg" alt="image" class="products__reklam-img" />
+								<a href="#" class="product-card__title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
 								</a>
-								<a href="#" class="swiper-slide products__reklam-slide">
-									<img src="img/reklam.jpg" alt="image" class="products__reklam-img" />
+							</div>
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product.jpg" alt="image" class="product-card__img" />
+								</a>
+								<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+									professional Balance</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
+								</a>
+							</div>
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product.jpg" alt="image" class="product-card__img" />
+								</a>
+								<a href="#" class="product-card__title">Тоник для кожи головы постпроцедурный ECOTRIATRIA PROFESSIONAL 90
+									мл</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
 								</a>
 							</div>
 						</div>
-						<div class="products__reklam-nav">
+					</div>
+					<div data-tab="products-3" class="swiper s-products__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product.jpg" alt="image" class="product-card__img" />
+								</a>
+								<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+									professional Balance</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
+								</a>
+							</div>
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product-2.jpg" alt="image" class="product-card__img" />
+								</a>
+								<a href="#" class="product-card__title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
+								</a>
+							</div>
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product.jpg" alt="image" class="product-card__img" />
+								</a>
+								<a href="#" class="product-card__title">Тоник для кожи головы постпроцедурный ECOTRIATRIA PROFESSIONAL 90
+									мл</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
+								</a>
+							</div>
+						</div>
+					</div>
+					<div data-tab="products-4" class="swiper s-products__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product-2.jpg" alt="image" class="product-card__img" />
+								</a>
+								<a href="#" class="product-card__title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
+								</a>
+							</div>
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product.jpg" alt="image" class="product-card__img" />
+								</a>
+								<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+									professional Balance</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
+								</a>
+							</div>
+							<div class="swiper-slide product-card">
+								<a href="#" class="product-card__gallery">
+									<img src="img/product.jpg" alt="image" class="product-card__img" />
+								</a>
+								<a href="#" class="product-card__title">Тоник для кожи головы постпроцедурный ECOTRIATRIA PROFESSIONAL 90
+									мл</a>
+								<div class="product-card__price">
+									<div></div>
+									<span>2 720 ₽</span>
+									<div></div>
+								</div>
+								<form action="#" class="product-card__form">
+									<div class="product-card__form-number">
+										<div class="product-card__btn-num _minus">-</div>
+										<input type="number" value="1" class="product-card__form-input" />
+										<div class="product-card__btn-num _plus">+</div>
+									</div>
+									<button class="btn-stroke product-card__form-btn">
+										В корзину
+									</button>
+								</form>
+								<a href="#" class="product-card__pay">
+									<img src="img/dolyame.svg" alt="icon" />
+									Долями по 680 ₽
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-products__reklam">
+						<div class="swiper s-products__reklam-slider">
+							<div class="swiper-wrapper">
+								<a href="#" class="swiper-slide s-products__reklam-slide">
+									<img src="img/reklam.jpg" alt="image" class="s-products__reklam-img" />
+								</a>
+								<a href="#" class="swiper-slide s-products__reklam-slide">
+									<img src="img/reklam.jpg" alt="image" class="s-products__reklam-img" />
+								</a>
+								<a href="#" class="swiper-slide s-products__reklam-slide">
+									<img src="img/reklam.jpg" alt="image" class="s-products__reklam-img" />
+								</a>
+							</div>
+						</div>
+						<div class="s-products__reklam-nav">
 							<button class="slider-btn _prev">
 								<svg>
 									<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
@@ -369,6 +619,76 @@
 						</div>
 					</div>
 				</div>
+				<a href="#" class="button s-products__btn">Перейти в каталог</a>
+			</div>
+		</section>
+
+		<section class="s-adv">
+			<div class="container s-adv__container">
+				<div class="s-adv__item">
+					<div class="s-adv__item-head">
+						<h5 class="s-adv__item-title">
+							Натуральная профессиональная трихологическая продукция
+						</h5>
+						<img src="img/branch.svg" alt="icon" class="s-adv__item-icon" />
+					</div>
+					<p class="s-adv__item-content">
+						На основе натуральных растительных ингредиентов
+					</p>
+				</div>
+				<div class="s-adv__item">
+					<div class="s-adv__item-head">
+						<h5 class="s-adv__item-title">Создано специалистами</h5>
+						<img src="img/branch.svg" alt="icon" class="s-adv__item-icon" />
+					</div>
+					<p class="s-adv__item-content">
+						Врачами дерматологами-трихологами и химиками-технологами с большим
+						опытом работы
+					</p>
+				</div>
+				<div class="s-adv__item">
+					<div class="s-adv__item-head">
+						<h5 class="s-adv__item-title">Эффективность подтверждена наградами</h5>
+						<img src="img/branch.svg" alt="icon" class="s-adv__item-icon" />
+					</div>
+					<p class="s-adv__item-content">
+						Премиями Моя косметика 2023 и Моя косметика 2024
+					</p>
+				</div>
+				<div class="s-adv__item">
+					<div class="s-adv__item-head">
+						<h5 class="s-adv__item-title">
+							Эффективность проверена клиническими исследованиями
+						</h5>
+						<img src="img/branch.svg" alt="icon" class="s-adv__item-icon" />
+					</div>
+					<p class="s-adv__item-content">
+						Текст преимущества текст преимущества текст преимущества текст
+						преимущества
+					</p>
+				</div>
+				<div class="s-adv__item">
+					<div class="s-adv__item-head">
+						<h5 class="s-adv__item-title">
+							Заголовок преимущества заголовок преимущества
+						</h5>
+						<img src="img/branch.svg" alt="icon" class="s-adv__item-icon" />
+					</div>
+					<p class="s-adv__item-content">
+						Текст преимущества текст преимущества текст преимущества текст
+						преимущества
+					</p>
+				</div>
+				<div class="s-adv__item">
+					<div class="s-adv__item-head">
+						<h5 class="s-adv__item-title">Заголовок преимущества</h5>
+						<img src="img/branch.svg" alt="icon" class="s-adv__item-icon" />
+					</div>
+					<p class="s-adv__item-content">
+						Текст преимущества текст преимущества текст преимущества текст
+						преимущества
+					</p>
+				</div>
 			</div>
 		</section>
 
@@ -378,8 +698,9 @@
 		<div class="container">
 		</div>
 	</footer>
-	<script src="./files/js/swiper.min.js?_v=20250327161038"></script>
-	<script src="js/app.min.js?_v=20250327161038"></script>
+	<script src="./files/js/swiper.min.js?_v=20250327173028"></script>
+	<script src="./files/js/spoller.js?_v=20250327173028"></script>
+	<script src="js/app.min.js?_v=20250327173028"></script>
 </body>
 
 </html>

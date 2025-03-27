@@ -8,8 +8,8 @@ export default function productCount() {
         .querySelector(".product-card__form-input");
 
       btn.addEventListener("click", () => {
-        if (btn.classList.contains("_minus") && currentInput.value > 1) {
-          currentInput.value = +currentInput.value - 1;
+        if (btn.classList.contains("_minus")) {
+          if (currentInput.value > 1) currentInput.value = +currentInput.value - 1;
         } else {
           currentInput.value = +currentInput.value + 1;
         }

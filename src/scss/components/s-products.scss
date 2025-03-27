@@ -1,5 +1,4 @@
-.products {
-  padding: 90px 0px;
+.s-products {
   overflow: hidden;
   &__nav {
     display: flex;
@@ -139,5 +138,11 @@
     border-radius: 0px 0px 8px 8px;
     border: 1px solid var(--light);
     border-top: none;
+  }
+  &__btn {
+    margin: 50px auto 0px auto;
+    @include tablet {
+      margin-top: 30px;
+    }
   }
 }

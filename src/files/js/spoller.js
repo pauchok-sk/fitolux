@@ -1,4 +1,4 @@
-export default function spoller() {
+function spoller() {
   const spollersArray = document.querySelectorAll("[data-spollers]");
   if (spollersArray.length > 0) {
     // Получение обычных слойлеров
@@ -232,3 +232,5 @@ export default function spoller() {
     }
   };
 }
+
+spoller();
