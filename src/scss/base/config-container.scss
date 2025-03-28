@@ -9,4 +9,8 @@
   width: 100%;
   padding: 0 var(--offset-width);
   margin: 0 auto;
+
+  &._min {
+    max-width: 1530px;
+  }
 }

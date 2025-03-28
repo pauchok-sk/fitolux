@@ -6,4 +6,32 @@
   @include tablet {
     padding: 40px 0px;
   }
+
+  &._min {
+    padding: 70px 0px;
+    @include tablet {
+      padding: 40px 0px;
+    }
+  }
+}
+
+.s-head {
+  @include flex-between;
+  gap: 30px;
+  margin-bottom: 50px;
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  &__slider-nav {
+    display: flex;
+    gap: 30px;
+    @include tablet {
+      gap: 20px;
+    }
+  }
+
+  .sect-title {
+    margin: 0;
+  }
 }

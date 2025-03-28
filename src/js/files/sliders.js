@@ -75,7 +75,7 @@ export default function sliders() {
     });
   }
 }
-  
+
 const advSlider = document.querySelector(".s-adv__slider");
 
 if (advSlider && window.matchMedia("(max-width: 767px)").matches) {
@@ -100,7 +100,7 @@ if (recSlider) {
       delay: 3000,
     },
     navigation: {
-      nextEl: ".s-rec__slider-btn"
+      nextEl: ".s-rec__slider-btn",
     },
     breakpoints: {
       1680: {
@@ -110,12 +110,12 @@ if (recSlider) {
       1200: {
         slidesPerView: 4,
         spaceBetween: 40,
-      }
+      },
     },
     pagination: {
       el: ".s-rec__pagination",
-      clickable: true
-    }
+      clickable: true,
+    },
   });
 }
 
@@ -130,14 +130,80 @@ if (aboutAdvSlider && window.matchMedia("(max-width: 1365px)").matches) {
       delay: 3000,
     },
     navigation: {
-      nextEl: ".s-rec__slider-btn"
+      nextEl: ".s-rec__slider-btn",
     },
     breakpoints: {
       768: {
         slidesPerView: "auto",
         spaceBetween: 30,
+      },
+    },
+  });
+}
+
+const blogSlider = document.querySelector(".s-blog__slider");
+
+if (blogSlider) {
+  const slider = new Swiper(blogSlider, {
+    speed: 700,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3500,
+    },
+    navigation: {
+      prevEl: ".s-blog .slider-btn._prev",
+      nextEl: ".s-blog .slider-btn._next",
+    },
+    scrollbar: {
+      el: ".s-blog .slider-scrollbar",
+      draggable: true
+    },
+    breakpoints: {
+      1540: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
+}
+
+const partnersSlider = document.querySelector(".s-partners__slider");
+
+if (partnersSlider) {
+  const slider = new Swiper(partnersSlider, {
+    speed: 700,
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    autoplay: {
+      delay: 3000,
+    },
+    navigation: {
+      prevEl: ".s-partners .slider-btn._prev",
+      nextEl: ".s-partners .slider-btn._next",
+    },
+
+    breakpoints: {
+      1540: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 30,
       }
     },
-    
   });
 }

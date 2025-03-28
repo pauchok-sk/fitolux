@@ -257,6 +257,68 @@
             }
         });
     }
+    const blogSlider = document.querySelector(".s-blog__slider");
+    if (blogSlider) {
+        new Swiper(blogSlider, {
+            speed: 700,
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            autoplay: {
+                delay: 3500
+            },
+            navigation: {
+                prevEl: ".s-blog .slider-btn._prev",
+                nextEl: ".s-blog .slider-btn._next"
+            },
+            scrollbar: {
+                el: ".s-blog .slider-scrollbar",
+                draggable: true
+            },
+            breakpoints: {
+                1540: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                }
+            }
+        });
+    }
+    const partnersSlider = document.querySelector(".s-partners__slider");
+    if (partnersSlider) {
+        new Swiper(partnersSlider, {
+            speed: 700,
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            autoplay: {
+                delay: 3e3
+            },
+            navigation: {
+                prevEl: ".s-partners .slider-btn._prev",
+                nextEl: ".s-partners .slider-btn._next"
+            },
+            breakpoints: {
+                1540: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                }
+            }
+        });
+    }
     function tab() {
         const buttonsTab = document.querySelectorAll("[data-tab-btn]");
         if (buttonsTab.length) buttonsTab.forEach((btn => {
@@ -273,6 +335,7 @@
             }));
         }));
     }
+    Fancybox.bind("[data-fancybox]");
     dropdown();
     burger();
     sliders();

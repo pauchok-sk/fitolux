@@ -1,0 +1,36 @@
+.input-policy {
+  display: none;
+
+  &:checked + label {
+    &::before {
+      background: url('@img/check.svg') center / 12px auto no-repeat;
+      background-color: black;
+    }
+  }
+}
+.label-policy {
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 36px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid black;
+    left: 0;
+    top: 0;
+  }
+
+  a {
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    @include hover {
+      text-decoration: none;
+    }
+  }
+}

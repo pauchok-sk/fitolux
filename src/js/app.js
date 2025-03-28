@@ -8,6 +8,8 @@ import searchToggle from "./files/searchToggle.js";
 import sliders from "./files/sliders.js";
 import tab from "./files/tab.js";
 
+Fancybox.bind("[data-fancybox]");
+
 dropdown();
 burger();
 sliders();

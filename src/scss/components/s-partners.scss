@@ -1,0 +1,58 @@
+.s-partners {
+  overflow: hidden;
+  &__container {
+    @include flex-between;
+    gap: 30px;
+    @include laptop {
+      flex-direction: column;
+    }
+  }
+  &__info {
+    max-width: 550px;
+    @include laptop {
+      max-width: none;
+    }
+  }
+  &__content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+    margin: 0;
+  }
+  &__gallery {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @include laptop {
+      width: 100%;
+    }
+    @include tablet {
+      gap: 30px;
+    }
+    @include tablet-min {
+      overflow: visible;
+    }
+    .slider-btn {
+      flex-shrink: 0;
+      @include tablet-min {
+        display: none;
+      }
+    }
+  }
+  &__slider {
+    @include tablet-min {
+      width: 100% !important;
+      overflow: visible !important;
+    }
+
+    .swiper-slide {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      @include tablet {
+        width: 190px !important;
+      }
+    }
+  }
+}

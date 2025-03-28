@@ -1,0 +1,21 @@
+.slider-scrollbar {
+  width: 100%;
+  margin-top: 50px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.10);
+  @include tablet {
+    margin-top: 30px;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: transparent;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: var(--green);
+      border-radius: 4px;
+      inset: -2px 0px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.s-subscribe {
+  position: relative;
+  background-color: var(--yellow);
+  overflow: hidden;
+  z-index: 1;
+  @include tablet {
+    padding-bottom: 240px !important;
+  }
+  &__container {
+    display: flex;
+    align-items: end;
+    gap: 200px;
+    @include laptop {
+      justify-content: start;
+    }
+  }
+  &__gallery {
+    transform: translateY(200px);
+    width: 545px;
+    flex-shrink: 0;
+    height: 545px;
+    @include laptop {
+      width: 350px;
+      height: 350px;
+      transform: translateY(0);
+      position: absolute;
+      bottom: -50px;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  &__gallery-wrapper {
+    @include flex-center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.06) 100%
+      );
+      box-shadow: 0px 0px 30px 0px rgba(96, 22, 55, 0.05);
+      backdrop-filter: blur(7.5px);
+      z-index: -1;
+    }
+  }
+  &__flower {
+    position: absolute;
+    top: -90px;
+    left: 50px;
+    z-index: -2;
+  }
+  &__logo {
+    @include laptop {
+      width: 230px;
+    }
+  }
+  &__main {
+    max-width: 600px;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0px 0px 40px 0px;
+    @include laptop-min {
+      font-size: 32px;
+    }
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .button {
+      width: 100%;
+    }
+  }
+  &__form-item {
+    width: 100%;
+  }
+  &__form-footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
