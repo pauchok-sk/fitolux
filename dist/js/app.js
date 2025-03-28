@@ -237,6 +237,26 @@
             }
         });
     }
+    const aboutAdvSlider = document.querySelector(".s-about__adv-slider");
+    if (aboutAdvSlider && window.matchMedia("(max-width: 1365px)").matches) {
+        new Swiper(aboutAdvSlider, {
+            speed: 700,
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            autoplay: {
+                delay: 3e3
+            },
+            navigation: {
+                nextEl: ".s-rec__slider-btn"
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: "auto",
+                    spaceBetween: 30
+                }
+            }
+        });
+    }
     function tab() {
         const buttonsTab = document.querySelectorAll("[data-tab-btn]");
         if (buttonsTab.length) buttonsTab.forEach((btn => {
