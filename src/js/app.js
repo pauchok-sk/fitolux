@@ -1,5 +1,6 @@
 import "../scss/style.scss";
 import aboutCardOpen from "./files/aboutCardOpen.js";
+import addBookmark from "./files/addBookmark.js";
 import burger from "./files/burger.js";
 import dropdown from "./files/dropdown.js";
 import inputmask from "./files/inputmask.js";
@@ -20,3 +21,4 @@ tab();
 searchToggle();
 aboutCardOpen();
 inputmask();
+addBookmark();

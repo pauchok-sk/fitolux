@@ -65,6 +65,7 @@ export default function sliders() {
   if (productsReklamSlider) {
     const slider = new Swiper(productsReklamSlider, {
       speed: 700,
+      spaceBetween: 15,
       autoplay: {
         delay: 3000,
       },
@@ -74,136 +75,154 @@ export default function sliders() {
       },
     });
   }
-}
 
-const advSlider = document.querySelector(".s-adv__slider");
+  const advSlider = document.querySelector(".s-adv__slider");
 
-if (advSlider && window.matchMedia("(max-width: 767px)").matches) {
-  const slider = new Swiper(advSlider, {
-    speed: 700,
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    autoplay: {
-      delay: 3500,
-    },
-  });
-}
-
-const recSlider = document.querySelector(".s-rec__slider");
-
-if (recSlider) {
-  const slider = new Swiper(recSlider, {
-    speed: 700,
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    autoplay: {
-      delay: 3000,
-    },
-    navigation: {
-      nextEl: ".s-rec__slider-btn",
-    },
-    breakpoints: {
-      1680: {
-        slidesPerView: 5,
-        spaceBetween: 40,
+  if (advSlider && window.matchMedia("(max-width: 767px)").matches) {
+    const slider = new Swiper(advSlider, {
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
       },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-    },
-    pagination: {
-      el: ".s-rec__pagination",
-      clickable: true,
-    },
-  });
-}
+    });
+  }
 
-const aboutAdvSlider = document.querySelector(".s-about__adv-slider");
+  const recSlider = document.querySelector(".s-rec__slider");
 
-if (aboutAdvSlider && window.matchMedia("(max-width: 1365px)").matches) {
-  const slider = new Swiper(aboutAdvSlider, {
-    speed: 700,
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    autoplay: {
-      delay: 3000,
-    },
-    navigation: {
-      nextEl: ".s-rec__slider-btn",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: "auto",
-        spaceBetween: 30,
+  if (recSlider) {
+    const slider = new Swiper(recSlider, {
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
       },
-    },
-  });
-}
+      navigation: {
+        nextEl: ".s-rec__slider-btn",
+      },
+      breakpoints: {
+        1680: {
+          slidesPerView: 5,
+          spaceBetween: 40,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+      pagination: {
+        el: ".s-rec__pagination",
+        clickable: true,
+      },
+    });
+  }
 
-const blogSlider = document.querySelector(".s-blog__slider");
+  const aboutAdvSlider = document.querySelector(".s-about__adv-slider");
 
-if (blogSlider) {
-  const slider = new Swiper(blogSlider, {
-    speed: 700,
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    autoplay: {
-      delay: 3500,
-    },
-    navigation: {
-      prevEl: ".s-blog .slider-btn._prev",
-      nextEl: ".s-blog .slider-btn._next",
-    },
-    scrollbar: {
-      el: ".s-blog .slider-scrollbar",
-      draggable: true
-    },
-    breakpoints: {
-      1540: {
-        slidesPerView: 4,
-        spaceBetween: 20,
+  if (aboutAdvSlider && window.matchMedia("(max-width: 1365px)").matches) {
+    const slider = new Swiper(aboutAdvSlider, {
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3000,
       },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+      navigation: {
+        nextEl: ".s-rec__slider-btn",
       },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+      breakpoints: {
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 30,
+        },
       },
-    },
-  });
-}
+    });
+  }
 
-const partnersSlider = document.querySelector(".s-partners__slider");
+  const blogSlider = document.querySelector(".s-blog__slider");
 
-if (partnersSlider) {
-  const slider = new Swiper(partnersSlider, {
-    speed: 700,
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    autoplay: {
-      delay: 3000,
-    },
-    navigation: {
-      prevEl: ".s-partners .slider-btn._prev",
-      nextEl: ".s-partners .slider-btn._next",
-    },
+  if (blogSlider) {
+    const slider = new Swiper(blogSlider, {
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-blog .slider-btn._prev",
+        nextEl: ".s-blog .slider-btn._next",
+      },
+      scrollbar: {
+        el: ".s-blog .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        1540: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
 
-    breakpoints: {
-      1540: {
-        slidesPerView: 4,
-        spaceBetween: 40,
+  const partnersSlider = document.querySelector(".s-partners__slider");
+
+  if (partnersSlider) {
+    const slider = new Swiper(partnersSlider, {
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
       },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 40,
+      navigation: {
+        prevEl: ".s-partners .slider-btn._prev",
+        nextEl: ".s-partners .slider-btn._next",
       },
-      576: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      }
-    },
-  });
+
+      breakpoints: {
+        1540: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
+
+  const archiveStockSlider = document.querySelector(
+    ".s-archive__stock-slider"
+  );
+
+  if (archiveStockSlider) {
+    const slider = new Swiper(archiveStockSlider, {
+      speed: 700,
+      spaceBetween: 15,
+      autoplay: {
+        delay: 3000,
+      },
+      navigation: {
+        prevEl: ".s-archive__stocks .slider-btn._prev",
+        nextEl: ".s-archive__stocks .slider-btn._next",
+      },
+    });
+  }
 }

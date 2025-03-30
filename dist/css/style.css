@@ -155,6 +155,7 @@ template {
   --light: #e6e6e6;
   --concrete: #f3f3f3;
   --concrete-dark: #999;
+  --alabaster: #f7f7f7;
   --green: #40c1ac
 }
 html {
@@ -1064,6 +1065,25 @@ body {
   padding: 130px 0 40px 0;
   z-index: 1
 }
+.intro__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1
+}
+.intro__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.intro__head .sect-title {
+  margin: 0
+}
 .intro__container {
   display: flex;
   flex-direction: column;
@@ -1757,6 +1777,109 @@ body {
   width: 100%;
   margin-top: 50px
 }
+.s-archive__body {
+  display: flex;
+  gap: 50px
+}
+.s-archive__aside {
+  width: 395px;
+  flex-shrink: 0
+}
+.s-archive__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+.s-archive__nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--alabaster);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 20px;
+  color: #000;
+  transition: color .2s ease,background-color .2s ease
+}
+.s-archive__nav-btn._active {
+  color: #fff;
+  background-color: var(--green)
+}
+.s-archive__nav-btn svg {
+  width: 30px;
+  height: 30px
+}
+.s-archive__stocks {
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid var(--alabaster);
+  margin-top: 50px
+}
+.s-archive__stocks-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px
+}
+.s-archive__stocks-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0
+}
+.s-archive__stocks-nav {
+  display: flex;
+  gap: 20px
+}
+.s-archive__stocks-nav .slider-btn {
+  width: 40px;
+  height: 40px
+}
+.s-archive__stocks-nav .slider-btn svg {
+  width: 14px;
+  height: 14px
+}
+.s-archive__stock-slider {
+  width: 100%;
+  aspect-ratio: 1/1
+}
+.s-archive__stock-slide {
+  border-radius: 8px;
+  overflow: hidden
+}
+.s-archive__stock-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.s-archive__aside-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px
+}
+.s-archive__footer-item {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid var(--alabaster)
+}
+.s-archive__footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background: linear-gradient(84deg,#40c1ac 0,#8aecaf 100%);
+  color: #fff;
+  font-size: 24px
+}
+.s-archive__footer-btn span {
+  flex: 1
+}
 .footer {
   position: relative;
   overflow: hidden;
@@ -2351,6 +2474,10 @@ body {
     padding-top: 110px;
     min-height: 500px
   }
+  .intro__bg {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%)
+  }
   .intro__adv-slide {
     width: 320px!important;
     padding: 20px
@@ -2636,6 +2763,10 @@ body {
   .s-stocks__item-title:hover {
     color: var(--green)
   }
+  .s-archive__nav-btn:hover {
+    color: #fff;
+    background-color: var(--green)
+  }
   .footer__social-btn:hover {
     opacity: .6
   }
@@ -2767,6 +2898,10 @@ body {
   }
   .s-stocks__item-title:active {
     color: var(--green)
+  }
+  .s-archive__nav-btn:active {
+    color: #fff;
+    background-color: var(--green)
   }
   .footer__social-btn:active {
     opacity: .6
