@@ -1,0 +1,31 @@
+.breadcrumbs {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+
+  .aioseo-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;   
+  }
+  .aioseo-breadcrumb {
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        margin-left: 10px;
+      }
+    }
+  }
+
+  a {
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    &:last-child {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.s-stocks {
+  background-color: var(--concrete);
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    @include desktop-min {
+      gap: 25px;
+    }
+    @include laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-min {
+      gap: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  &__item {
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+    grid-column: 1 span;
+    background-color: white;
+    @include laptop {
+      flex-direction: column;
+    }
+    @include tablet-min {
+      grid-column: 2 span;
+    }
+  }
+  &__gallery {
+    display: block;
+    width: 360px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    @include desktop {
+      width: 330px;
+    }
+    @include laptop {
+      width: 100%;
+    }
+  }
+  &__gallery-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__item-body {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    @include desktop {
+      padding: 20px;
+    }
+    @include laptop {
+      flex: 1;
+    }
+    @include tablet-min {
+      padding: 15px;
+    }
+  }
+  &__item-title {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0px 0px 20px 0px;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--green);
+    }
+    @include desktop-min {
+      font-size: 22px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__item-content {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--gray);
+    flex: 1;
+    margin: 0px 0px 20px 0px;
+    @include desktop-min {
+      font-size: 16px;
+    }
+  }
+  &__item-footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include desktop {
+      flex-wrap: wrap;
+    }
+  }
+  &__item-date {
+    flex: 1;
+  }
+  &__item-date-title {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--concrete-dark);
+    margin-bottom: 4px;
+  }
+  &__item-date {
+    font-size: 18px;
+  }
+  &__item-btn {
+    min-height: 50px;
+    width: 190px;
+    @include desktop {
+      width: 100%;
+    }
+  }
+  &__btn-more {
+    width: 100%;
+    margin-top: 50px;
+    @include tablet {
+      margin-top: 25px;
+    }
+  }
+}

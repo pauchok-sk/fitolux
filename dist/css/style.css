@@ -153,6 +153,8 @@ template {
   --light-gray: #f9f9f9;
   --silver: #a7a7a7;
   --light: #e6e6e6;
+  --concrete: #f3f3f3;
+  --concrete-dark: #999;
   --green: #40c1ac
 }
 html {
@@ -327,7 +329,8 @@ body {
 .main-title {
   font-size: 60px;
   font-weight: 900;
-  text-transform: uppercase
+  text-transform: uppercase;
+  margin: 0
 }
 .sect-title {
   font-size: 48px;
@@ -639,6 +642,23 @@ body {
   font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 2px
+}
+.breadcrumbs {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px
+}
+.breadcrumbs .aioseo-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+.breadcrumbs .aioseo-breadcrumb:not(:last-child)::after {
+  content: "/";
+  margin-left: 10px
+}
+.breadcrumbs span:last-child {
+  opacity: .7
 }
 .burger {
   position: fixed;
@@ -1040,6 +1060,7 @@ body {
   flex-direction: column;
   color: #fff;
   overflow: hidden;
+  min-height: 615px;
   padding: 130px 0 40px 0;
   z-index: 1
 }
@@ -1092,7 +1113,7 @@ body {
   width: 50px
 }
 .intro-main {
-  min-height: 100vh;
+  min-height: 100vh!important;
   padding-bottom: 30px;
   display: flex;
   align-items: end;
@@ -1664,6 +1685,78 @@ body {
   justify-content: center;
   align-items: center
 }
+.s-stocks {
+  background-color: var(--concrete)
+}
+.s-stocks__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px
+}
+.s-stocks__item {
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+  grid-column: 1 span;
+  background-color: #fff
+}
+.s-stocks__gallery {
+  display: block;
+  width: 360px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1
+}
+.s-stocks__gallery-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.s-stocks__item-body {
+  display: flex;
+  flex-direction: column;
+  padding: 40px
+}
+.s-stocks__item-title {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  transition: color .2s ease
+}
+.s-stocks__item-content {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--gray);
+  flex: 1;
+  margin: 0 0 20px 0
+}
+.s-stocks__item-footer {
+  display: flex;
+  align-items: center;
+  gap: 20px
+}
+.s-stocks__item-date {
+  flex: 1
+}
+.s-stocks__item-date-title {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--concrete-dark);
+  margin-bottom: 4px
+}
+.s-stocks__item-date {
+  font-size: 18px
+}
+.s-stocks__item-btn {
+  min-height: 50px;
+  width: 190px
+}
+.s-stocks__btn-more {
+  width: 100%;
+  margin-top: 50px
+}
 .footer {
   position: relative;
   overflow: hidden;
@@ -1865,6 +1958,18 @@ body {
   .s-adv__item-content {
     margin-top: 40px
   }
+  .s-stocks__gallery {
+    width: 330px
+  }
+  .s-stocks__item-body {
+    padding: 20px
+  }
+  .s-stocks__item-footer {
+    flex-wrap: wrap
+  }
+  .s-stocks__item-btn {
+    width: 100%
+  }
 }
 @media (max-width:1539px) {
   .header__body {
@@ -1910,6 +2015,15 @@ body {
   .s-about__item-body {
     flex: none;
     width: 100%
+  }
+  .s-stocks__wrapper {
+    gap: 25px
+  }
+  .s-stocks__item-title {
+    font-size: 22px
+  }
+  .s-stocks__item-content {
+    font-size: 16px
   }
 }
 @media (max-width:1365px) {
@@ -1988,6 +2102,18 @@ body {
   }
   .s-partners__gallery {
     width: 100%
+  }
+  .s-stocks__wrapper {
+    grid-template-columns: repeat(3,1fr)
+  }
+  .s-stocks__item {
+    flex-direction: column
+  }
+  .s-stocks__gallery {
+    width: 100%
+  }
+  .s-stocks__item-body {
+    flex: 1
   }
 }
 @media (max-width:1199px) {
@@ -2171,6 +2297,9 @@ body {
   .s-subscribe__title {
     font-size: 32px
   }
+  .s-stocks__wrapper {
+    grid-template-columns: repeat(2,1fr)
+  }
   .footer__head {
     display: flex;
     flex-direction: column
@@ -2219,7 +2348,8 @@ body {
     margin-top: 30px
   }
   .intro {
-    padding-top: 110px
+    padding-top: 110px;
+    min-height: 500px
   }
   .intro__adv-slide {
     width: 320px!important;
@@ -2288,6 +2418,12 @@ body {
   .s-partners__slider .swiper-slide {
     width: 190px!important
   }
+  .s-stocks__item-title {
+    font-size: 18px
+  }
+  .s-stocks__btn-more {
+    margin-top: 25px
+  }
   .footer__flower-right {
     bottom: auto;
     top: 0;
@@ -2329,6 +2465,17 @@ body {
   .s-partners__slider {
     width: 100%!important;
     overflow: visible!important
+  }
+  .s-stocks__wrapper {
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto
+  }
+  .s-stocks__item {
+    grid-column: 2 span
+  }
+  .s-stocks__item-body {
+    padding: 15px
   }
   .footer__nav {
     flex-direction: column;
@@ -2419,6 +2566,9 @@ body {
   .label-policy a:hover {
     text-decoration: none
   }
+  .breadcrumbs a:hover {
+    text-decoration: underline
+  }
   .burger__close:hover {
     opacity: .5
   }
@@ -2483,6 +2633,9 @@ body {
   .s-blog__slide-btn:hover {
     text-decoration: none
   }
+  .s-stocks__item-title:hover {
+    color: var(--green)
+  }
   .footer__social-btn:hover {
     opacity: .6
   }
@@ -2544,6 +2697,9 @@ body {
   }
   .label-policy a:active {
     text-decoration: none
+  }
+  .breadcrumbs a:active {
+    text-decoration: underline
   }
   .burger__close:active {
     opacity: .5
@@ -2608,6 +2764,9 @@ body {
   }
   .s-blog__slide-btn:active {
     text-decoration: none
+  }
+  .s-stocks__item-title:active {
+    color: var(--green)
   }
   .footer__social-btn:active {
     opacity: .6
