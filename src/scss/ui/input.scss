@@ -10,6 +10,11 @@
   color: black;
   font-weight: 300;
 
+  &._black {
+    background: transparent;
+    border-color: black;
+  }
+
   &::placeholder {
     color: black;
   }
