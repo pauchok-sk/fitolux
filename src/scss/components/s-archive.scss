@@ -142,11 +142,11 @@
     padding: 20px;
     border-radius: 8px;
     background: linear-gradient(84deg, #40c1ac 0%, #8aecaf 100%);
-    
+
     color: white;
     font-size: 24px;
     @include desktop-min {
-      font-size: 20px
+      font-size: 20px;
     }
 
     span {
@@ -172,6 +172,87 @@
     }
   }
   &__experts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @include tablet {
+      gap: 20px;
+    }
+  }
+  &__social-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 250px;
+    grid-column: 1 span;
+    @include laptop-min {
+      grid-column: 2 span;
+    }
+    @include tablet-min {
+      padding: 0;
+    }
+  }
+  &__social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include tablet-min {
+      padding: 15px;
+    }
+  }
+  &__social-list-btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+    background-color: white;
+    border-radius: 50px;
+    padding-right: 14px;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    @include hover {
+      background-color: var(--yellow);
+    }
+  }
+  &__social-list-circle {
+    @include flex-center;
+    width: 34px;
+    height: 34px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &__social-title {
+    margin: 0;
+    max-width: 275px;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 0px 0px 15px 15px;
+    @include tablet {
+      font-size: 20px;
+    }
+    @include tablet-min {
+      max-width: none;
+      width: 100%;
+      padding: 15px;
+      background-color: rgb(255, 255, 255, 0.6);
+    }
+  }
+  &__blog {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
