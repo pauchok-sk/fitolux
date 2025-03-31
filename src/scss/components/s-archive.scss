@@ -54,6 +54,7 @@
       background-color: var(--green);
     }
     &._active {
+      pointer-events: none;
       color: white;
       background-color: var(--green);
     }
@@ -152,6 +153,9 @@
       flex: 1;
     }
   }
+  &__main {
+    flex: 1;
+  }
   &__decisions {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -165,6 +169,14 @@
     margin-top: 50px;
     @include tablet {
       margin-top: 30px;
+    }
+  }
+  &__experts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @include tablet {
+      gap: 20px;
     }
   }
 }

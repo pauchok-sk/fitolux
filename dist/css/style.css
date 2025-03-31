@@ -156,6 +156,7 @@ template {
   --concrete: #f3f3f3;
   --concrete-dark: #999;
   --alabaster: #f7f7f7;
+  --wild: #f5f5f5;
   --green: #40c1ac
 }
 html {
@@ -716,6 +717,79 @@ body {
 .decision-card__btn {
   max-width: 100%;
   width: 190px;
+  min-height: 50px;
+  margin-top: auto
+}
+.expert-card {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 span;
+  overflow: hidden;
+  border-radius: 8px
+}
+.expert-card__gallery {
+  position: relative;
+  display: block;
+  padding-bottom: 69%
+}
+.expert-card__gallery-img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.expert-card__title {
+  display: block;
+  width: 100%;
+  background-color: var(--wild);
+  padding: 25px 30px;
+  font-size: 26px;
+  font-weight: 500;
+  transition: color .2s ease
+}
+.expert-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 30px;
+  border-radius: 0 0 8px 8px;
+  border: 2px solid var(--wild)
+}
+.expert-card__content {
+  margin-bottom: 20px
+}
+.expert-card__content h4 {
+  margin: 0 0 20px 0
+}
+.expert-card__content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%
+}
+.expert-card__content ul li {
+  position: relative;
+  padding-left: 20px
+}
+.expert-card__content ul li::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 50%;
+  left: 8px;
+  top: 12px
+}
+.expert-card__btn {
+  width: 190px;
+  max-width: 100%;
   min-height: 50px;
   margin-top: auto
 }
@@ -1864,6 +1938,7 @@ body {
   transition: color .2s ease,background-color .2s ease
 }
 .s-archive__nav-btn._active {
+  pointer-events: none;
   color: #fff;
   background-color: var(--green)
 }
@@ -1941,6 +2016,9 @@ body {
 .s-archive__footer-btn span {
   flex: 1
 }
+.s-archive__main {
+  flex: 1
+}
 .s-archive__decisions {
   display: grid;
   grid-template-columns: repeat(6,1fr);
@@ -1949,6 +2027,11 @@ body {
 .s-archive__more-btn {
   width: 100%;
   margin-top: 50px
+}
+.s-archive__experts {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px
 }
 .footer {
   position: relative;
@@ -2452,6 +2535,13 @@ body {
   .decision-card__title {
     font-size: 18px
   }
+  .expert-card__title {
+    font-size: 22px;
+    padding: 20px
+  }
+  .expert-card__body {
+    padding: 20px
+  }
   .search-form {
     padding: 15px 20px
   }
@@ -2591,6 +2681,16 @@ body {
   .decision-card {
     grid-column: 3 span
   }
+  .expert-card__title {
+    font-size: 18px;
+    padding: 15px
+  }
+  .expert-card__body {
+    padding: 20px
+  }
+  .expert-card__content ul {
+    font-size: 16px
+  }
   .intro {
     padding-top: 110px;
     min-height: 500px
@@ -2675,6 +2775,9 @@ body {
   .s-archive__more-btn {
     margin-top: 30px
   }
+  .s-archive__experts {
+    gap: 20px
+  }
   .footer__flower-right {
     bottom: auto;
     top: 0;
@@ -2703,6 +2806,9 @@ body {
 @media (max-width:576px) {
   .product-card {
     padding: 20px
+  }
+  .expert-card {
+    grid-column: 2 span
   }
   .s-products__slider .product-card {
     width: 340px!important
@@ -2754,6 +2860,9 @@ body {
     grid-column: 6 span
   }
   .decision-card__btn {
+    width: 100%
+  }
+  .expert-card__btn {
     width: 100%
   }
   .intro-main__slide-btn {
@@ -2833,6 +2942,9 @@ body {
     text-decoration: underline
   }
   .decision-card__title:hover {
+    color: var(--green)
+  }
+  .expert-card__title:hover {
     color: var(--green)
   }
   .burger__close:hover {
@@ -2978,6 +3090,9 @@ body {
     text-decoration: underline
   }
   .decision-card__title:active {
+    color: var(--green)
+  }
+  .expert-card__title:active {
     color: var(--green)
   }
   .burger__close:active {
