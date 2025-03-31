@@ -866,6 +866,46 @@ body {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg)
 }
+.new-card {
+  display: flex;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  overflow: hidden;
+  grid-column: 3 span
+}
+.new-card__img {
+  display: block;
+  width: 320px;
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.new-card__body {
+  display: flex;
+  flex-direction: column;
+  padding: 30px
+}
+.new-card__title {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  transition: color .2s ease
+}
+.new-card__footer {
+  margin-top: auto
+}
+.new-card__date {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--silver);
+  margin-bottom: 20px
+}
+.new-card__btn {
+  max-width: 100%;
+  width: 190px;
+  min-height: 50px
+}
 .burger {
   position: fixed;
   display: flex;
@@ -2164,6 +2204,11 @@ body {
   grid-template-columns: repeat(2,1fr);
   gap: 30px
 }
+.s-archive__news {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 30px
+}
 .footer {
   position: relative;
   overflow: hidden;
@@ -2343,6 +2388,12 @@ body {
   .decision-card__title {
     font-size: 20px
   }
+  .new-card__img {
+    width: 265px
+  }
+  .new-card__title {
+    font-size: 18px
+  }
   .header__nav {
     gap: 25px;
     padding-left: 25px
@@ -2382,6 +2433,16 @@ body {
   }
 }
 @media (max-width:1539px) {
+  .new-card {
+    flex-direction: column;
+    grid-column: 2 span
+  }
+  .new-card__img {
+    width: 100%
+  }
+  .new-card__body {
+    flex: 1
+  }
   .header__body {
     gap: 25px;
     padding-left: 25px;
@@ -2676,6 +2737,9 @@ body {
   .blog-card__body {
     padding: 20px
   }
+  .new-card__body {
+    padding: 20px
+  }
   .search-form {
     padding: 15px 20px
   }
@@ -2768,6 +2832,9 @@ body {
   .s-archive__social {
     grid-column: 2 span
   }
+  .s-archive__news {
+    gap: 20px
+  }
   .footer__head {
     display: flex;
     flex-direction: column
@@ -2830,6 +2897,9 @@ body {
   }
   .blog-card__title {
     font-size: 18px
+  }
+  .new-card {
+    grid-column: 3 span
   }
   .intro {
     padding-top: 110px;
@@ -2959,6 +3029,9 @@ body {
   .blog-card {
     grid-column: 2 span
   }
+  .new-card__title {
+    font-size: 16px
+  }
   .s-products__slider .product-card {
     width: 340px!important
   }
@@ -3024,6 +3097,12 @@ body {
     width: 100%
   }
   .expert-card__btn {
+    width: 100%
+  }
+  .new-card {
+    grid-column: 6 span
+  }
+  .new-card__btn {
     width: 100%
   }
   .intro-main__slide-btn {
@@ -3118,6 +3197,9 @@ body {
   .blog-card__btn:hover {
     color: #fff;
     background-color: #000
+  }
+  .new-card__title:hover {
+    color: var(--green)
   }
   .burger__close:hover {
     opacity: .5
@@ -3280,6 +3362,9 @@ body {
   .blog-card__btn:active {
     color: #fff;
     background-color: #000
+  }
+  .new-card__title:active {
+    color: var(--green)
   }
   .burger__close:active {
     opacity: .5

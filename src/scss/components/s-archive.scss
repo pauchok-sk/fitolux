@@ -260,4 +260,12 @@
       gap: 20px;
     }
   }
+  &__news {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    @include laptop-min {
+      gap: 20px;
+    }
+  }
 }
