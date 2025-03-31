@@ -223,6 +223,9 @@ body {
 .button._white {
   background-color: #fff
 }
+.button._gray {
+  background-color: var(--light-gray)
+}
 .btn-stroke {
   display: flex;
   align-items: center;
@@ -366,6 +369,9 @@ body {
 }
 .button._white {
   background-color: #fff
+}
+.button._gray {
+  background-color: var(--light-gray)
 }
 .btn-stroke {
   display: flex;
@@ -660,6 +666,58 @@ body {
 }
 .breadcrumbs span:last-child {
   opacity: .7
+}
+.decision-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  grid-column: 2 span
+}
+.decision-card__gallery {
+  position: relative;
+  display: block;
+  padding-bottom: 62%
+}
+.decision-card__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.decision-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 30px;
+  background-color: var(--light-gray)
+}
+.decision-card__title {
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  transition: color .2s ease
+}
+.decision-card__descr {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: var(--gray);
+  font-weight: 300;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.decision-card__btn {
+  max-width: 100%;
+  width: 190px;
+  min-height: 50px;
+  margin-top: auto
 }
 .burger {
   position: fixed;
@@ -1779,9 +1837,12 @@ body {
 }
 .s-archive__body {
   display: flex;
+  align-items: start;
   gap: 50px
 }
 .s-archive__aside {
+  position: sticky;
+  top: 100px;
   width: 395px;
   flex-shrink: 0
 }
@@ -1879,6 +1940,15 @@ body {
 }
 .s-archive__footer-btn span {
   flex: 1
+}
+.s-archive__decisions {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 30px
+}
+.s-archive__more-btn {
+  width: 100%;
+  margin-top: 50px
 }
 .footer {
   position: relative;
@@ -2056,6 +2126,9 @@ body {
   .dropdown__body a {
     font-size: 14px
   }
+  .decision-card__title {
+    font-size: 20px
+  }
   .header__nav {
     gap: 25px;
     padding-left: 25px
@@ -2148,8 +2221,20 @@ body {
   .s-stocks__item-content {
     font-size: 16px
   }
+  .s-archive__aside {
+    width: 310px
+  }
+  .s-archive__footer-item {
+    padding: 12px
+  }
+  .s-archive__footer-btn {
+    font-size: 20px
+  }
 }
 @media (max-width:1365px) {
+  .decision-card__body {
+    padding: 20px
+  }
   .header__contacts-body {
     display: none
   }
@@ -2237,6 +2322,36 @@ body {
   }
   .s-stocks__item-body {
     flex: 1
+  }
+  .s-archive {
+    overflow: hidden
+  }
+  .s-archive__body {
+    flex-wrap: wrap;
+    gap: 30px
+  }
+  .s-archive__aside {
+    width: 100%;
+    position: static;
+    top: 0
+  }
+  .s-archive__nav {
+    flex-direction: row
+  }
+  .s-archive__nav-btn {
+    white-space: nowrap;
+    flex-shrink: 0
+  }
+  .s-archive__stocks {
+    max-width: 395px;
+    margin: 30px auto 0 auto
+  }
+  .s-archive__aside-footer {
+    margin: 30px auto 0 auto;
+    max-width: 500px
+  }
+  .s-archive__decisions {
+    gap: 20px
   }
 }
 @media (max-width:1199px) {
@@ -2333,6 +2448,9 @@ body {
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 20px
+  }
+  .decision-card__title {
+    font-size: 18px
   }
   .search-form {
     padding: 15px 20px
@@ -2470,6 +2588,9 @@ body {
   .slider-scrollbar {
     margin-top: 30px
   }
+  .decision-card {
+    grid-column: 3 span
+  }
   .intro {
     padding-top: 110px;
     min-height: 500px
@@ -2551,6 +2672,9 @@ body {
   .s-stocks__btn-more {
     margin-top: 25px
   }
+  .s-archive__more-btn {
+    margin-top: 30px
+  }
   .footer__flower-right {
     bottom: auto;
     top: 0;
@@ -2626,6 +2750,12 @@ body {
   }
 }
 @media (max-width:479px) {
+  .decision-card {
+    grid-column: 6 span
+  }
+  .decision-card__btn {
+    width: 100%
+  }
   .intro-main__slide-btn {
     width: 100%
   }
@@ -2657,6 +2787,9 @@ body {
   .button._white:hover {
     background-color: var(--light)
   }
+  .button._gray:hover {
+    background-color: var(--concrete)
+  }
   .btn-stroke:hover {
     color: #fff;
     background-color: #000
@@ -2672,6 +2805,9 @@ body {
   }
   .button._white:hover {
     background-color: var(--light)
+  }
+  .button._gray:hover {
+    background-color: var(--concrete)
   }
   .btn-stroke:hover {
     color: #fff;
@@ -2695,6 +2831,9 @@ body {
   }
   .breadcrumbs a:hover {
     text-decoration: underline
+  }
+  .decision-card__title:hover {
+    color: var(--green)
   }
   .burger__close:hover {
     opacity: .5
@@ -2793,6 +2932,9 @@ body {
   .button._white:active {
     background-color: var(--light)
   }
+  .button._gray:active {
+    background-color: var(--concrete)
+  }
   .btn-stroke:active {
     color: #fff;
     background-color: #000
@@ -2808,6 +2950,9 @@ body {
   }
   .button._white:active {
     background-color: var(--light)
+  }
+  .button._gray:active {
+    background-color: var(--concrete)
   }
   .btn-stroke:active {
     color: #fff;
@@ -2831,6 +2976,9 @@ body {
   }
   .breadcrumbs a:active {
     text-decoration: underline
+  }
+  .decision-card__title:active {
+    color: var(--green)
   }
   .burger__close:active {
     opacity: .5

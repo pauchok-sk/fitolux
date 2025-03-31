@@ -1,0 +1,68 @@
+.decision-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  grid-column: 2 span;
+  @include tablet {
+    grid-column: 3 span;
+  }
+  @include mobile {
+    grid-column: 6 span;
+  }
+  &__gallery {
+    position: relative;
+    display: block;
+    padding-bottom: 62%;
+  }
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 30px;
+    background-color: var(--light-gray);
+    @include laptop {
+      padding: 20px;
+    }
+  }
+  &__title {
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--green);
+    }
+    @include desktop {
+      font-size: 20px;
+    }
+    @include laptop-min {
+      font-size: 18px;
+    }
+  }
+  &__descr {
+    margin: 0px 0px 20px 0px;
+    font-size: 16px;
+    color: var(--gray);
+    font-weight: 300;
+    @include overflowText(3);
+  }
+  &__btn {
+    max-width: 100%;
+    width: 190px;
+    min-height: 50px;
+    margin-top: auto;
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

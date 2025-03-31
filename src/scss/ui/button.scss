@@ -35,6 +35,12 @@
       background-color: var(--light);
     }
   }
+  &._gray {
+    background-color: var(--light-gray);
+    @include hover {
+      background-color: var(--concrete);
+    }
+  }
 }
 
 .btn-stroke {

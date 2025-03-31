@@ -1,16 +1,37 @@
 .s-archive {
+  @include laptop {
+    overflow: hidden;
+  }
   &__body {
     display: flex;
+    align-items: start;
     gap: 50px;
+    @include laptop {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
   &__aside {
+    position: sticky;
+    top: 100px;
     width: 395px;
     flex-shrink: 0;
+    @include desktop-min {
+      width: 310px;
+    }
+    @include laptop {
+      width: 100%;
+      position: static;
+      top: 0;
+    }
   }
   &__nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @include laptop {
+      flex-direction: row;
+    }
   }
   &__nav-btn {
     display: flex;
@@ -36,6 +57,10 @@
       color: white;
       background-color: var(--green);
     }
+    @include laptop {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
 
     svg {
       width: 30px;
@@ -47,6 +72,10 @@
     border-radius: 16px;
     border: 2px solid var(--alabaster);
     margin-top: 50px;
+    @include laptop {
+      max-width: 395px;
+      margin: 30px auto 0px auto;
+    }
   }
   &__stocks-head {
     @include flex-between;
@@ -91,12 +120,19 @@
     flex-direction: column;
     gap: 30px;
     margin-top: 50px;
+    @include laptop {
+      margin: 30px auto 0px auto;
+      max-width: 500px;
+    }
   }
   &__footer-item {
     width: 100%;
     padding: 16px;
     border-radius: 16px;
     border: 2px solid var(--alabaster);
+    @include desktop-min {
+      padding: 12px;
+    }
   }
   &__footer-btn {
     display: flex;
@@ -108,9 +144,27 @@
     
     color: white;
     font-size: 24px;
+    @include desktop-min {
+      font-size: 20px
+    }
 
     span {
       flex: 1;
+    }
+  }
+  &__decisions {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    @include laptop {
+      gap: 20px;
+    }
+  }
+  &__more-btn {
+    width: 100%;
+    margin-top: 50px;
+    @include tablet {
+      margin-top: 30px;
     }
   }
 }
