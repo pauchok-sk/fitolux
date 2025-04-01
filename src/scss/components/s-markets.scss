@@ -1,0 +1,41 @@
+.s-markets {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+    @include tablet {
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  &__item {
+    display: block;
+    grid-column: 1 span;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 250px;
+    @include laptop-min {
+      min-height: 195px;
+    }
+    @include tablet {
+      grid-column: 2 span;
+    }
+  }
+  &__content {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 150%;
+    @include tablet {
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

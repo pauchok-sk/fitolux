@@ -179,8 +179,7 @@
 
 		<section class="intro">
 			<picture class="intro__bg">
-				<source srcset="img/intro-blog-mob.jpg" media="(max-width: 768px)" />
-				<img src="img/intro-blog.jpg" alt="image" />
+				<img src="img/intro-contacts-0.jpg" alt="image" />
 			</picture>
 			<div class="container intro__container">
 				<div class="intro__head">
@@ -189,33 +188,49 @@
 							<span class="aioseo-breadcrumb">
 								<a href="/" title="Главная">Главная</a>
 							</span>
-							<span class="aioseo-breadcrumb"> Блог </span>
+							<span class="aioseo-breadcrumb"> Где приобрести профессиональную продукцию </span>
 						</div>
 					</div>
-					<h1 class="main-title">Блог</h1>
+					<h1 class="main-title">Где приобрести</h1>
+					<div class="sect-title">профессиональную продукцию <br> Ecotriatria professional</div>
 				</div>
 				<div class="swiper intro__adv-slider">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide intro__adv-slide">
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
 							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
 							<span>Продукция</span>
-						</div>
-						<div class="swiper-slide intro__adv-slide">
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
 							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
 							<span>Акции</span>
-						</div>
-						<div class="swiper-slide intro__adv-slide">
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
 							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
 							<span>Где купить</span>
-						</div>
-						<div class="swiper-slide intro__adv-slide">
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
 							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
 							<span>Решение проблем</span>
-						</div>
-						<div class="swiper-slide intro__adv-slide">
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
 							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
 							<span>Академия Трихологии</span>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -225,46 +240,32 @@
 			<div class="container s-archive__container">
 				<div class="s-archive__body">
 					<aside class="s-archive__aside">
-						<ul class="list s-archive__nav" id="archive-nav">
+						<ul data-spollers class="list s-archive__nav _col">
 							<li>
 								<a href="#" class="s-archive__nav-btn">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-decisions"></use>
-									</svg>
-									<span>Решение проблем</span>
+									Профессиональная продукция Ecotriatria professional
 								</a>
 							</li>
 							<li>
 								<a href="#" class="s-archive__nav-btn">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-medal"></use>
-									</svg>
-									<span>Эксперты</span>
+									Трихологические процедуры Ecotriatria professional
 								</a>
 							</li>
 							<li>
-								<a href="#" class="s-archive__nav-btn _active">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-book"></use>
+								<div data-spoller class="s-archive__nav-btn _spoller-active">
+									<span>Косметика Ecotriatria домашнего применения, фитосборы, коллаген
+										Tormesis</span>
+									<svg class="s-archive__nav-arrow">
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
 									</svg>
-									<span>Блог</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="s-archive__nav-btn">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-list"></use>
-									</svg>
-									<span>Новости</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="s-archive__nav-btn">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-question"></use>
-									</svg>
-									<span>Вопросы и ответы</span>
-								</a>
+								</div>
+								<div>
+									<ul class="list s-archive__nav-sublist">
+										<li><a href="#">Интернет-магазин</a></li>
+										<li><a href="#" class="_active">Маркетплейсы</a></li>
+										<li><a href="#">Точки продаж в вашем городе</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
 						<div data-da=".s-archive__container, 1365" class="s-archive__stocks">
@@ -313,191 +314,77 @@
 						</div>
 					</aside>
 					<div class="s-archive__main">
-						<div class="s-archive__social-wrapper">
-							<div class="s-archive__social" style="
-              background: url(&quot;img/blog-yt.jpg&quot;) top right / cover
-                no-repeat;
-            ">
-								<ul class="list s-archive__social-list">
-									<li>
-										<a href="#" target="_blank" class="s-archive__social-list-btn">
-											<div class="s-archive__social-list-circle">
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
-												</svg>
-											</div>
-											<span>Youtube</span>
-										</a>
-									</li>
-								</ul>
-								<h5 class="s-archive__social-title">
-									Подписывайтесь на наш Youtube канал
-								</h5>
+						<div class="s-markets">
+							<div class="warn">
+								<img src="img/warn.svg" alt="icon" class="warn__icon" />
+								<span>Официальный представитель брендов ECOTRIATRIA и TORMESIS на
+									маркетплейсах – магазин ETASFERA</span>
+								<button class="btn-reset warn__delete">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-close"></use>
+									</svg>
+								</button>
 							</div>
-							<div class="s-archive__social" style="
-              background: url(&quot;img/blog-socials.jpg&quot;) bottom right /
-                cover no-repeat;
-            ">
-								<ul class="list s-archive__social-list">
-									<li>
-										<a href="#" target="_blank" class="s-archive__social-list-btn">
-											<div class="s-archive__social-list-circle">
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
-												</svg>
-											</div>
-											<span>Телеграм</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" target="_blank" class="s-archive__social-list-btn">
-											<div class="s-archive__social-list-circle">
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
-												</svg>
-											</div>
-											<span>Вконтакте</span>
-										</a>
-									</li>
-								</ul>
-								<h5 class="s-archive__social-title">Больше информации в наших соцсетях</h5>
+							<div class="s-markets__wrapper">
+								<a href="#" target="_blank" class="s-markets__item" style="
+                background: url(&quot;img/ozon.jpg&quot;) center / cover
+                  no-repeat;
+              ">
+									<div class="tag">
+										<div class="tag__circle">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+											</svg>
+										</div>
+										<span>Ozon</span>
+									</div>
+								</a>
+								<a href="#" target="_blank" class="s-markets__item" style="
+                background: url(&quot;img/wb.jpg&quot;) center / cover
+                  no-repeat;
+              ">
+									<div class="tag">
+										<div class="tag__circle">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+											</svg>
+										</div>
+										<span>Wildberries</span>
+									</div>
+								</a>
+							</div>
+							<div class="s-markets__content">
+								<p>
+									Не следует, однако забывать, что консультация с широким активом
+									обеспечивает широкому кругу (специалистов) участие в формировании
+									модели развития. Значимость этих проблем настолько очевидна, что
+									укрепление и развитие структуры в значительной степени
+									обуславливает создание дальнейших направлений развития.
+								</p>
+								<p>
+									Значимость этих проблем настолько очевидна, что консультация с
+									широким активом обеспечивает широкому кругу (специалистов) участие
+									в формировании позиций, занимаемых участниками в отношении
+									поставленных задач. Равным образом новая модель организационной
+									деятельности играет важную роль в формировании систем массового
+									участия. Равным образом рамки и место обучения кадров влечет за
+									собой процесс внедрения и модернизации позиций, занимаемых
+									участниками в отношении поставленных задач. Идейные соображения
+									высшего порядка, а также начало повседневной работы по
+									формированию позиции играет важную роль в формировании
+									существенных финансовых и административных условий.
+								</p>
+								<p>
+									Равным образом укрепление и развитие структуры влечет за собой
+									процесс внедрения и модернизации новых предложений. Задача
+									организации, в особенности же укрепление и развитие структуры
+									требуют определения и уточнения соответствующий условий
+									активизации. Таким образом начало повседневной работы по
+									формированию позиции способствует подготовки и реализации позиций,
+									занимаемых участниками в отношении поставленных задач. 
+								</p>
 							</div>
 						</div>
-						<div class="s-archive__blog">
-							<article class="blog-card">
-								<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="blog-card__gallery">
-									<div class="blog-card__gallery-btn"></div>
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="#" class="blog-card__gallery">
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="blog-card__gallery">
-									<div class="blog-card__gallery-btn"></div>
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="#" class="blog-card__gallery">
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="blog-card__gallery">
-									<div class="blog-card__gallery-btn"></div>
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="#" class="blog-card__gallery">
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="blog-card__gallery">
-									<div class="blog-card__gallery-btn"></div>
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="#" class="blog-card__gallery">
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-						</div>
-						<button class="button s-archive__more-btn _gray">показать еще</button>
 					</div>
 				</div>
 			</div>
@@ -710,6 +597,7 @@
 	<script src="./files/js/spoller.js?_v=20250401155305"></script>
 	<script src="./files/js/fancybox.min.js?_v=20250401155305"></script>
 	<script src="./files/js/inputmask.min.js?_v=20250401155305"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250401155305" type="text/javascript"></script>
 	<script src="js/app.min.js?_v=20250401155305"></script>
 </body>
 
