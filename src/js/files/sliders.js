@@ -208,9 +208,7 @@ export default function sliders() {
     });
   }
 
-  const archiveStockSlider = document.querySelector(
-    ".s-archive__stock-slider"
-  );
+  const archiveStockSlider = document.querySelector(".s-archive__stock-slider");
 
   if (archiveStockSlider) {
     const slider = new Swiper(archiveStockSlider, {
@@ -225,4 +223,17 @@ export default function sliders() {
       },
     });
   }
+}
+
+const contactsSlider = document.querySelector(".s-contacts__slider");
+
+if (contactsSlider && window.matchMedia("(max-width: 1365px)").matches) {
+  const slider = new Swiper(contactsSlider, {
+    speed: 700,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    // autoplay: {
+    //   delay: 3000,
+    // },
+  });
 }

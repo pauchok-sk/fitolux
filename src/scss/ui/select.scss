@@ -1,0 +1,17 @@
+.select {
+  cursor: pointer;
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid var(--light);
+  background: url("@img/arrow.svg") right 14px center / 14px auto no-repeat;
+  background-color: white;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font-size: 18px;
+  font-weight: 300;
+}

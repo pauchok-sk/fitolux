@@ -32,10 +32,23 @@
     @include laptop {
       flex-direction: row;
     }
+
+    &._col {
+      @include laptop {
+        flex-direction: column;
+        // max-width: 500px;
+        // margin: 0 auto;
+
+        .s-archive__nav-btn {
+          white-space: wrap;
+        }
+      }
+    }
   }
   &__nav-btn {
     display: flex;
     align-items: center;
+    cursor: pointer;
     gap: 20px;
     background-color: var(--alabaster);
     border-radius: 8px;
@@ -63,10 +76,28 @@
       flex-shrink: 0;
     }
 
+    &._spoller-active {
+      background-color: var(--green);
+      color: white;
+      .s-archive__nav-arrow {
+        transform: rotate(180deg);
+      }
+    }
+    &[data-spoller] {
+      span {
+        flex: 1;
+      }
+    }
+
     svg {
       width: 30px;
       height: 30px;
     }
+  }
+  &__nav-arrow {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.2s ease;
   }
   &__stocks {
     padding: 16px;
@@ -155,6 +186,10 @@
   }
   &__main {
     flex: 1;
+    @include laptop {
+      flex: none;
+      width: 100%;
+    }
   }
   &__decisions {
     display: grid;
@@ -266,6 +301,29 @@
     gap: 30px;
     @include laptop-min {
       gap: 20px;
+    }
+  }
+  &__nav-sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--alabaster);
+    @include tablet {
+      padding: 20px;
+    }
+
+    a {
+      font-size: 16px;
+      font-weight: 300;
+      transition: color .2s ease;
+      @include hover {
+        color: var(--green);
+      }
+      &._active {
+        color: var(--green);
+      }
     }
   }
 }
