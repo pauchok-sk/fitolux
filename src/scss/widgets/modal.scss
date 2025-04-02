@@ -1,11 +1,42 @@
 .modal {
   max-width: calc(100% - 30px);
+  padding: 50px;
   width: 500px;
+  border-radius: 12px;
   display: none;
+  @include tablet {
+    padding: 30px 20px;
+  }
+
+  &._big {
+    width: 1200px;
+    max-width: calc(100vw - 30px)
+  }
+
+  &__close {
+    @include flex-center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 14px;
+    right: 14px;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--green);
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
   &__title {
-    font-size: 24px;
-    text-align: center;
-    margin: 0px 0px 20px 0px;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0px 0px 30px 0px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
   &__form {
     display: flex;

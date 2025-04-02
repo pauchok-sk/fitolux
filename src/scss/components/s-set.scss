@@ -1,0 +1,80 @@
+.s-set {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+    gap: 20px;
+    justify-content: space-between;
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr)
+    }
+  }
+  &__add {
+    @include flex-center;
+    flex-direction: column;
+    position: relative;
+    min-height: 470px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 30px;
+    cursor: pointer;
+    width: 100%;
+
+    color: white;
+    text-align: center;
+
+    z-index: 1;
+    @include hover {
+      &::before {
+        opacity: 0.75;
+      }
+    }
+    @include tablet {
+      min-height: 350px;
+      padding: 20px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: var(--green-dark);
+      opacity: 0.7;
+      z-index: -1;
+      transition: opacity 0.2s ease;
+    }
+  }
+  &__add-plus {
+    @include flex-center;
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 30px;
+    @include tablet {
+      width: 100px;
+      height: 100px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  &__add-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  &__add-content {
+    font-size: 18px;
+    max-width: 400px;
+    margin: 0;
+  }
+}

@@ -512,7 +512,9 @@
             }));
         }));
     }
-    Fancybox.bind("[data-fancybox]");
+    Fancybox.bind("[data-fancybox]", {
+        closeButton: false
+    });
     dropdown();
     burger();
     sliders();

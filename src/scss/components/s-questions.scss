@@ -1,0 +1,60 @@
+.s-questions {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-gray);
+  z-index: 1;
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    @include laptop-min {
+      width: 90%;
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    row-gap: 40px;
+    @include laptop-min {
+      gap: 30px;
+    }
+  }
+  &__item {
+    grid-column: 1 span;
+    @include laptop-min {
+      grid-column: 2 span;
+    }
+  }
+  &__item-title {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0px 0px 30px 0px;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__item-content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    a {
+      font-weight: 400;
+      transition: color .2s ease;
+      @include hover {
+        color: var(--green);
+      }
+    }
+  }
+}

@@ -13,7 +13,10 @@ import searchToggle from "./files/searchToggle.js";
 import sliders from "./files/sliders.js";
 import tab from "./files/tab.js";
 
-Fancybox.bind("[data-fancybox]");
+Fancybox.bind("[data-fancybox]", {
+  closeButton: false,
+});
+// Fancybox.show([{ src: "#modal-products", type: "inline" }]);
 
 dropdown();
 burger();

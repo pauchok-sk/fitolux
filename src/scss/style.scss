@@ -30,11 +30,13 @@
 @import "./ui/tag";
 @import "./ui/warn";
 @import "./ui/berocket";
+@import "./ui/scroll";
 
 // widgets
 @import "./widgets/burger";
 @import "./widgets/search-form";
 @import "./widgets/modal";
+@import "./widgets/choose-products";
 
 // components
 @import "./components/header";
@@ -55,5 +57,7 @@
 @import "./components/s-markets";
 @import "./components/s-catalog-head";
 @import "./components/s-catalog";
+@import "./components/s-set";
+@import "./components/s-questions";
 
 @import "./components/footer";

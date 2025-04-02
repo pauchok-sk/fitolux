@@ -157,7 +157,10 @@ template {
   --concrete-dark: #999;
   --alabaster: #f7f7f7;
   --wild: #f5f5f5;
-  --green: #40c1ac
+  --green: #40c1ac;
+  --green-dark: #024439;
+  --red: #cb6565;
+  --red-dark: #a84c4c
 }
 html {
   box-sizing: border-box
@@ -227,6 +230,10 @@ body {
 .button._gray {
   background-color: var(--light-gray)
 }
+.button._red {
+  background-color: var(--red);
+  color: #fff
+}
 .btn-stroke {
   display: flex;
   align-items: center;
@@ -240,10 +247,15 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  gap: 16px;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 400;
   transition: color .2s ease,background-color .2s ease
+}
+.btn-stroke svg {
+  width: 18px;
+  height: 18px
 }
 .list {
   padding-left: 0;
@@ -374,6 +386,10 @@ body {
 .button._gray {
   background-color: var(--light-gray)
 }
+.button._red {
+  background-color: var(--red);
+  color: #fff
+}
 .btn-stroke {
   display: flex;
   align-items: center;
@@ -387,10 +403,15 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  gap: 16px;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 400;
   transition: color .2s ease,background-color .2s ease
+}
+.btn-stroke svg {
+  width: 18px;
+  height: 18px
 }
 ._scrollable {
   display: flex;
@@ -426,26 +447,25 @@ body {
   margin: 0
 }
 .product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   border-radius: 8px;
   grid-column: 1 span;
   padding: 30px;
   border: 1px solid var(--light)
 }
 .product-card__gallery {
-  position: relative;
   margin-bottom: 20px;
-  padding-bottom: 75%
+  width: 100%
 }
 .product-card__img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
+  max-width: 365px;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
+  max-height: 275px;
+  margin: 0 auto
 }
 .product-card__title {
   display: block;
@@ -460,8 +480,7 @@ body {
   justify-content: center;
   margin-top: auto;
   gap: 20px;
-  font-size: 24px;
-  margin-bottom: 32px
+  font-size: 24px
 }
 .product-card__price div {
   flex: 1;
@@ -470,6 +489,7 @@ body {
 }
 .product-card__form {
   display: flex;
+  margin-top: 32px;
   gap: 10px
 }
 .product-card__form-number {
@@ -526,6 +546,24 @@ body {
 }
 .product-card__pay img {
   width: 20px
+}
+.product-card__added-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  flex-direction: column;
+  gap: 20px;
+  inset: 0;
+  background-color: rgba(0,0,0,.4);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: opacity .2s ease,visibility .2s ease
+}
+.product-card__added-nav .button {
+  max-width: 300px;
+  width: 100%
 }
 .slider-btn {
   display: flex;
@@ -1065,6 +1103,20 @@ a.tag:hover {
   top: 0;
   border: 1px solid var(--light)
 }
+._scroll {
+  padding-right: 10px
+}
+._scroll::-webkit-scrollbar {
+  width: 8px
+}
+._scroll::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: #eaefee
+}
+._scroll::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #278878
+}
 .burger {
   position: fixed;
   display: flex;
@@ -1263,13 +1315,34 @@ a.tag:hover {
 }
 .modal {
   max-width: calc(100% - 30px);
+  padding: 50px;
   width: 500px;
+  border-radius: 12px;
   display: none
 }
+.modal._big {
+  width: 1200px;
+  max-width: calc(100vw - 30px)
+}
+.modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 14px;
+  right: 14px;
+  transition: color .2s ease
+}
+.modal__close svg {
+  width: 25px;
+  height: 25px
+}
 .modal__title {
-  font-size: 24px;
-  text-align: center;
-  margin: 0 0 20px 0
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 30px 0
 }
 .modal__form {
   display: flex;
@@ -1282,6 +1355,44 @@ a.tag:hover {
 }
 .modal__form-btn {
   width: 100%
+}
+.choose-products {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 670px;
+  overflow-y: auto
+}
+.choose-products__item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--light);
+  padding: 20px
+}
+.choose-products__item-gallery {
+  display: block;
+  width: 160px;
+  flex-shrink: 0
+}
+.choose-products__item-img {
+  width: 100%
+}
+.choose-products__item-title {
+  font-size: 20px;
+  font-weight: 400;
+  flex: 1;
+  transition: color .2s ease
+}
+.choose-products__item-footer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0
+}
+.choose-products__item-price {
+  font-size: 24px
 }
 .header {
   position: fixed;
@@ -2789,6 +2900,113 @@ a.tag:hover {
   grid-template-columns: repeat(3,1fr);
   gap: 20px
 }
+.s-set__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(425px,1fr));
+  gap: 20px;
+  justify-content: space-between
+}
+.s-set__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  min-height: 470px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 30px;
+  cursor: pointer;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  z-index: 1
+}
+.s-set__add::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--green-dark);
+  opacity: .7;
+  z-index: -1;
+  transition: opacity .2s ease
+}
+.s-set__add-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 30px
+}
+.s-set__add-plus::after,
+.s-set__add-plus::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px
+}
+.s-set__add-plus::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.s-set__add-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px
+}
+.s-set__add-content {
+  font-size: 18px;
+  max-width: 400px;
+  margin: 0
+}
+.s-questions {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-gray);
+  z-index: 1
+}
+.s-questions__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: -1
+}
+.s-questions__container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 80px;
+  row-gap: 40px
+}
+.s-questions__item {
+  grid-column: 1 span
+}
+.s-questions__item-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 30px 0
+}
+.s-questions__item-content {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%
+}
+.s-questions__item-content p {
+  margin: 0
+}
+.s-questions__item-content p:not(:last-child) {
+  margin-bottom: 20px
+}
+.s-questions__item-content a {
+  font-weight: 400;
+  transition: color .2s ease
+}
 .footer {
   position: relative;
   overflow: hidden;
@@ -3376,8 +3594,23 @@ a.tag:hover {
   .product-card__price {
     gap: 15px;
     font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 20px
+    line-height: 24px
+  }
+  .product-card__form {
+    margin-top: 20px
+  }
+  .product-card__added-nav {
+    position: static;
+    background-color: rgba(0,0,0,0);
+    opacity: 1;
+    visibility: visible;
+    margin-top: 20px;
+    flex-direction: row
+  }
+  .product-card__added-nav .button {
+    width: calc(50% - 10px);
+    padding-left: 10px!important;
+    padding-right: 10px!important
   }
   .decision-card__title {
     font-size: 18px
@@ -3397,6 +3630,18 @@ a.tag:hover {
   }
   .search-form {
     padding: 15px 20px
+  }
+  .choose-products {
+    max-height: 500px
+  }
+  .choose-products__item {
+    gap: 20px;
+    flex-wrap: wrap
+  }
+  .choose-products__item-footer {
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between
   }
   .header__body {
     padding: 15px 20px
@@ -3508,6 +3753,15 @@ a.tag:hover {
   .s-catalog__wrapper {
     grid-template-columns: repeat(2,1fr)
   }
+  .s-questions__logo {
+    width: 90%
+  }
+  .s-questions__container {
+    gap: 30px
+  }
+  .s-questions__item {
+    grid-column: 2 span
+  }
   .footer__head {
     display: flex;
     flex-direction: column
@@ -3586,6 +3840,12 @@ a.tag:hover {
   .warn__delete {
     top: 10px;
     right: 10px
+  }
+  .modal {
+    padding: 30px 20px
+  }
+  .modal__title {
+    margin-bottom: 20px
   }
   .intro {
     padding-top: 110px;
@@ -3760,6 +4020,17 @@ a.tag:hover {
     right: -140px;
     bottom: -60px
   }
+  .s-set__add {
+    min-height: 350px;
+    padding: 20px
+  }
+  .s-set__add-plus {
+    width: 100px;
+    height: 100px
+  }
+  .s-questions__item-title {
+    font-size: 24px
+  }
   .footer__flower-right {
     bottom: auto;
     top: 0;
@@ -3801,6 +4072,10 @@ a.tag:hover {
   .warn {
     font-size: 16px;
     align-items: start
+  }
+  .choose-products__item {
+    flex-direction: column;
+    text-align: center
   }
   .s-products__slider .product-card {
     width: 340px!important
@@ -3905,6 +4180,9 @@ a.tag:hover {
   .new-card__btn {
     width: 100%
   }
+  .choose-products__item-footer {
+    flex-direction: column
+  }
   .intro-main__slide-btn {
     width: 100%
   }
@@ -3922,6 +4200,9 @@ a.tag:hover {
   }
   .s-contacts__map {
     height: 350px
+  }
+  .s-set__container {
+    grid-template-columns: repeat(1,1fr)
   }
 }
 @media (max-width:419px) {
@@ -3945,6 +4226,9 @@ a.tag:hover {
   .button._gray:hover {
     background-color: var(--concrete)
   }
+  .button._red:hover {
+    background-color: var(--red-dark)
+  }
   .btn-stroke:hover {
     color: #fff;
     background-color: #000
@@ -3964,12 +4248,19 @@ a.tag:hover {
   .button._gray:hover {
     background-color: var(--concrete)
   }
+  .button._red:hover {
+    background-color: var(--red-dark)
+  }
   .btn-stroke:hover {
     color: #fff;
     background-color: #000
   }
+  .product-card:hover .product-card__added-nav {
+    opacity: 1;
+    visibility: visible
+  }
   .product-card__title:hover {
-    color: var(--gray)
+    color: var(--green)
   }
   .product-card__btn-num:hover {
     background-color: var(--light)
@@ -4027,6 +4318,12 @@ a.tag:hover {
   }
   .search-form__btn:hover {
     opacity: .5
+  }
+  .modal__close:hover {
+    color: var(--green)
+  }
+  .choose-products__item-title:hover {
+    color: var(--green)
   }
   .header__list a:hover::before {
     right: 0
@@ -4096,6 +4393,12 @@ a.tag:hover {
   .s-contacts__item-link:hover {
     color: var(--green)
   }
+  .s-set__add:hover::before {
+    opacity: .75
+  }
+  .s-questions__item-content a:hover {
+    color: var(--green)
+  }
   .footer__social-btn:hover {
     opacity: .6
   }
@@ -4125,6 +4428,9 @@ a.tag:hover {
   .button._gray:active {
     background-color: var(--concrete)
   }
+  .button._red:active {
+    background-color: var(--red-dark)
+  }
   .btn-stroke:active {
     color: #fff;
     background-color: #000
@@ -4144,12 +4450,19 @@ a.tag:hover {
   .button._gray:active {
     background-color: var(--concrete)
   }
+  .button._red:active {
+    background-color: var(--red-dark)
+  }
   .btn-stroke:active {
     color: #fff;
     background-color: #000
   }
+  .product-card:active .product-card__added-nav {
+    opacity: 1;
+    visibility: visible
+  }
   .product-card__title:active {
-    color: var(--gray)
+    color: var(--green)
   }
   .product-card__btn-num:active {
     background-color: var(--light)
@@ -4207,6 +4520,12 @@ a.tag:hover {
   }
   .search-form__btn:active {
     opacity: .5
+  }
+  .modal__close:active {
+    color: var(--green)
+  }
+  .choose-products__item-title:active {
+    color: var(--green)
   }
   .header__list a:active::before {
     right: 0
@@ -4274,6 +4593,12 @@ a.tag:hover {
     color: var(--green)
   }
   .s-contacts__item-link:active {
+    color: var(--green)
+  }
+  .s-set__add:active::before {
+    opacity: .75
+  }
+  .s-questions__item-content a:active {
     color: var(--green)
   }
   .footer__social-btn:active {

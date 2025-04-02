@@ -41,6 +41,13 @@
       background-color: var(--concrete);
     }
   }
+  &._red {
+    background-color: var(--red);
+    color: white;
+    @include hover {
+      background-color: var(--red-dark);
+    }
+  }
 }
 
 .btn-stroke {
@@ -52,6 +59,7 @@
   border-radius: 50px;
   background-color: transparent;
   width: fit-content;
+  gap: 16px;
 
   text-transform: uppercase;
   font-size: 16px;
@@ -60,5 +68,10 @@
   @include hover {
     color: white;
     background-color: black;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
   }
 }
