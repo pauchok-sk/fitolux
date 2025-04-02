@@ -1,0 +1,35 @@
+.s-catalog {
+  &__head {
+    margin-bottom: 20px;
+  }
+  &__select {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    border: none;
+    padding: 0;
+    padding-right: 18px;
+    background: url('@img/arrows.svg') right 0 center / 6px auto no-repeat;
+    outline: none;
+
+    font-size: 18px;
+    font-weight: 300;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-min {
+      .product-card {
+        grid-column: 2 span;
+      }
+    }
+  }
+}

@@ -15,6 +15,13 @@
   }
 }
 
+.sect-top-off {
+  padding-top: 0 !important;
+}
+.sect-bottom-off {
+  padding-bottom: 0 !important;
+}
+
 .s-head {
   @include flex-between;
   gap: 30px;

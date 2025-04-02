@@ -317,7 +317,7 @@
     a {
       font-size: 16px;
       font-weight: 300;
-      transition: color .2s ease;
+      transition: color 0.2s ease;
       @include hover {
         color: var(--green);
       }
@@ -325,5 +325,42 @@
         color: var(--green);
       }
     }
+  }
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__filter-btn {
+    @include flex-between;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--alabaster);
+
+    font-size: 18px;
+    font-weight: 300;
+    transition: background-color 0.2s ease;
+    @include hover {
+      background-color: var(--light);
+    }
+
+    &._spoller-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s ease;
+    }
+  }
+  &__filter-body {
+    padding: 30px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--alabaster);
   }
 }

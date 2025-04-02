@@ -29,6 +29,7 @@
 @import "./ui/select";
 @import "./ui/tag";
 @import "./ui/warn";
+@import "./ui/berocket";
 
 // widgets
 @import "./widgets/burger";
@@ -52,5 +53,7 @@
 @import "./components/faq";
 @import "./components/s-contacts";
 @import "./components/s-markets";
+@import "./components/s-catalog-head";
+@import "./components/s-catalog";
 
 @import "./components/footer";
