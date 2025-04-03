@@ -1,0 +1,57 @@
+.s-method {
+  padding-top: 0;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 150%;
+    @include tablet {
+      font-size: 18px;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__bottom-content {
+    padding: 40px;
+    border-radius: 8px;
+    background-color: var(--light-gray);
+    margin-top: 50px;
+    
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 150%;
+
+    @include tablet {
+      padding: 20px;
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__download-btn {
+    margin-top: 50px;
+    min-height: 50px;
+    width: 350px;
+    @include tablet {
+      margin-top: 30px;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
