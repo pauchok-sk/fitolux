@@ -1,0 +1,134 @@
+.s-cooperation {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--concrete);
+  z-index: 1;
+  &__flower {
+    position: absolute;
+    top: -250px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: -1;
+  }
+  &__container {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    @include laptop {
+      flex-wrap: wrap;
+    }
+  }
+  &__mail {
+    flex: 0 1 500px;
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3.5px);
+    @include laptop {
+      width: 100%;
+      flex: none;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+  }
+  &__mail-content {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--gray);
+    margin: 0px 0px 40px 0px;
+  }
+  &__mail-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--green);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: var(--green);
+    }
+  }
+  &__form-wrapper {
+    flex: 1;
+    padding: 50px;
+    border-radius: 8px;
+    border: 2px solid black;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3.5px);
+    @include desktop-min {
+      padding: 30px;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+  }
+  &__form-title {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0px 0px 40px 0px;
+    @include laptop-min {
+      font-size: 32px;
+    }
+    @include tablet {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    @include desktop-min {
+      gap: 30px;
+    }
+    @include tablet {
+      gap: 10px;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+  &__form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include tablet {
+      grid-column: 2 span;
+    }
+
+    textarea {
+      flex: 1;
+      @include tablet {
+        height: 120px;
+      }
+    }
+  }
+  &__form-item {
+    width: 100%;
+  }
+  &__form-policy {
+    margin: 8px 0px 0px 0px;
+    font-size: 16px;
+    font-weight: 300;
+
+    a {
+      text-decoration: underline;
+      transition: color .2s ease;
+      @include hover {
+        text-decoration: none;
+        color: var(--green);
+      }
+    }
+  }
+}

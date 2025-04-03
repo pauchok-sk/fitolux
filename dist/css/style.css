@@ -655,6 +655,10 @@ body {
   background: rgba(0,0,0,0);
   border-color: #000
 }
+.input._white {
+  background-color: #fff;
+  border-color: var(--light)
+}
 .input::-webkit-input-placeholder {
   color: #000
 }
@@ -666,6 +670,9 @@ body {
 }
 .input::placeholder {
   color: #000
+}
+textarea.input {
+  resize: none
 }
 .input-policy {
   display: none
@@ -3314,6 +3321,168 @@ a.tag:hover {
   overflow: hidden;
   height: 590px
 }
+.s-contacts-main__container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 40px
+}
+.s-contacts-main__info {
+  flex: 0 1 600px
+}
+.s-contacts-main__tel {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  transition: color .2s ease
+}
+.s-contacts-main__info-item {
+  margin-top: 30px
+}
+.s-contacts-main__info-title {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--silver);
+  margin-bottom: 20px
+}
+.s-contacts-main__item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 30px
+}
+.s-contacts-main__mail {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%
+}
+.s-contacts-main__mail a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color .2s ease
+}
+.s-contacts-main__info-content {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%
+}
+.s-contacts-main__social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 30px
+}
+.s-contacts-main__social-btn {
+  display: block;
+  width: 48px;
+  height: 48px;
+  transition: color .2s ease
+}
+.s-contacts-main__social-btn svg {
+  width: 100%;
+  height: 100%
+}
+.s-contacts-main__map {
+  position: sticky;
+  top: 100px;
+  overflow: hidden;
+  max-width: 100%;
+  width: 1100px;
+  height: 590px;
+  border-radius: 8px
+}
+.s-cooperation {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--concrete);
+  z-index: 1
+}
+.s-cooperation__flower {
+  position: absolute;
+  top: -250px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  z-index: -1
+}
+.s-cooperation__container {
+  display: flex;
+  align-items: start;
+  gap: 40px
+}
+.s-cooperation__mail {
+  flex: 0 1 500px;
+  padding: 40px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  background: hsla(0,0%,100%,.4);
+  backdrop-filter: blur(3.5px)
+}
+.s-cooperation__mail-content {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--gray);
+  margin: 0 0 40px 0
+}
+.s-cooperation__mail-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  transition: color .2s ease
+}
+.s-cooperation__mail-btn svg {
+  width: 24px;
+  height: 24px;
+  color: var(--green)
+}
+.s-cooperation__form-wrapper {
+  flex: 1;
+  padding: 50px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  background: hsla(0,0%,100%,.4);
+  backdrop-filter: blur(3.5px)
+}
+.s-cooperation__form-title {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0 0 40px 0
+}
+.s-cooperation__form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 60px
+}
+.s-cooperation__form .button {
+  width: 100%
+}
+.s-cooperation__form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+.s-cooperation__form-block textarea {
+  flex: 1
+}
+.s-cooperation__form-item {
+  width: 100%
+}
+.s-cooperation__form-policy {
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  font-weight: 300
+}
+.s-cooperation__form-policy a {
+  text-decoration: underline;
+  transition: color .2s ease
+}
 .footer {
   position: relative;
   overflow: hidden;
@@ -3661,6 +3830,12 @@ a.tag:hover {
   .s-contacts__item-img {
     width: 100%
   }
+  .s-cooperation__form-wrapper {
+    padding: 30px
+  }
+  .s-cooperation__form {
+    gap: 30px
+  }
 }
 @media (max-width:1365px) {
   .decision-card__body {
@@ -3840,6 +4015,16 @@ a.tag:hover {
   .s-contacts__item-img {
     width: 320px
   }
+  .s-contacts-main__map {
+    height: 500px
+  }
+  .s-cooperation__container {
+    flex-wrap: wrap
+  }
+  .s-cooperation__mail {
+    width: 100%;
+    flex: none
+  }
 }
 @media (max-width:1199px) {
   .header__logo {
@@ -3918,6 +4103,9 @@ a.tag:hover {
   }
   .s-contacts__wrapper-map {
     margin-top: 60px
+  }
+  .s-contacts-main__map {
+    height: 400px
   }
   .footer__flower-left {
     left: 0
@@ -4165,6 +4353,15 @@ a.tag:hover {
   }
   .s-contacts__map {
     height: 460px
+  }
+  .s-contacts-main__container {
+    flex-wrap: wrap
+  }
+  .s-contacts-main__map {
+    position: static
+  }
+  .s-cooperation__form-title {
+    font-size: 32px
   }
   .footer__head {
     display: flex;
@@ -4516,6 +4713,31 @@ a.tag:hover {
   }
   .s-contacts__map {
     height: 400px
+  }
+  .s-contacts-main__tel {
+    font-size: 24px
+  }
+  .s-contacts-main__map {
+    height: 350px
+  }
+  .s-cooperation__mail {
+    padding: 20px
+  }
+  .s-cooperation__form-wrapper {
+    padding: 20px
+  }
+  .s-cooperation__form-title {
+    font-size: 28px;
+    margin-bottom: 20px
+  }
+  .s-cooperation__form {
+    gap: 10px
+  }
+  .s-cooperation__form-block {
+    grid-column: 2 span
+  }
+  .s-cooperation__form-block textarea {
+    height: 120px
   }
   .footer__flower-right {
     bottom: auto;
@@ -4931,6 +5153,22 @@ a.tag:hover {
   .s-contacts__item-link:hover {
     color: var(--green)
   }
+  .s-contacts-main__tel:hover {
+    color: var(--green)
+  }
+  .s-contacts-main__mail a:hover {
+    color: var(--green)
+  }
+  .s-contacts-main__social-btn:hover {
+    color: var(--green)
+  }
+  .s-cooperation__mail-btn:hover {
+    color: var(--green)
+  }
+  .s-cooperation__form-policy a:hover {
+    text-decoration: none;
+    color: var(--green)
+  }
   .footer__social-btn:hover {
     opacity: .6
   }
@@ -5140,6 +5378,22 @@ a.tag:hover {
     color: var(--green)
   }
   .s-contacts__item-link:active {
+    color: var(--green)
+  }
+  .s-contacts-main__tel:active {
+    color: var(--green)
+  }
+  .s-contacts-main__mail a:active {
+    color: var(--green)
+  }
+  .s-contacts-main__social-btn:active {
+    color: var(--green)
+  }
+  .s-cooperation__mail-btn:active {
+    color: var(--green)
+  }
+  .s-cooperation__form-policy a:active {
+    text-decoration: none;
     color: var(--green)
   }
   .footer__social-btn:active {
