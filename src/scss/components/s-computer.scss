@@ -1,0 +1,142 @@
+.s-computer {
+  &__quiz {
+    display: flex;
+    gap: 40px;
+    @include desktop-min {
+      flex-direction: column-reverse;
+    }
+  }
+  &__quiz-main {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 1060px;
+    min-height: 420px;
+    padding: 60px;
+    border-radius: 8px;
+    background: var(--light-gray);
+    @include desktop {
+      flex-basis: 935px;
+    }
+    @include desktop-min {
+      flex: none;
+    }
+    @include laptop-min {
+      padding: 30px;
+      min-height: auto;
+    }
+    @include mobile {
+      padding: 20px;
+    }
+  }
+  &__quiz-item {
+  }
+  &__quiz-title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__choose {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__choose-input {
+    display: none;
+    &:checked + label {
+      .s-computer__choose-circle {
+        border: 5px solid black;
+      }
+    }
+  }
+  &__choose-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    border: 1px solid black;
+
+    font-size: 16px;
+    font-weight: 300;
+    @include laptop-min {
+      grid-column: 1 span;
+    }
+    @include tablet-min {
+      grid-column: 2 span;
+    }
+  }
+  &__choose-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--alto);
+  }
+  &__quiz-footer {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 25px;
+    margin-top: auto;
+    @include laptop-min {
+      padding-top: 0;
+      margin-top: 30px;
+    }
+  }
+  &__quiz-next {
+    min-height: 50px;
+    width: 140px;
+  }
+  &__quiz-num {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  &__quis-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border-radius: 8px;
+    background-color: var(--light-gray) !important;
+    padding: 60px;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+    @include desktop-min {
+      flex: none;
+    }
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include mobile {
+      padding: 20px;
+    }
+
+    h4 {
+      font-size: 24px;
+      line-height: 150%;
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

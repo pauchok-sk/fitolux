@@ -157,6 +157,7 @@ template {
   --concrete-dark: #999;
   --alabaster: #f7f7f7;
   --wild: #f5f5f5;
+  --alto: #d9d9d9;
   --green: #40c1ac;
   --green-dark: #024439;
   --red: #cb6565;
@@ -3007,6 +3008,96 @@ a.tag:hover {
   font-weight: 400;
   transition: color .2s ease
 }
+.s-computer__quiz {
+  display: flex;
+  gap: 40px
+}
+.s-computer__quiz-main {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 1060px;
+  min-height: 420px;
+  padding: 60px;
+  border-radius: 8px;
+  background: var(--light-gray)
+}
+.s-computer__quiz-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin: 0 0 40px 0
+}
+.s-computer__choose {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(30%,1fr))
+}
+.s-computer__choose-input {
+  display: none
+}
+.s-computer__choose-input:checked+label .s-computer__choose-circle {
+  border: 5px solid #000
+}
+.s-computer__choose-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  border: 1px solid #000;
+  font-size: 16px;
+  font-weight: 300
+}
+.s-computer__choose-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--alto)
+}
+.s-computer__quiz-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 25px;
+  margin-top: auto
+}
+.s-computer__quiz-next {
+  min-height: 50px;
+  width: 140px
+}
+.s-computer__quiz-num {
+  font-size: 20px;
+  font-weight: 300
+}
+.s-computer__quis-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border-radius: 8px;
+  background-color: var(--light-gray)!important;
+  padding: 60px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%
+}
+.s-computer__quis-info h4 {
+  font-size: 24px;
+  line-height: 150%;
+  margin: 0
+}
+.s-computer__quis-info h4:not(:last-child) {
+  margin-bottom: 10px
+}
+.s-computer__quis-info p {
+  margin: 0
+}
+.s-computer__quis-info p:not(:last-child) {
+  margin-bottom: 20px
+}
 .footer {
   position: relative;
   overflow: hidden;
@@ -3235,6 +3326,9 @@ a.tag:hover {
   .s-contacts__item-tel {
     font-size: 20px
   }
+  .s-computer__quiz-main {
+    flex-basis: 935px
+  }
 }
 @media (max-width:1539px) {
   .new-card {
@@ -3325,6 +3419,15 @@ a.tag:hover {
   .s-catalog-head__program-img {
     right: -55px;
     bottom: -65px
+  }
+  .s-computer__quiz {
+    flex-direction: column-reverse
+  }
+  .s-computer__quiz-main {
+    flex: none
+  }
+  .s-computer__quis-info {
+    flex: none
   }
 }
 @media (max-width:1365px) {
@@ -3762,6 +3865,23 @@ a.tag:hover {
   .s-questions__item {
     grid-column: 2 span
   }
+  .s-computer__quiz-main {
+    padding: 30px;
+    min-height: auto
+  }
+  .s-computer__choose {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .s-computer__choose-label {
+    grid-column: 1 span
+  }
+  .s-computer__quiz-footer {
+    padding-top: 0;
+    margin-top: 30px
+  }
+  .s-computer__quis-info {
+    padding: 30px
+  }
   .footer__head {
     display: flex;
     flex-direction: column
@@ -4031,6 +4151,12 @@ a.tag:hover {
   .s-questions__item-title {
     font-size: 24px
   }
+  .s-computer__quiz-title {
+    font-size: 24px
+  }
+  .s-computer__quis-info h4 {
+    font-size: 20px
+  }
   .footer__flower-right {
     bottom: auto;
     top: 0;
@@ -4143,6 +4269,9 @@ a.tag:hover {
   .s-catalog__wrapper .product-card {
     grid-column: 2 span
   }
+  .s-computer__choose-label {
+    grid-column: 2 span
+  }
   .footer__nav {
     flex-direction: column;
     align-items: center;
@@ -4203,6 +4332,12 @@ a.tag:hover {
   }
   .s-set__container {
     grid-template-columns: repeat(1,1fr)
+  }
+  .s-computer__quiz-main {
+    padding: 20px
+  }
+  .s-computer__quis-info {
+    padding: 20px
   }
 }
 @media (max-width:419px) {
