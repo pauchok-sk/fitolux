@@ -1,0 +1,14 @@
+.s-rec-products {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__slider {
+    @include tablet {
+      overflow: visible !important;
+    }
+    .product-card {
+      height: auto !important;
+      box-sizing: border-box;
+    }
+  }
+}

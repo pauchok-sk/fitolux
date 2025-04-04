@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Фитолукс</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250404193754" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250404193754">
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250404193754">
+	<link rel="stylesheet" href="./files/css/shareon.min.css?_v=20250404193754">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250404193754" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container">
+			<div class="header__body">
+				<a href="#" class="header__logo">
+					<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+				</a>
+				<nav class="header__nav">
+					<ul class="list header__list">
+						<li><a href="#">интернет-магазин</a></li>
+						<li><a href="#">профессиональная продукция</a></li>
+						<li><a href="#">отзывы</a></li>
+						<li><a href="#">контакты</a></li>
+					</ul>
+					<div class="dropdown">
+						<button class="btn-reset dropdown__btn">
+							<span>Еще</span>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+						<div class="dropdown__body">
+							<ul class="list dropdown__list">
+								<li><a href="#">Статьи</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Вопросы и ответы</a></li>
+								<li><a href="#">Наши эксперты</a></li>
+								<li><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="header__contacts">
+					<ul class="list header__social">
+						<li>
+							<a href="#" target="_blank" class="header__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="header__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="header__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-vk"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<div class="header__contacts-body">
+						<a href="tel:+78002342360" class="header__tel">+7 (800) 234-23-60</a>
+						<div class="header__address">г. Казань, ул. Хади Такташа, 1</div>
+					</div>
+				</div>
+				<div class="header__profile-nav">
+					<button class="btn-reset header__search-btn" id="btn-search">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-search"></use>
+						</svg>
+					</button>
+					<a href="#" class="header__profile">
+						<img src="img/profile.svg" alt="icon" />
+						<span>Личный <br />
+							кабинет</span>
+					</a>
+					<a href="#" class="header__basket">
+						<span class="header__basket-number">5</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-basket"></use>
+						</svg>
+					</a>
+					<button class="btn-reset header__burger-btn" id="burger-open">
+						<div></div>
+						<div></div>
+						<div></div>
+					</button>
+				</div>
+				<form action="#" class="search-form" id="search-form">
+					<input type="text" placeholder="Поиск..." class="search-form__input">
+					<button class="btn-reset search-form__btn">
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-search'></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<div class="burger" id="burger">
+		<div class="burger__head">
+			<a href="#" class="burger__logo">
+				<img src="img/logo.svg" alt="image" class="burger__logo-img" />
+			</a>
+			<button class="btn-reset burger__close" id="burger-close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</button>
+		</div>
+		<div data-spollers class="burger__body">
+			<ul class="list burger__list">
+				<li><a href="#">интернет-магазин</a></li>
+				<li><a href="#">профессиональная продукция</a></li>
+				<li><a href="#">отзывы</a></li>
+				<li><a href="#">контакты</a></li>
+			</ul>
+			<button data-spoller class="btn-reset burger__btn-more">
+				<span>Ещё</span>
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+				</svg>
+			</button>
+			<div>
+				<ul class="list burger__list">
+					<li><a href="#">Статьи</a></li>
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">Вопросы и ответы</a></li>
+					<li><a href="#">Наши эксперты</a></li>
+					<li><a href="#">Сотрудничество</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+				</ul>
+			</div>
+			<div class="burger__contacts">
+				<a href="tel:+78002342360" class="burger__tel">+7 (800) 234-23-60</a>
+				<div class="burger__address">г. Казань, ул. Хади Такташа, 1</div>
+				<ul class="list burger__social">
+					<li>
+						<a href="#" class="burger__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="burger__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="burger__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-vk"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<main>
+
+		<section class="intro">
+			<picture class="intro__bg">
+				<source srcset="img/intro-catalog-mob.jpg" media="(max-width: 768px)" />
+				<img src="img/intro-catalog.jpg" alt="image" />
+			</picture>
+			<div class="container intro__container">
+				<div class="intro__head">
+					<div class="breadcrumbs">
+						<div class="aioseo-breadcrumbs">
+							<span class="aioseo-breadcrumb">
+								<a href="/" title="Главная">Главная</a>
+							</span>
+							<span class="aioseo-breadcrumb"> Косметика и фитосборы для кожи головы и волос </span>
+						</div>
+					</div>
+					<h1 class="main-title">Косметика и фитосборы для кожи головы и волос</h1>
+				</div>
+				<div class="swiper intro__adv-slider">
+					<div class="swiper-wrapper">
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Продукция</span>
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Акции</span>
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Где купить</span>
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Решение проблем</span>
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Академия Трихологии</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sect-p sect-bottom-off s-catalog-head">
+			<div class="container">
+				<div class="warn">
+					<img src="img/warn-opacity.svg" alt="icon" class="warn__icon" />
+					<span>Официальный представитель брендов ECOTRIATRIA и TORMESIS на
+						маркетплейсах – магазин ETASFERA. <br />
+						Мы не несём ответственности за продукцию, которую вы приобретаете
+						на маркетплейсах у других продавцов.</span>
+					<button class="btn-reset warn__delete">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-close"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="s-catalog-head__programs">
+					<div class="s-catalog-head__program">
+						<a href="#" class="tag">
+							<div class="tag__circle">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+							<span>Выбрать</span>
+						</a>
+						<div class="s-catalog-head__program-info">
+							<h5 class="s-catalog-head__program-title">Индивидуальный набор</h5>
+							<p class="s-catalog-head__program-content">
+								Выберите средства разных наименований и оформите заказ
+								индивидуального ухода со скидкой!
+							</p>
+						</div>
+						<img src="img/set.png" alt="image" class="s-catalog-head__program-img">
+					</div>
+					<div class="s-catalog-head__program">
+						<a href="#" class="tag">
+							<div class="tag__circle">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+							<span>Подобрать</span>
+						</a>
+						<div class="s-catalog-head__program-info">
+							<h5 class="s-catalog-head__program-title">Компьютерный подбор</h5>
+							<p class="s-catalog-head__program-content">
+								Пройдите небольшой тест и узнайте, какие продукты подходят именно
+								вам
+							</p>
+						</div>
+						<img src="img/quiz.png" alt="image" class="s-catalog-head__program-img">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-rec sect-p">
+			<div class="container s-rec__container">
+				<div class="swiper s-rec__slider">
+					<div class="swiper-wrapper">
+						<a href="#" class="swiper-slide s-rec__slide">
+							<div class="s-rec__slide-gallery">
+								<img src="img/rec-1.png" alt="image" class="s-rec__slide-img" />
+							</div>
+							<div class="s-rec__slide-body">
+								<h5 class="s-rec__slide-title">
+									Натуральная косметика Ecotriatria ETA
+								</h5>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-rec__slide">
+							<div class="s-rec__slide-gallery">
+								<img src="img/rec-2.png" alt="image" class="s-rec__slide-img" />
+							</div>
+							<div class="s-rec__slide-body">
+								<h5 class="s-rec__slide-title">
+									Профессиональная косметика для домашнего применения Ecotriatria
+									Professional Balance
+								</h5>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-rec__slide">
+							<div class="s-rec__slide-gallery">
+								<img src="img/rec-1.png" alt="image" class="s-rec__slide-img" />
+							</div>
+							<div class="s-rec__slide-body">
+								<h5 class="s-rec__slide-title">
+									Натуральная косметика Ecotriatria ETA
+								</h5>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-rec__slide">
+							<div class="s-rec__slide-gallery">
+								<img src="img/rec-2.png" alt="image" class="s-rec__slide-img" />
+							</div>
+							<div class="s-rec__slide-body">
+								<h5 class="s-rec__slide-title">
+									Профессиональная косметика для домашнего применения Ecotriatria
+									Professional Balance
+								</h5>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-rec__slide">
+							<div class="s-rec__slide-gallery">
+								<img src="img/rec-1.png" alt="image" class="s-rec__slide-img" />
+							</div>
+							<div class="s-rec__slide-body">
+								<h5 class="s-rec__slide-title">
+									Натуральная косметика Ecotriatria ETA
+								</h5>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-rec__slide">
+							<div class="s-rec__slide-gallery">
+								<img src="img/rec-2.png" alt="image" class="s-rec__slide-img" />
+							</div>
+							<div class="s-rec__slide-body">
+								<h5 class="s-rec__slide-title">
+									Профессиональная косметика для домашнего применения Ecotriatria
+									Professional Balance
+								</h5>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-rec__slide">
+							<div class="s-rec__slide-gallery">
+								<img src="img/rec-1.png" alt="image" class="s-rec__slide-img" />
+							</div>
+							<div class="s-rec__slide-body">
+								<h5 class="s-rec__slide-title">
+									Натуральная косметика Ecotriatria ETA
+								</h5>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-rec__slide">
+							<div class="s-rec__slide-gallery">
+								<img src="img/rec-2.png" alt="image" class="s-rec__slide-img" />
+							</div>
+							<div class="s-rec__slide-body">
+								<h5 class="s-rec__slide-title">
+									Профессиональная косметика для домашнего применения Ecotriatria
+									Professional Balance
+								</h5>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="slider-btn _next _big s-rec__slider-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+					</svg>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-archive sect-p">
+			<div class="container s-archive__container">
+				<div class="s-archive__body">
+					<aside class="s-archive__aside">
+						<div data-spollers class="s-archive__filters">
+							<div class="s-archive__filter">
+								<div data-spoller class="s-archive__filter-btn _spoller-active">
+									<span>Цена, ₽</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div>
+									<div class="s-archive__filter-body">
+										<div class="berocket_single_filter_widget berocket_single_filter_widget_283" data-id="283">
+											<div class="bapf_sfilter bapf_slidr bapf_slidr_jqrui bapf_slidr_ready" data-op="slidr" data-taxonomy="price" id="bapf_1">
+												<div class="bapf_body">
+													<div class="bapf_slidr_all">
+														<span class="bapf_from"><span class="bapf_tbprice">$</span><input type="text" placeholder="от" /></span><span class="bapf_to"><span class="bapf_tbprice">$</span><input type="text" placeholder="до" /></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="s-archive__filter">
+								<div data-spoller class="s-archive__filter-btn _spoller-active">
+									<span>Бренд</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div>
+									<div class="s-archive__filter-body">
+										<div class="berocket_single_filter_widget berocket_single_filter_widget_282" data-id="282">
+											<div class="bapf_sfilter bapf_ckbox" data-op="OR" data-taxonomy="pa_load_capacity" id="bapf_3">
+												<div class="bapf_body">
+													<ul>
+														<li>
+															<input id="brand-1" type="checkbox" /><label for="brand-1">Бренд 1</label>
+														</li>
+														<li>
+															<input id="brand-2" type="checkbox" /><label for="brand-2">Бренд 2</label>
+														</li>
+														<li>
+															<input id="brand-3" type="checkbox" /><label for="brand-3">Бренд 3</label>
+														</li>
+														<li>
+															<input id="brand-4" type="checkbox" /><label for="brand-4">Бренд 4</label>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="s-archive__filter">
+								<div data-spoller class="s-archive__filter-btn _spoller-active">
+									<span>Тип продукции</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div>
+									<div class="s-archive__filter-body">
+										<div class="berocket_single_filter_widget berocket_single_filter_widget_282" data-id="282">
+											<div class="bapf_sfilter bapf_ckbox" data-op="OR" data-taxonomy="pa_load_capacity" id="bapf_3">
+												<div class="bapf_body">
+													<ul>
+														<li>
+															<input id="type-1" type="checkbox" /><label for="type-1">Натуральная косметика Ecotriatria ETA</label>
+														</li>
+														<li>
+															<input id="type-2" type="checkbox" /><label for="type-2">Профессиональная косметика Ecotriatria Professional
+																Balance</label>
+														</li>
+														<li>
+															<input id="type-3" type="checkbox" /><label for="type-3">Наборы Ecotriatria и Tormesis</label>
+														</li>
+														<li>
+															<input id="type-4" type="checkbox" /><label for="type-4">Фитосборы Tormesis</label>
+														</li>
+														<li>
+															<input id="type-5" type="checkbox" /><label for="type-5">Коллаген Tormesis Premium</label>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div data-da=".s-archive__container, 1365" class="s-archive__stocks">
+							<div class="s-archive__stocks-head">
+								<h4 class="s-archive__stocks-title">Акции</h4>
+								<div class="s-archive__stocks-nav">
+									<button class="slider-btn _prev">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+										</svg>
+									</button>
+									<button class="slider-btn _next">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="swiper s-archive__stock-slider">
+								<div class="swiper-wrapper">
+									<a href="#" class="swiper-slide s-archive__stock-slide">
+										<img src="img/stock-img.jpg" alt="image" class="s-archive__stock-img" />
+									</a>
+									<a href="#" class="swiper-slide s-archive__stock-slide">
+										<img src="img/stock-img.jpg" alt="image" class="s-archive__stock-img" />
+									</a>
+									<a href="#" class="swiper-slide s-archive__stock-slide">
+										<img src="img/stock-img.jpg" alt="image" class="s-archive__stock-img" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<div data-da=".s-archive__container, 1365" class="s-archive__aside-footer">
+							<div class="s-archive__footer-item">
+								<a href="#" target="_blank" class="s-archive__footer-btn">
+									<span>Где нас найти</span>
+									<img src="img/location.svg" alt="icon" />
+								</a>
+							</div>
+							<div class="s-archive__footer-item">
+								<a href="#" target="_blank" class="s-archive__footer-btn" id="btn-bookmark">
+									<span>Добавить сайт в закладки</span>
+									<img src="img/bookmark.svg" alt="icon" />
+								</a>
+							</div>
+						</div>
+					</aside>
+					<div class="s-archive__main">
+						<div class="s-catalog">
+							<div class="s-catalog__head">
+								<select class="s-catalog__select">
+									<option value="Сначала дешевые" selected>Сначала дешевые</option>
+									<option value="Сначала дорогие">Сначала дорогие</option>
+									<option value="Сначала популярные">Сначала популярные</option>
+								</select>
+							</div>
+							<div class="s-catalog__wrapper">
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+										professional Balance</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product-2.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+										professional Balance</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+										professional Balance</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product-2.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+										professional Balance</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+										professional Balance</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product-2.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+								<div class="product-card">
+									<a href="#" class="product-card__gallery">
+										<img src="img/product.jpg" alt="image" class="product-card__img" />
+									</a>
+									<a href="#" class="product-card__title">Сыворотка для укрепления волос Ecotriatria
+										professional Balance</a>
+									<div class="product-card__price">
+										<div></div>
+										<span>2 720 ₽</span>
+										<div></div>
+									</div>
+									<form action="#" class="product-card__form">
+										<div class="product-card__form-number">
+											<div class="product-card__btn-num _minus">-</div>
+											<input type="number" value="1" class="product-card__form-input" />
+											<div class="product-card__btn-num _plus">+</div>
+										</div>
+										<button class="btn-stroke product-card__form-btn">
+											В корзину
+										</button>
+									</form>
+									<a href="#" class="product-card__pay">
+										<img src="img/dolyame.svg" alt="icon" />
+										Долями по 680 ₽
+									</a>
+								</div>
+							</div>
+						</div>
+						<button class="button s-archive__more-btn _gray">показать еще</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-subscribe sect-p _min">
+			<div class="container s-subscribe__container _min">
+				<div class="s-subscribe__gallery">
+					<div class="s-subscribe__gallery-wrapper">
+						<img src="img/flower.png" alt="image" class="s-subscribe__flower" />
+						<img src="img/logo-dark.svg" alt="logo" class="s-subscribe__logo" />
+					</div>
+				</div>
+				<div class="s-subscribe__main">
+					<h2 class="s-subscribe__title">
+						Подпишитесь для получения информации об акциях и новинках
+					</h2>
+					<form action="#" class="s-subscribe__form">
+						<div class="s-subscribe__form-item">
+							<input type="email" placeholder="Введите свой e-mail" class="input" />
+						</div>
+						<div class="s-subscribe__form-item">
+							<input type="text" placeholder="Введите купон (если есть)" class="input" />
+						</div>
+						<button class="button _white">Подписаться</button>
+						<div class="s-subscribe__form-footer">
+							<input checked type="checkbox" id="subscribe-policy" class="input-policy" />
+							<label for="subscribe-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+
+							<input type="checkbox" id="subscribe-mailing" class="input-policy" />
+							<label for="subscribe-mailing" class="label-policy">Согласен на получение акций/рассылок</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-partners sect-p">
+			<div class="container s-partners__container">
+				<div class="s-partners__info">
+					<h2 class="sect-title">Наши партнеры</h2>
+					<p class="s-partners__content">
+						Значимость этих проблем настолько очевидна, что рамки и место обучения
+						кадров в значительной степени обуславливает создание систем массового
+						участия.
+					</p>
+				</div>
+				<div class="s-partners__gallery">
+					<button class="slider-btn _prev">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<div class="swiper s-partners__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+						</div>
+					</div>
+					<button class="slider-btn _next">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<div class="modal" id="modal-connection">
+		<h3 class="modal__title">Связаться с нами</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<form action="#" class="modal__form">
+			<div class="modal__form-item">
+				<input type="text" placeholder="Ваше имя" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<input type="tel" placeholder="Ваш телефон" class="input _black" />
+			</div>
+			<button class="button modal__form-btn">Отправить</button>
+			<input checked type="checkbox" id="connection-policy" class="input-policy" />
+			<label for="connection-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+		</form>
+	</div>
+	<div class="modal" id="modal-consult">
+		<h3 class="modal__title">Получить бесплатную консультацию</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<form action="#" class="modal__form">
+			<div class="modal__form-item">
+				<input type="text" placeholder="Ваше имя" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<input type="tel" placeholder="Ваш телефон" class="input _black" />
+			</div>
+			<button class="button modal__form-btn">Отправить</button>
+			<input checked type="checkbox" id="consult-policy" class="input-policy" />
+			<label for="consult-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+		</form>
+	</div>
+
+	<div class="modal _big" id="modal-products">
+		<h3 class="modal__title">Выберите продукты</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="choose-products _scroll">
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="modal-share">
+		<h3 class="modal__title">Поделиться в соцсетях</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="shareon">
+			<a class="facebook"></a>
+			<a class="odnoklassniki"></a>
+			<a class="telegram"></a>
+			<a class="twitter"></a>
+			<a class="viber"></a>
+			<a class="vkontakte"></a>
+			<a class="whatsapp"></a>
+			<a class="copy-url"></a>
+		</div>
+	</div>
+
+	<div class="modal" id="modal-review">
+		<h3 class="modal__title">Оставить отзыв</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<form action="#" class="modal__form">
+			<div class="modal__form-item">
+				<input type="text" placeholder="Ваше имя" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<input type="tel" placeholder="Ваш телефон" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<textarea rows="4" class="input _black" placeholder="Ваш отзыв"></textarea>
+			</div>
+			<button class="button modal__form-btn">Отправить</button>
+			<input checked type="checkbox" id="review-policy" class="input-policy" />
+			<label for="review-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+		</form>
+	</div>
+	<footer class="footer">
+		<img src="img/flower-opacity-left.png" alt="image" class="footer__flower-left">
+		<img src="img/flower-opacity-right.png" alt="image" class="footer__flower-right">
+		<div class="container">
+			<div class="footer__head">
+				<div class="footer__social">
+					<div class="footer__social-content">Еще не подписались?</div>
+					<ul class="list footer__social-list">
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-vk"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-yt"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<button data-fancybox data-src="#modal-connection" class="button _white footer__head-btn">Обратная связь</button>
+				<div class="footer__head-contacts">
+					<a href="tel:+79809763186" class="footer__tel">+7 (980) 976-31-86</a>
+				</div>
+			</div>
+			<div class="footer__body">
+				<div class="footer__main">
+					<a href="#" class="footer__logo">
+						<img src="img/logo.svg" alt="logo" class="footer__logo-img" />
+					</a>
+					<div class="footer__main-bottom">
+						<a href="tel:+79809763186" class="footer__main-tel">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tel"></use>
+							</svg>
+							<span>+7 (980) 976-31-86</span>
+						</a>
+						<div class="footer__address">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-location"></use>
+							</svg>
+							<span>г. Казань, ул. Хади Такташа, 1</span>
+						</div>
+					</div>
+				</div>
+				<nav class="footer__nav">
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">о нас</h5>
+						<ul class="list footer__nav-list">
+							<li><a href="#">О компании </a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Лицензии</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">Каталог</h5>
+						<ul class="list footer__nav-list">
+							<li><a href="#">Интернет-магазин</a></li>
+							<li><a href="#">Для специалистов</a></li>
+							<li><a href="#">Акции</a></li>
+						</ul>
+					</div>
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">Покупателю</h5>
+						<ul class="list footer__nav-list">
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Сотрудничество</a></li>
+							<li><a href="#">Связаться с нами</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="footer__info">
+					<ul class="list footer__info-list">
+						<li><a href="#">Политика конфиденциальности</a></li>
+						<li><a href="#">Обработка данных</a></li>
+					</ul>
+					<div class="footer__info-bottom">
+						<p class="footer__copyright">© 2005-2025 ООО "Фитолукс"</p>
+						<div class="footer__dev">
+							<span>Разработка сайта</span>
+							<a href="#" class="footer__dev-btn">
+								<img src="img/logo-dev.svg" alt="logo" class="footer__dev-img" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="./files/js/swiper.min.js?_v=20250404193754"></script>
+	<script src="./files/js/spoller.js?_v=20250404193754"></script>
+	<script src="./files/js/fancybox.min.js?_v=20250404193754"></script>
+	<script src="./files/js/inputmask.min.js?_v=20250404193754"></script>
+	<script src="./files/js/shareon.min.js?_v=20250404193754"></script>
+	<script src="js/app.min.js?_v=20250404193754"></script>
+</body>
+
+</html>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Фитолукс</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250404193754" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250404193754">
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250404193754">
+	<link rel="stylesheet" href="./files/css/shareon.min.css?_v=20250404193754">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250404193754" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container">
+			<div class="header__body">
+				<a href="#" class="header__logo">
+					<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+				</a>
+				<nav class="header__nav">
+					<ul class="list header__list">
+						<li><a href="#">интернет-магазин</a></li>
+						<li><a href="#">профессиональная продукция</a></li>
+						<li><a href="#">отзывы</a></li>
+						<li><a href="#">контакты</a></li>
+					</ul>
+					<div class="dropdown">
+						<button class="btn-reset dropdown__btn">
+							<span>Еще</span>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+						<div class="dropdown__body">
+							<ul class="list dropdown__list">
+								<li><a href="#">Статьи</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Вопросы и ответы</a></li>
+								<li><a href="#">Наши эксперты</a></li>
+								<li><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="header__contacts">
+					<ul class="list header__social">
+						<li>
+							<a href="#" target="_blank" class="header__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="header__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="header__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-vk"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<div class="header__contacts-body">
+						<a href="tel:+78002342360" class="header__tel">+7 (800) 234-23-60</a>
+						<div class="header__address">г. Казань, ул. Хади Такташа, 1</div>
+					</div>
+				</div>
+				<div class="header__profile-nav">
+					<button class="btn-reset header__search-btn" id="btn-search">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-search"></use>
+						</svg>
+					</button>
+					<a href="#" class="header__profile">
+						<img src="img/profile.svg" alt="icon" />
+						<span>Личный <br />
+							кабинет</span>
+					</a>
+					<a href="#" class="header__basket">
+						<span class="header__basket-number">5</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-basket"></use>
+						</svg>
+					</a>
+					<button class="btn-reset header__burger-btn" id="burger-open">
+						<div></div>
+						<div></div>
+						<div></div>
+					</button>
+				</div>
+				<form action="#" class="search-form" id="search-form">
+					<input type="text" placeholder="Поиск..." class="search-form__input">
+					<button class="btn-reset search-form__btn">
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-search'></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<div class="burger" id="burger">
+		<div class="burger__head">
+			<a href="#" class="burger__logo">
+				<img src="img/logo.svg" alt="image" class="burger__logo-img" />
+			</a>
+			<button class="btn-reset burger__close" id="burger-close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</button>
+		</div>
+		<div data-spollers class="burger__body">
+			<ul class="list burger__list">
+				<li><a href="#">интернет-магазин</a></li>
+				<li><a href="#">профессиональная продукция</a></li>
+				<li><a href="#">отзывы</a></li>
+				<li><a href="#">контакты</a></li>
+			</ul>
+			<button data-spoller class="btn-reset burger__btn-more">
+				<span>Ещё</span>
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+				</svg>
+			</button>
+			<div>
+				<ul class="list burger__list">
+					<li><a href="#">Статьи</a></li>
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">Вопросы и ответы</a></li>
+					<li><a href="#">Наши эксперты</a></li>
+					<li><a href="#">Сотрудничество</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+				</ul>
+			</div>
+			<div class="burger__contacts">
+				<a href="tel:+78002342360" class="burger__tel">+7 (800) 234-23-60</a>
+				<div class="burger__address">г. Казань, ул. Хади Такташа, 1</div>
+				<ul class="list burger__social">
+					<li>
+						<a href="#" class="burger__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="burger__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="burger__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-vk"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<main>
+
+		<section class="intro">
+			<picture class="intro__bg">
+				<source srcset="img/intro-stocks-mob.jpg" media="(max-width: 768px)">
+				<img src="img/intro-stocks.jpg" alt="image">
+			</picture>
+			<div class="container intro__container">
+				<div class="intro__head">
+					<div class="breadcrumbs">
+						<div class="aioseo-breadcrumbs">
+							<span class="aioseo-breadcrumb">
+								<a href="/" title="Главная">Главная</a>
+							</span>
+							<span class="aioseo-breadcrumb"> Акции </span>
+						</div>
+					</div>
+					<h1 class="main-title">Акции</h1>
+				</div>
+				<div class="swiper intro__adv-slider">
+					<div class="swiper-wrapper">
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Продукция</span>
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Акции</span>
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Где купить</span>
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Решение проблем</span>
+						</a>
+						<a href="#" class="swiper-slide intro__adv-slide">
+							<svg class="intro__adv-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+							</svg>
+							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
+							<span>Академия Трихологии</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-stocks sect-p">
+			<div class="container">
+				<div class="s-stocks__wrapper">
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis — 20%; на сыворотку Ecotriatria Professional
+								Balance — 25%
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-stocks__item">
+						<a href="#" class="s-stocks__gallery">
+							<img src="img/stock-img.jpg" alt="image" class="s-stocks__gallery-img" />
+						</a>
+						<div class="s-stocks__item-body">
+							<a href="#" class="s-stocks__item-title">С наступившим Новым годом и Рождеством!</a>
+							<p class="s-stocks__item-content">
+								Новогодние скидки на всю продукцию Ecotriatria для домашнего
+								применения и Tormesis
+							</p>
+							<div class="s-stocks__item-footer">
+								<div class="s-stocks__item-date">
+									<div class="s-stocks__item-date-title">Срок проведения:</div>
+									<div class="s-stocks__item-date">13.01.25 – 15.01.25</div>
+								</div>
+								<a href="#" class="btn-stroke s-stocks__item-btn">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="button s-stocks__btn-more _white">показать еще</button>
+			</div>
+		</section>
+
+		<section class="s-subscribe sect-p _min">
+			<div class="container s-subscribe__container _min">
+				<div class="s-subscribe__gallery">
+					<div class="s-subscribe__gallery-wrapper">
+						<img src="img/flower.png" alt="image" class="s-subscribe__flower" />
+						<img src="img/logo-dark.svg" alt="logo" class="s-subscribe__logo" />
+					</div>
+				</div>
+				<div class="s-subscribe__main">
+					<h2 class="s-subscribe__title">
+						Подпишитесь для получения информации об акциях и новинках
+					</h2>
+					<form action="#" class="s-subscribe__form">
+						<div class="s-subscribe__form-item">
+							<input type="email" placeholder="Введите свой e-mail" class="input" />
+						</div>
+						<div class="s-subscribe__form-item">
+							<input type="text" placeholder="Введите купон (если есть)" class="input" />
+						</div>
+						<button class="button _white">Подписаться</button>
+						<div class="s-subscribe__form-footer">
+							<input checked type="checkbox" id="subscribe-policy" class="input-policy" />
+							<label for="subscribe-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+
+							<input type="checkbox" id="subscribe-mailing" class="input-policy" />
+							<label for="subscribe-mailing" class="label-policy">Согласен на получение акций/рассылок</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-partners sect-p">
+			<div class="container s-partners__container">
+				<div class="s-partners__info">
+					<h2 class="sect-title">Наши партнеры</h2>
+					<p class="s-partners__content">
+						Значимость этих проблем настолько очевидна, что рамки и место обучения
+						кадров в значительной степени обуславливает создание систем массового
+						участия.
+					</p>
+				</div>
+				<div class="s-partners__gallery">
+					<button class="slider-btn _prev">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<div class="swiper s-partners__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+							</div>
+						</div>
+					</div>
+					<button class="slider-btn _next">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<div class="modal" id="modal-connection">
+		<h3 class="modal__title">Связаться с нами</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<form action="#" class="modal__form">
+			<div class="modal__form-item">
+				<input type="text" placeholder="Ваше имя" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<input type="tel" placeholder="Ваш телефон" class="input _black" />
+			</div>
+			<button class="button modal__form-btn">Отправить</button>
+			<input checked type="checkbox" id="connection-policy" class="input-policy" />
+			<label for="connection-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+		</form>
+	</div>
+	<div class="modal" id="modal-consult">
+		<h3 class="modal__title">Получить бесплатную консультацию</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<form action="#" class="modal__form">
+			<div class="modal__form-item">
+				<input type="text" placeholder="Ваше имя" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<input type="tel" placeholder="Ваш телефон" class="input _black" />
+			</div>
+			<button class="button modal__form-btn">Отправить</button>
+			<input checked type="checkbox" id="consult-policy" class="input-policy" />
+			<label for="consult-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+		</form>
+	</div>
+
+	<div class="modal _big" id="modal-products">
+		<h3 class="modal__title">Выберите продукты</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="choose-products _scroll">
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+			<div class="choose-products__item">
+				<a href="#" class="choose-products__item-gallery">
+					<img src="img/product-2.jpg" alt="" class="choose-products__item-img" />
+				</a>
+				<a href="#" class="choose-products__item-title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+				<div class="choose-products__item-footer">
+					<div class="choose-products__item-price">2 720 ₽</div>
+					<button class="btn-stroke choose-products__item-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+						</svg>
+						<span>Добавить</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="modal-share">
+		<h3 class="modal__title">Поделиться в соцсетях</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="shareon">
+			<a class="facebook"></a>
+			<a class="odnoklassniki"></a>
+			<a class="telegram"></a>
+			<a class="twitter"></a>
+			<a class="viber"></a>
+			<a class="vkontakte"></a>
+			<a class="whatsapp"></a>
+			<a class="copy-url"></a>
+		</div>
+	</div>
+
+	<div class="modal" id="modal-review">
+		<h3 class="modal__title">Оставить отзыв</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<form action="#" class="modal__form">
+			<div class="modal__form-item">
+				<input type="text" placeholder="Ваше имя" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<input type="tel" placeholder="Ваш телефон" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<textarea rows="4" class="input _black" placeholder="Ваш отзыв"></textarea>
+			</div>
+			<button class="button modal__form-btn">Отправить</button>
+			<input checked type="checkbox" id="review-policy" class="input-policy" />
+			<label for="review-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+		</form>
+	</div>
+	<footer class="footer">
+		<img src="img/flower-opacity-left.png" alt="image" class="footer__flower-left">
+		<img src="img/flower-opacity-right.png" alt="image" class="footer__flower-right">
+		<div class="container">
+			<div class="footer__head">
+				<div class="footer__social">
+					<div class="footer__social-content">Еще не подписались?</div>
+					<ul class="list footer__social-list">
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-vk"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-yt"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<button data-fancybox data-src="#modal-connection" class="button _white footer__head-btn">Обратная связь</button>
+				<div class="footer__head-contacts">
+					<a href="tel:+79809763186" class="footer__tel">+7 (980) 976-31-86</a>
+				</div>
+			</div>
+			<div class="footer__body">
+				<div class="footer__main">
+					<a href="#" class="footer__logo">
+						<img src="img/logo.svg" alt="logo" class="footer__logo-img" />
+					</a>
+					<div class="footer__main-bottom">
+						<a href="tel:+79809763186" class="footer__main-tel">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tel"></use>
+							</svg>
+							<span>+7 (980) 976-31-86</span>
+						</a>
+						<div class="footer__address">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-location"></use>
+							</svg>
+							<span>г. Казань, ул. Хади Такташа, 1</span>
+						</div>
+					</div>
+				</div>
+				<nav class="footer__nav">
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">о нас</h5>
+						<ul class="list footer__nav-list">
+							<li><a href="#">О компании </a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Лицензии</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">Каталог</h5>
+						<ul class="list footer__nav-list">
+							<li><a href="#">Интернет-магазин</a></li>
+							<li><a href="#">Для специалистов</a></li>
+							<li><a href="#">Акции</a></li>
+						</ul>
+					</div>
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">Покупателю</h5>
+						<ul class="list footer__nav-list">
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Сотрудничество</a></li>
+							<li><a href="#">Связаться с нами</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="footer__info">
+					<ul class="list footer__info-list">
+						<li><a href="#">Политика конфиденциальности</a></li>
+						<li><a href="#">Обработка данных</a></li>
+					</ul>
+					<div class="footer__info-bottom">
+						<p class="footer__copyright">© 2005-2025 ООО "Фитолукс"</p>
+						<div class="footer__dev">
+							<span>Разработка сайта</span>
+							<a href="#" class="footer__dev-btn">
+								<img src="img/logo-dev.svg" alt="logo" class="footer__dev-img" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="./files/js/swiper.min.js?_v=20250404193754"></script>
+	<script src="./files/js/spoller.js?_v=20250404193754"></script>
+	<script src="./files/js/fancybox.min.js?_v=20250404193754"></script>
+	<script src="./files/js/inputmask.min.js?_v=20250404193754"></script>
+	<script src="./files/js/shareon.min.js?_v=20250404193754"></script>
+	<script src="js/app.min.js?_v=20250404193754"></script>
+</body>
+
+</html>

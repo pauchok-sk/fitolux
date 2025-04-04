@@ -334,4 +334,39 @@ export default function sliders() {
       },
     });
   }
+  
+  const recProductsSlider = document.querySelector(".s-rec-products__slider");
+
+  if (recProductsSlider) {
+    const slider = new Swiper(recProductsSlider, {
+      speed: 700,
+      spaceBetween: 20,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 2500,
+      },
+      navigation: {
+        prevEl: ".s-rec-products .slider-btn._prev",
+        nextEl: ".s-rec-products .slider-btn._next"
+      },
+      scrollbar: {
+        el: ".s-reviews .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        1365: {
+          spaceBetween: 20,
+          slidesPerView: 4,
+        },
+        992: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+        576: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        }
+      },
+    });
+  }
 }
