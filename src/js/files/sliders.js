@@ -288,9 +288,9 @@ export default function sliders() {
       speed: 700,
       spaceBetween: 20,
       slidesPerView: "auto",
-      // autoplay: {
-      //   delay: 3000
-      // },
+      autoplay: {
+        delay: 3000,
+      },
       breakpoints: {
         1540: {
           spaceBetween: 30,
@@ -299,8 +299,39 @@ export default function sliders() {
         576: {
           spaceBetween: 30,
           slidesPerView: "auto",
+        },
+      },
+    });
+  }
+
+  const reviewsSLider = document.querySelector(".s-reviews__slider");
+
+  if (reviewsSLider) {
+    const slider = new Swiper(reviewsSLider, {
+      speed: 700,
+      spaceBetween: 20,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 2500,
+      },
+      navigation: {
+        prevEl: ".s-reviews .slider-btn._prev",
+        nextEl: ".s-reviews .slider-btn._next"
+      },
+      scrollbar: {
+        el: ".s-reviews .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        992: {
+          spaceBetween: 30,
+          slidesPerView: 3,
+        },
+        576: {
+          spaceBetween: 20,
+          slidesPerView: 2,
         }
-      }
+      },
     });
   }
 }

@@ -58,3 +58,11 @@
     margin: 0;
   }
 }
+
+.sect-head__slider-nav {
+  display: flex;
+  gap: 30px;
+  @include tablet {
+    gap: 20px;
+  }
+}
