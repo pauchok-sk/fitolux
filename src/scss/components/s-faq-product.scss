@@ -1,0 +1,83 @@
+.s-faq-product {
+  &__body {
+    padding: 30px;
+    border-radius: 16px;
+    background: var(--light-gray);
+    @include tablet {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+    row-gap: 20px;
+    @include desktop-min {
+      gap: 40px;
+      row-gap: 20px;
+    }
+  }
+  &__spoller {
+    background-color: white;
+    border-radius: 8px;
+    @include laptop-middle {
+      grid-column: 2 span
+    }
+    @include tablet {
+      box-shadow: 0px 4px 15px 1px rgba(24, 39, 81, 0.20);
+    }
+  }
+  &__spoller-btn {
+    @include flex-between;
+    gap: 15px;
+    width: 100%;
+    padding: 30px;
+
+    text-align: start;
+    font-size: 22px;
+
+    @include tablet {
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    &._spoller-active {
+      .s-faq-product__spoller-circle {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__spoller-circle {
+    @include flex-center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid black;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  &__spoller-body {
+    padding: 0px 30px 30px 30px;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+    @include tablet {
+      padding: 0px 20px 20px 20px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -14,6 +14,22 @@
     }
   }
 }
+.sect-m {
+  margin: 90px 0px;
+  @include laptop-min {
+    margin: 70px 0px;
+  }
+  @include tablet {
+    margin: 40px 0px;
+  }
+
+  &._min {
+    margin: 70px 0px;
+    @include tablet {
+      margin: 40px 0px;
+    }
+  }
+}
 
 .sect-top-off {
   padding-top: 0 !important;
