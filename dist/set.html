@@ -8,10 +8,11 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250403162425" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250403162425">
-	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250403162425">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250403162425" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250404143512" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250404143512">
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250404143512">
+	<link rel="stylesheet" href="./files/css/shareon.min.css?_v=20250404143512">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250404143512" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -482,6 +483,25 @@
 			<label for="connection-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
 		</form>
 	</div>
+	<div class="modal" id="modal-consult">
+		<h3 class="modal__title">Получить бесплатную консультацию</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<form action="#" class="modal__form">
+			<div class="modal__form-item">
+				<input type="text" placeholder="Ваше имя" class="input _black" />
+			</div>
+			<div class="modal__form-item">
+				<input type="tel" placeholder="Ваш телефон" class="input _black" />
+			</div>
+			<button class="button modal__form-btn">Отправить</button>
+			<input checked type="checkbox" id="consult-policy" class="input-policy" />
+			<label for="consult-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
+		</form>
+	</div>
 
 	<div class="modal _big" id="modal-products">
 		<h3 class="modal__title">Выберите продукты</h3>
@@ -566,6 +586,25 @@
 					</button>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="modal-share">
+		<h3 class="modal__title">Поделиться в соцсетях</h3>
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="shareon">
+			<a class="facebook"></a>
+			<a class="odnoklassniki"></a>
+			<a class="telegram"></a>
+			<a class="twitter"></a>
+			<a class="viber"></a>
+			<a class="vkontakte"></a>
+			<a class="whatsapp"></a>
+			<a class="copy-url"></a>
 		</div>
 	</div>
 
@@ -672,12 +711,12 @@
 			</div>
 		</div>
 	</footer>
-
-	<script src="./files/js/swiper.min.js?_v=20250403162425"></script>
-	<script src="./files/js/spoller.js?_v=20250403162425"></script>
-	<script src="./files/js/fancybox.min.js?_v=20250403162425"></script>
-	<script src="./files/js/inputmask.min.js?_v=20250403162425"></script>
-	<script src="js/app.min.js?_v=20250403162425"></script>
+	<script src="./files/js/swiper.min.js?_v=20250404143512"></script>
+	<script src="./files/js/spoller.js?_v=20250404143512"></script>
+	<script src="./files/js/fancybox.min.js?_v=20250404143512"></script>
+	<script src="./files/js/inputmask.min.js?_v=20250404143512"></script>
+	<script src="./files/js/shareon.min.js?_v=20250404143512"></script>
+	<script src="js/app.min.js?_v=20250404143512"></script>
 </body>
 
 </html>

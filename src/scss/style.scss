@@ -12,7 +12,6 @@
 @import "./ui/tab";
 @import "./ui/dropdown";
 @import "./ui/title";
-@import "./ui/button";
 @import "./ui/scrollable";
 @import "./ui/sect";
 @import "./ui/product-card";
@@ -31,6 +30,7 @@
 @import "./ui/warn";
 @import "./ui/berocket";
 @import "./ui/scroll";
+@import "./ui/video-btn";
 
 // widgets
 @import "./widgets/burger";
@@ -64,5 +64,7 @@
 @import "./components/s-contacts";
 @import "./components/s-contacts-main";
 @import "./components/s-cooperation";
+@import "./components/s-product";
+@import "./components/s-about-product";
 
 @import "./components/footer";

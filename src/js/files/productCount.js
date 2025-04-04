@@ -16,4 +16,22 @@ export default function productCount() {
       });
     });
   }
+
+  const buttonsMain = document.querySelectorAll(".s-product__btn-num");
+
+  if (buttonsMain.length) {
+    buttonsMain.forEach((btn) => {
+      const currentInput = btn
+        .closest(".s-product__form-number")
+        .querySelector(".s-product__form-input");
+
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("_minus")) {
+          if (currentInput.value > 1) currentInput.value = +currentInput.value - 1;
+        } else {
+          currentInput.value = +currentInput.value + 1;
+        }
+      });
+    });
+  }
 }

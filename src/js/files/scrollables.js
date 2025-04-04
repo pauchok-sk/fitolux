@@ -5,5 +5,6 @@ export default function scrollables() {
 
   if (window.matchMedia("(max-width: 1365px)").matches) {
     new Scrollable("#archive-nav")
+    new Scrollable("#about-product-nav")
   }
 }

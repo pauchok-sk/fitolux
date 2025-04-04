@@ -218,10 +218,30 @@
         const da = new DynamicAdapt("max");
         da.init();
     }
+    function moreText() {
+        const buttons = document.querySelectorAll("[data-more-btn]");
+        if (buttons.length) buttons.forEach((btn => {
+            btn.addEventListener("click", (() => {
+                const parent = btn.closest("[data-more]");
+                const currentHidden = parent.querySelector("._hidden");
+                currentHidden.classList.remove("_hidden");
+                btn.remove();
+            }));
+        }));
+    }
     function productCount() {
         const buttons = document.querySelectorAll(".product-card__btn-num");
         if (buttons.length) buttons.forEach((btn => {
             const currentInput = btn.closest(".product-card__form-number").querySelector(".product-card__form-input");
+            btn.addEventListener("click", (() => {
+                if (btn.classList.contains("_minus")) {
+                    if (currentInput.value > 1) currentInput.value = +currentInput.value - 1;
+                } else currentInput.value = +currentInput.value + 1;
+            }));
+        }));
+        const buttonsMain = document.querySelectorAll(".s-product__btn-num");
+        if (buttonsMain.length) buttonsMain.forEach((btn => {
+            const currentInput = btn.closest(".s-product__form-number").querySelector(".s-product__form-input");
             btn.addEventListener("click", (() => {
                 if (btn.classList.contains("_minus")) {
                     if (currentInput.value > 1) currentInput.value = +currentInput.value - 1;
@@ -283,7 +303,10 @@
     }
     function scrollables() {
         new Scrollable(".s-products__nav");
-        if (window.matchMedia("(max-width: 1365px)").matches) new Scrollable("#archive-nav");
+        if (window.matchMedia("(max-width: 1365px)").matches) {
+            new Scrollable("#archive-nav");
+            new Scrollable("#about-product-nav");
+        }
     }
     function searchToggle() {
         const btnSearch = document.querySelector("#btn-search");
@@ -493,7 +516,51 @@
         new Swiper(contactsSlider, {
             speed: 700,
             slidesPerView: "auto",
-            spaceBetween: 20
+            spaceBetween: 20,
+            autoplay: {
+                delay: 3e3
+            }
+        });
+    }
+    const thumbProductSlider = document.querySelector(".s-product__thumb-slider");
+    if (thumbProductSlider) {
+        const thumbSlider = new Swiper(thumbProductSlider, {
+            speed: 700,
+            spaceBetween: 10,
+            slidesPerView: 4,
+            navigation: {
+                prevEl: ".s-product__thumb-gallery .slider-btn._prev",
+                nextEl: ".s-product__thumb-gallery .slider-btn._next"
+            },
+            breakpoints: {
+                1366: {
+                    direction: "vertical",
+                    spaceBetween: 20,
+                    slidesPerView: 4
+                },
+                992: {
+                    direction: "vertical",
+                    spaceBetween: 20,
+                    slidesPerView: 3
+                },
+                768: {
+                    spaceBetween: 20,
+                    slidesPerView: 4
+                }
+            }
+        });
+        const productSlider = document.querySelector(".s-product__slider");
+        new Swiper(productSlider, {
+            speed: 700,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            navigation: {
+                prevEl: ".s-product__thumb-gallery .slider-btn._prev",
+                nextEl: ".s-product__thumb-gallery .slider-btn._next"
+            },
+            thumbs: {
+                swiper: thumbSlider
+            }
         });
     }
     function tab() {
@@ -528,4 +595,6 @@
     mediaAdaptive();
     map();
     removeWarn();
+    moreText();
+    Shareon.init();
 })();

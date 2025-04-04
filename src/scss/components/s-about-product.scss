@@ -1,0 +1,139 @@
+.s-about-product {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-gray);
+  z-index: 1;
+  &__flower {
+    position: absolute;
+    right: 0;
+    top: -24px;
+    z-index: -1;
+  }
+  &__nav {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  &__nav-btn {
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 10px;
+
+    @include hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: var(--green);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &._active {
+      font-weight: 500;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 80px;
+    @include laptop {
+      gap: 40px;
+    }
+    @include laptop-middle {
+      flex-direction: column-reverse;
+    }
+  }
+  &__content-wrapper {
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3.5px);
+    min-height: 480px;
+    flex: 1;
+    @include laptop-middle {
+      flex: none;
+      width: 100%;
+      min-height: auto;
+    }
+    @include tablet {
+      padding: 25px;
+    }
+    @include mobile {
+      padding: 20px;
+    }
+  }
+  &__content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+  
+    &._hidden {
+      @include overflowText(12);
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__btn-more {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+
+    color: var(--green);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+
+    @include hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  &__video {
+    @include flex-center;
+    position: sticky;
+    top: 100px;
+    width: 480px;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    flex-shrink: 0;
+    @include laptop-middle {
+      position: static;
+      margin: 0 auto;
+      width: 650px;
+      height: 400px;
+      max-width: 100%;
+      aspect-ratio: inherit;
+    }
+    @include tablet{
+      height: 350px;
+    }
+    @include mobile {
+      height: 300px;
+    }
+  }
+}

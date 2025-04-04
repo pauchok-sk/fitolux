@@ -232,8 +232,53 @@ if (contactsSlider && window.matchMedia("(max-width: 1365px)").matches) {
     speed: 700,
     slidesPerView: "auto",
     spaceBetween: 20,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
+  });
+}
+
+const thumbProductSlider = document.querySelector(".s-product__thumb-slider");
+
+if (thumbProductSlider) {
+  const thumbSlider = new Swiper(thumbProductSlider, {
+    speed: 700,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    navigation: {
+      prevEl: ".s-product__thumb-gallery .slider-btn._prev",
+      nextEl: ".s-product__thumb-gallery .slider-btn._next",
+    },
+    breakpoints: {
+      1366: {
+        direction: "vertical",
+        spaceBetween: 20,
+        slidesPerView: 4,
+      },
+      992: {
+        direction: "vertical",
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      768: {
+        spaceBetween: 20,
+        slidesPerView: 4,
+      }
+    },
+  });
+
+  const productSlider = document.querySelector(".s-product__slider");
+
+  const slider = new Swiper(productSlider, {
+    speed: 700,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+      prevEl: ".s-product__thumb-gallery .slider-btn._prev",
+      nextEl: ".s-product__thumb-gallery .slider-btn._next",
+    },
+    thumbs: {
+      swiper: thumbSlider,
+    },
   });
 }
