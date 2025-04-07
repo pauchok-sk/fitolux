@@ -555,6 +555,9 @@ body {
   opacity: .5;
   pointer-events: none
 }
+.slider-btn.swiper-button-lock {
+  display: none
+}
 .slider-pagination {
   display: flex;
   align-items: center;
@@ -3973,6 +3976,53 @@ a.tag:hover {
   height: auto!important;
   box-sizing: border-box
 }
+.s-award {
+  background-color: var(--light-gray)
+}
+.s-award__head {
+  align-items: start
+}
+.s-award__title {
+  max-width: 1000px
+}
+.s-award__head-content {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--gray);
+  margin: 0
+}
+.s-award__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 60px
+}
+.s-award__content {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%
+}
+.s-award__content p {
+  margin: 0
+}
+.s-award__content p:not(:last-child) {
+  margin-bottom: 20px
+}
+.s-award__bottom-content {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 150%;
+  color: var(--gray);
+  margin: 25px 0 0 0
+}
+.s-award__video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 8px;
+  min-height: 480px
+}
 .footer {
   position: relative;
   overflow: hidden;
@@ -4711,6 +4761,13 @@ a.tag:hover {
   .s-faq-product__spoller {
     grid-column: 2 span
   }
+  .s-award__head {
+    flex-direction: column
+  }
+  .s-award__wrapper {
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px
+  }
   .footer__flower-left {
     left: 0
   }
@@ -5004,6 +5061,9 @@ a.tag:hover {
   .s-product__buttons .btn-stroke {
     font-size: 16px!important
   }
+  .s-award__video {
+    min-height: 380px
+  }
   .footer__head {
     display: flex;
     flex-direction: column
@@ -5016,10 +5076,10 @@ a.tag:hover {
 }
 @media (max-width:767px) {
   .main-title {
-    font-size: 36px
+    font-size: 28px
   }
   .sect-title {
-    font-size: 28px
+    font-size: 26px
   }
   .sect-title {
     margin-bottom: 30px
@@ -5608,6 +5668,9 @@ a.tag:hover {
   }
   .s-reviews__slide {
     width: 300px!important
+  }
+  .s-award__video {
+    min-height: 300px
   }
   .footer__nav {
     flex-direction: column;
