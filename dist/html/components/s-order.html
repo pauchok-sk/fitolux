@@ -1,0 +1,132 @@
+<section class="sect-p s-order">
+	<div class="container">
+		<div class="breadcrumbs">
+			<div class="aioseo-breadcrumbs">
+				<span class="aioseo-breadcrumb">
+					<a href="/" title="Главная">Главная</a>
+				</span>
+				<span class="aioseo-breadcrumb"> Оформление заказа </span>
+			</div>
+		</div>
+		<h1 class="main-title">Оформление заказа</h1>
+		<form class="s-order__form">
+			<div class="s-order__main">
+				<div class="s-order__block">
+					<h4 class="s-order__title">Способ получения</h4>
+					<div class="s-order__block-wrapper">
+						<input type="radio" id="delivery-1" name="delivery" checked class="s-order__input-radio" />
+						<label for="delivery-1" class="s-order__label-radio">
+							<img src="img/sdek.svg" alt="icon" class="s-order__delivery-icon" />
+							<span>CDEK: Посылка склад-дверь, (2-3 дня)</span>
+							<div class="s-order__delivery-price">619 ₽</div>
+						</label>
+
+						<input type="radio" id="delivery-2" name="delivery" class="s-order__input-radio" />
+						<label for="delivery-2" class="s-order__label-radio">
+							<img src="img/sdek.svg" alt="icon" class="s-order__delivery-icon" />
+							<span>CDEK: Посылка склад-дверь, (2-3 дня)</span>
+							<div class="s-order__delivery-price">619 ₽</div>
+						</label>
+
+						<input type="radio" id="delivery-3" name="delivery" class="s-order__input-radio" />
+						<label for="delivery-3" class="s-order__label-radio">
+							<img src="img/boxberry.png" alt="icon" class="s-order__delivery-icon" />
+							<span>Boxberry: до ПВЗ с оплатой на сайте (2 рабочих дня)</span>
+							<div class="s-order__delivery-price">472 ₽</div>
+						</label>
+
+						<input type="radio" id="delivery-4" name="delivery" class="s-order__input-radio" />
+						<label for="delivery-4" class="s-order__label-radio">
+							<img src="img/boxberry.png" alt="icon" class="s-order__delivery-icon" />
+							<span>Boxberry: до ПВЗ с оплатой на сайте (2 рабочих дня)</span>
+							<div class="s-order__delivery-price">472 ₽</div>
+						</label>
+
+						<input type="radio" id="delivery-5" name="delivery" class="s-order__input-radio" />
+						<label for="delivery-5" class="s-order__label-radio">
+							<img src="img/box.svg" alt="icon" class="s-order__delivery-icon" />
+							<span>Самовывоз</span>
+							<div class="s-order__delivery-price">Бесплатно</div>
+						</label>
+					</div>
+				</div>
+				<div class="s-order__block">
+					<h4 class="s-order__title">Личная информация</h4>
+					<div class="s-order__block-wrapper">
+						<div class="s-order__input-wrapper">
+							<label for="email-delivery" class="s-order__input-title">Email *</label>
+							<input type="email" id="email-delivery" value="email@mail.ru" class="input _white" />
+						</div>
+						<div class="s-order__input-wrapper">
+							<label for="tel-delivery" class="s-order__input-title">Телефон *</label>
+							<input type="tel" id="tel-delivery" value="+7 (111) 111-11-11" class="input _white" />
+						</div>
+						<div class="s-order__input-wrapper">
+							<label for="name-delivery" class="s-order__input-title">Имя *</label>
+							<input type="text" id="name-delivery" class="input _white" />
+						</div>
+						<div class="s-order__input-wrapper">
+							<label for="family-delivery" class="s-order__input-title">Фамилия *</label>
+							<input type="text" id="family-delivery" class="input _white" />
+						</div>
+						<div class="s-order__input-wrapper">
+							<label for="address-delivery" class="s-order__input-title">Адрес ПВЗ CDEK*</label>
+							<input type="text" id="address-delivery" class="input _white" />
+							<button type="button" class="btn-reset s-order__choose-place">
+								Выбрать ПВЗ
+							</button>
+						</div>
+						<div class="s-order__input-wrapper">
+							<label for="comment-delivery" class="s-order__input-title">Комментарий (необязательно)</label>
+							<input type="text" id="comment-delivery" class="input _white" />
+						</div>
+					</div>
+				</div>
+				<div class="s-order__block">
+					<h4 class="s-order__title">Способ оплаты</h4>
+					<div class="s-order__block-wrapper">
+						<input type="radio" id="payment-1" name="payment" checked class="s-order__input-radio" />
+						<label for="payment-1" class="s-order__label-radio">
+							<img src="img/card.svg" alt="icon" class="s-order__payment-icon" />
+							<span>Банковской картой, через SberPay и другими способами</span>
+						</label>
+
+						<input type="radio" id="payment-2" name="payment" class="s-order__input-radio" />
+						<label for="payment-2" class="s-order__label-radio">
+							<img src="img/dolyame.svg" alt="icon" class="s-order__payment-icon" />
+							<span>Долями</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="s-order__info">
+				<div class="s-order__info-body">
+					<h4 class="s-order__info-title">Информация о заказе</h4>
+					<ul class="list s-order__info-list">
+						<li>
+							<span>Сумма</span>
+							<span>5 440 ₽</span>
+						</li>
+						<li>
+							<span>Доставка</span>
+							<span>619 ₽</span>
+						</li>
+					</ul>
+					<div class="s-order__info-sum">
+						<span>К оплате</span>
+						<span>5 940 ₽</span>
+					</div>
+					<button type="submit" class="button s-order__submit">Оплатить</button>
+				</div>
+				<div class="s-order__promo">
+					<input type="text" placeholder="У вас есть промокод?" class="input _white" />
+					<button type="button" class="btn-reset s-order__promo-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>

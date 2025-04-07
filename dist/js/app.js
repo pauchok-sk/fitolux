@@ -336,7 +336,12 @@
     function searchToggle() {
         const btnSearch = document.querySelector("#btn-search");
         const searchForm = document.querySelector("#search-form");
-        btnSearch.addEventListener("click", (() => searchForm.classList.toggle("_open")));
+        document.body.addEventListener("click", (() => searchForm.classList.remove("_open")));
+        searchForm.addEventListener("click", (e => e.stopPropagation()));
+        btnSearch.addEventListener("click", (e => {
+            e.stopPropagation();
+            searchForm.classList.toggle("_open");
+        }));
     }
     function sliders() {
         const introMainSlider = document.querySelector(".intro-main__slider");
