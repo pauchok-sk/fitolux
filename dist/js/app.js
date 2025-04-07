@@ -264,6 +264,15 @@
                 } else currentInput.value = +currentInput.value + 1;
             }));
         }));
+        const buttonsOrder = document.querySelectorAll(".order-card__btn-num");
+        if (buttonsOrder.length) buttonsOrder.forEach((btn => {
+            const currentInput = btn.closest(".order-card__form-number").querySelector(".order-card__form-input");
+            btn.addEventListener("click", (() => {
+                if (btn.classList.contains("_minus")) {
+                    if (currentInput.value > 1) currentInput.value = +currentInput.value - 1;
+                } else currentInput.value = +currentInput.value + 1;
+            }));
+        }));
     }
     function removeWarn() {
         const btns = document.querySelectorAll(".warn__delete");

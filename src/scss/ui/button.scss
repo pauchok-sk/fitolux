@@ -48,6 +48,15 @@
       background-color: var(--red-dark);
     }
   }
+  &._black {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    @include hover {
+      background-color: transparent;
+      color: black;
+    }
+  }
 
   &._outline {
     background-color: transparent;

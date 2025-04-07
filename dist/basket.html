@@ -178,411 +178,72 @@
 	</div>
 	<main>
 
-		<section class="intro">
-			<picture class="intro__bg">
-				<source srcset="img/intro-blog-mob.jpg" media="(max-width: 768px)" />
-				<img src="img/intro-blog.jpg" alt="image" />
-			</picture>
-			<div class="container intro__container">
-				<div class="intro__head">
-					<div class="breadcrumbs">
-						<div class="aioseo-breadcrumbs">
-							<span class="aioseo-breadcrumb">
-								<a href="/" title="Главная">Главная</a>
-							</span>
-							<span class="aioseo-breadcrumb"> Блог </span>
-						</div>
-					</div>
-					<h1 class="main-title">Блог</h1>
-				</div>
-				<div class="swiper intro__adv-slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide intro__adv-slide">
-							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
-							<span>Продукция</span>
-						</div>
-						<div class="swiper-slide intro__adv-slide">
-							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
-							<span>Акции</span>
-						</div>
-						<div class="swiper-slide intro__adv-slide">
-							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
-							<span>Где купить</span>
-						</div>
-						<div class="swiper-slide intro__adv-slide">
-							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
-							<span>Решение проблем</span>
-						</div>
-						<div class="swiper-slide intro__adv-slide">
-							<img src="img/gift.svg" alt="icon" class="intro__adv-icon" />
-							<span>Академия Трихологии</span>
-						</div>
+		<section class="sect-p s-basket">
+			<div class="container">
+				<div class="breadcrumbs">
+					<div class="aioseo-breadcrumbs">
+						<span class="aioseo-breadcrumb">
+							<a href="/" title="Главная">Главная</a>
+						</span>
+						<span class="aioseo-breadcrumb"> Корзина </span>
 					</div>
 				</div>
-			</div>
-		</section>
+				<h1 class="main-title">Корзина</h1>
+				<form class="s-basket__body">
+					<div class="s-basket__orders">
+						<div class="order-card _outline">
+							<a href="#" class="order-card__gallery">
+								<img src="img/product-2.jpg" alt="image" class="order-card__img" />
+							</a>
+							<a href="#" class="order-card__title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+							<div class="order-card__form-number">
+								<div class="order-card__btn-num _minus">-</div>
+								<input type="number" value="1" class="order-card__form-input" />
+								<div class="order-card__btn-num _plus">+</div>
+							</div>
+							<div class="order-card__price">2 720 ₽</div>
+							<button type="button" class="btn-reset order-card__btn-delete">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-close"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="order-card _outline">
+							<a href="#" class="order-card__gallery">
+								<img src="img/product-2.jpg" alt="image" class="order-card__img" />
+							</a>
+							<a href="#" class="order-card__title">Tormesis №2 «АНТИ-ДГТ БЬЮТИ F ANTI-DHT BEAUTY F»</a>
+							<div class="order-card__form-number">
+								<div class="order-card__btn-num _minus">-</div>
+								<input type="number" value="1" class="order-card__form-input" />
+								<div class="order-card__btn-num _plus">+</div>
+							</div>
+							<div class="order-card__price">2 720 ₽</div>
+							<button type="button" class="btn-reset order-card__btn-delete">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-close"></use>
+								</svg>
+							</button>
+						</div>
 
-		<section class="s-archive sect-p">
-			<div class="container s-archive__container">
-				<div class="s-archive__body">
-					<aside class="s-archive__aside">
-						<ul class="list s-archive__nav" id="archive-nav">
-							<li>
-								<a href="#" class="s-archive__nav-btn">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-decisions"></use>
-									</svg>
-									<span>Решение проблем</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="s-archive__nav-btn">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-medal"></use>
-									</svg>
-									<span>Эксперты</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="s-archive__nav-btn _active">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-book"></use>
-									</svg>
-									<span>Блог</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="s-archive__nav-btn">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-list"></use>
-									</svg>
-									<span>Новости</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="s-archive__nav-btn">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-question"></use>
-									</svg>
-									<span>Вопросы и ответы</span>
-								</a>
-							</li>
-						</ul>
-						<div data-da=".s-archive__container, 1365" class="s-archive__stocks">
-							<div class="s-archive__stocks-head">
-								<h4 class="s-archive__stocks-title">Акции</h4>
-								<div class="s-archive__stocks-nav">
-									<button class="slider-btn _prev">
-										<svg>
-											<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-										</svg>
-									</button>
-									<button class="slider-btn _next">
-										<svg>
-											<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-										</svg>
-									</button>
-								</div>
-							</div>
-							<div class="swiper s-archive__stock-slider">
-								<div class="swiper-wrapper">
-									<a href="#" class="swiper-slide s-archive__stock-slide">
-										<img src="img/stock-img.jpg" alt="image" class="s-archive__stock-img" />
-									</a>
-									<a href="#" class="swiper-slide s-archive__stock-slide">
-										<img src="img/stock-img.jpg" alt="image" class="s-archive__stock-img" />
-									</a>
-									<a href="#" class="swiper-slide s-archive__stock-slide">
-										<img src="img/stock-img.jpg" alt="image" class="s-archive__stock-img" />
-									</a>
-								</div>
-							</div>
-						</div>
-						<div data-da=".s-archive__container, 1365" class="s-archive__aside-footer">
-							<div class="s-archive__footer-item">
-								<a href="#" target="_blank" class="s-archive__footer-btn">
-									<span>Где нас найти</span>
-									<img src="img/location.svg" alt="icon" />
-								</a>
-							</div>
-							<div class="s-archive__footer-item">
-								<a href="#" target="_blank" class="s-archive__footer-btn" id="btn-bookmark">
-									<span>Добавить сайт в закладки</span>
-									<img src="img/bookmark.svg" alt="icon" />
-								</a>
-							</div>
-						</div>
-					</aside>
-					<div class="s-archive__main">
-						<div class="s-archive__social-wrapper">
-							<div class="s-archive__social" style="
-              background: url(&quot;img/blog-yt.jpg&quot;) top right / cover
-                no-repeat;
-            ">
-								<ul class="list s-archive__social-list">
-									<li>
-										<a href="#" target="_blank" class="s-archive__social-list-btn">
-											<div class="s-archive__social-list-circle">
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
-												</svg>
-											</div>
-											<span>Youtube</span>
-										</a>
-									</li>
-								</ul>
-								<h5 class="s-archive__social-title">
-									Подписывайтесь на наш Youtube канал
-								</h5>
-							</div>
-							<div class="s-archive__social" style="
-              background: url(&quot;img/blog-socials.jpg&quot;) bottom right /
-                cover no-repeat;
-            ">
-								<ul class="list s-archive__social-list">
-									<li>
-										<a href="#" target="_blank" class="s-archive__social-list-btn">
-											<div class="s-archive__social-list-circle">
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
-												</svg>
-											</div>
-											<span>Телеграм</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" target="_blank" class="s-archive__social-list-btn">
-											<div class="s-archive__social-list-circle">
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
-												</svg>
-											</div>
-											<span>Вконтакте</span>
-										</a>
-									</li>
-								</ul>
-								<h5 class="s-archive__social-title">Больше информации в наших соцсетях</h5>
-							</div>
-						</div>
-						<div class="s-archive__blog">
-							<article class="blog-card">
-								<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="blog-card__gallery">
-									<div class="blog-card__gallery-btn"></div>
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="#" class="blog-card__gallery">
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="blog-card__gallery">
-									<div class="blog-card__gallery-btn"></div>
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="#" class="blog-card__gallery">
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="blog-card__gallery">
-									<div class="blog-card__gallery-btn"></div>
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="#" class="blog-card__gallery">
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="blog-card__gallery">
-									<div class="blog-card__gallery-btn"></div>
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-							<article class="blog-card">
-								<a href="#" class="blog-card__gallery">
-									<img src="img/blog-img.jpg" alt="image" class="blog-card__img" />
-								</a>
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Интенсивное очищение для жирной кожи головы</a>
-									<div class="blog-card__footer">
-										<div class="blog-card__date">28.12.2024</div>
-										<a href="#" class="blog-card__btn">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</article>
-						</div>
-						<button class="button s-archive__more-btn _gray">показать еще</button>
 					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="s-subscribe sect-p _min">
-			<div class="container s-subscribe__container _min">
-				<div class="s-subscribe__gallery">
-					<div class="s-subscribe__gallery-wrapper">
-						<img src="img/flower.png" alt="image" class="s-subscribe__flower" />
-						<img src="img/logo-dark.svg" alt="logo" class="s-subscribe__logo" />
-					</div>
-				</div>
-				<div class="s-subscribe__main">
-					<h2 class="s-subscribe__title">
-						Подпишитесь для получения информации об акциях и новинках
-					</h2>
-					<form action="#" class="s-subscribe__form">
-						<div class="s-subscribe__form-item">
-							<input type="email" placeholder="Введите свой e-mail" class="input" />
+					<div class="s-basket__info">
+						<h5 class="s-basket__info-title">Информация о заказе</h5>
+						<div class="s-basket__sum">
+							<span>Сумма</span>
+							<span>5 440 ₽</span>
 						</div>
-						<div class="s-subscribe__form-item">
-							<input type="text" placeholder="Введите купон (если есть)" class="input" />
-						</div>
-						<button class="button _white">Подписаться</button>
-						<div class="s-subscribe__form-footer">
-							<input checked type="checkbox" id="subscribe-policy" class="input-policy" />
-							<label for="subscribe-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
-
-							<input type="checkbox" id="subscribe-mailing" class="input-policy" />
-							<label for="subscribe-mailing" class="label-policy">Согласен на получение акций/рассылок</label>
-						</div>
-					</form>
-				</div>
-			</div>
-		</section>
-
-		<section class="s-partners sect-p">
-			<div class="container s-partners__container">
-				<div class="s-partners__info">
-					<h2 class="sect-title">Наши партнеры</h2>
-					<p class="s-partners__content">
-						Значимость этих проблем настолько очевидна, что рамки и место обучения
-						кадров в значительной степени обуславливает создание систем массового
-						участия.
-					</p>
-				</div>
-				<div class="s-partners__gallery">
-					<button class="slider-btn _prev">
-						<svg>
-							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-						</svg>
-					</button>
-					<div class="swiper s-partners__slider">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
+						<button type="submit" class="button s-basket__submit">Оформить заказ</button>
+						<div class="s-basket__dol">
+							<img src="img/dolyame.svg" alt="icon" class="s-basket__dol-img">
+							<div class="s-basket__dol-info">
+								<span>Оплатите долями 1 680 ₽ </span>
+								<span>Остальное потом — раз в 2 недели</span>
 							</div>
-							<div class="swiper-slide">
-								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
-							</div>
-							<div class="swiper-slide">
-								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
-							</div>
-							<div class="swiper-slide">
-								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
-							</div>
-							<div class="swiper-slide">
-								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
-							</div>
-							<div class="swiper-slide">
-								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
-							</div>
-							<div class="swiper-slide">
-								<img src="img/partner.png" alt="image" class="s-partners__slide-img" />
-							</div>
+							<a href="#" class="button _black s-basket__dol-more">Подробнее</a>
 						</div>
 					</div>
-					<button class="slider-btn _next">
-						<svg>
-							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-						</svg>
-					</button>
-				</div>
+				</form>
 			</div>
 		</section>
 
