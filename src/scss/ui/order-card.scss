@@ -1,0 +1,58 @@
+.order-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-radius: 8px;
+  background-color: white;
+  padding: 20px 40px;
+  @include laptop-min {
+    padding: 20px;
+    flex-wrap: wrap;
+
+  }
+  &__gallery {
+    width: 135px;
+    flex-shrink: 0;
+    display: block;
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+  &__img {
+    width: 100%;
+    display: block;
+  }
+  &__title {
+    font-size: 20px;
+    flex: 0 1 650px;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--green);
+    }
+    @include laptop-min {
+      font-size: 18px;
+    }
+  }
+  &__num {
+    font-size: 20px;
+    text-align: end;
+    flex: 1;
+    white-space: nowrap;
+    @include laptop-min {
+      font-size: 18px;
+      text-align: start;
+      flex: none;
+    }
+  }
+  &__price {
+    font-size: 20px;
+    text-align: end;
+    flex: 1;
+    white-space: nowrap;
+    @include laptop-min {
+      font-size: 18px;
+      text-align: start;
+      flex: none;
+    }
+  }
+}
