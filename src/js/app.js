@@ -7,6 +7,7 @@ import inputmask from "./files/inputmask.js";
 import map from "./files/map.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
 import moreText from "./files/moreText.js";
+import passwordBtn from "./files/password-btn.js";
 import productCount from "./files/productCount.js";
 import removeWarn from "./files/removeWarn.js";
 import scrollables from "./files/scrollables.js";
@@ -33,4 +34,6 @@ mediaAdaptive();
 map();
 removeWarn();
 moreText();
+passwordBtn();
+
 Shareon.init();

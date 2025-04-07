@@ -25,3 +25,14 @@
     margin-bottom: 30px;
   }
 }
+
+.t-title {
+  font-size: 40px;
+  font-weight: 500;
+  @include laptop-min {
+    font-size: 32px;
+  }
+  @include tablet {
+    font-size: 28px;
+  }
+}

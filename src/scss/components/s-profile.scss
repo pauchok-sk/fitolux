@@ -1,0 +1,122 @@
+.s-profile {
+  padding-top: 130px !important;
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 80px;
+    margin-top: 90px;
+    @include laptop {
+      gap: 40px;
+    }
+    @include laptop-middle {
+      flex-direction: column-reverse;
+    }
+    @include laptop-min {
+      margin-top: 60px;
+    }
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+  &__aside {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 395px;
+    flex-shrink: 0;
+    top: 110px;
+    @include laptop-middle {
+      position: static;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  &__aside-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--alabaster);
+    font-size: 18px;
+
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    @include hover {
+      background-color: var(--green);
+      color: white;
+    }
+    &._active {
+      background-color: var(--green);
+      color: white;
+    }
+
+    @include laptop-middle {
+      flex: 1;
+      width: auto;
+    }
+    @include laptop-min {
+      flex: 0 0 100%;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__main {
+    flex: 1;
+    @include laptop-middle {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__title {
+    margin: 0px 0px 50px 0px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    row-gap: 40px;
+    @include tablet {
+      gap: 25px;
+    }
+  }
+  &__form-item {
+    grid-column: 1 span;
+    @include tablet {
+      grid-column: 2 span;
+    }
+  }
+  &__form-label {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--silver);
+    margin-bottom: 10px;
+  }
+  &__form-nav {
+    grid-column: 2 span;
+    display: flex;
+    gap: 30px;
+    @include tablet-min {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      flex: 1;
+      @include tablet-min {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

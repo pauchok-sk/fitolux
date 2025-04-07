@@ -10,6 +10,10 @@
   color: black;
   font-weight: 300;
 
+  @include tablet {
+    padding: 20px;
+  }
+
   &._black {
     background: transparent;
     border-color: black;
@@ -25,4 +29,43 @@
 }
 textarea.input {
   resize: none;
+}
+.input-check {
+  display: none;
+
+  &:checked + label {
+    &::before {
+      background: url('@img/check.svg') center / 12px auto no-repeat;
+      background-color: black;
+    }
+  }
+}
+
+.label-check {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 30px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid var(--light);
+    left: 0;
+    top: 0;
+  }
+
+  a {
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    @include hover {
+      text-decoration: none;
+    }
+  }
 }

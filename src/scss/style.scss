@@ -31,12 +31,14 @@
 @import "./ui/berocket";
 @import "./ui/scroll";
 @import "./ui/video-btn";
+@import "./ui/password-btn";
 
 // widgets
 @import "./widgets/burger";
 @import "./widgets/search-form";
 @import "./widgets/modal";
 @import "./widgets/choose-products";
+@import "./widgets/modal-auth";
 
 // components
 @import "./components/header";
@@ -73,5 +75,7 @@
 @import "./components/s-rec-products";
 @import "./components/s-award";
 @import "./components/s-get-info";
+@import "./components/s-auth";
+@import "./components/s-profile";
 
 @import "./components/footer";

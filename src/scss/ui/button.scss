@@ -48,6 +48,16 @@
       background-color: var(--red-dark);
     }
   }
+
+  &._outline {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    @include hover {
+      color: white;
+      background-color: black;
+    }
+  }
 }
 
 .btn-stroke {

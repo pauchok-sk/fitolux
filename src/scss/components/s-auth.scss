@@ -1,0 +1,107 @@
+.s-auth {
+  padding-top: 130px !important;
+  &__body {
+    position: relative;
+    width: 650px;
+    max-width: 100%;
+    padding: 60px;
+    border-radius: 8px;
+    background-color: var(--light-gray);
+    margin: 90px auto 0px auto;
+    @include laptop-min {
+      margin-top: 60px;
+    }
+    @include tablet {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      padding: 20px;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+  }
+  &__form {
+    .label-check {
+      margin: 30px 0px;
+    }
+    .button {
+      width: 100%;
+    }
+  }
+  &__form-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .input {
+      padding-right: 50px;
+    }
+  }
+  &__forgot {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0px auto;
+
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+    @include hover {
+      text-decoration: none;
+      color: var(--green);
+    }
+  }
+  &__footer {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #f0f0f0;
+    @include tablet-min {
+      margin-top: 25px;
+      padding-top: 25px;
+    }
+  }
+  &__footer-content {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+  }
+  &__footer-btn {
+    font-size: 16px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--green);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    @include hover {
+      text-decoration: none;
+    }
+  }
+  &__form-policy {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 30px 0px;
+
+    a {
+      font-weight: 400;
+      text-decoration: underline;
+      transition: color .2s ease;
+
+      @include hover {
+        color: var(--green);
+        text-decoration: none;
+      }
+    }
+  }
+}

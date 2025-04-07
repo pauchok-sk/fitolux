@@ -8,11 +8,11 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250407105924" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250407105924">
-	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250407105924">
-	<link rel="stylesheet" href="./files/css/shareon.min.css?_v=20250407105924">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250407105924" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250407122543" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250407122543">
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250407122543">
+	<link rel="stylesheet" href="./files/css/shareon.min.css?_v=20250407122543">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250407122543" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -848,6 +848,72 @@
 			<label for="review-policy" class="label-policy">Согласен на <a href="#">обработку персональных данных</a></label>
 		</form>
 	</div>
+
+	<div id="modal-reg" class="modal-auth">
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<h3 class="modal-auth__title">Регистрация</h3>
+		<form action="#" class="modal-auth__form">
+			<div class="modal-auth__form-item">
+				<input type="email" placeholder="Email" class="input _white" />
+			</div>
+			<div class="modal-auth__form-item">
+				<div class="password-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+					</svg>
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-eye-off"></use>
+					</svg>
+				</div>
+				<input type="password" placeholder="Пароль" class="input _white" />
+			</div>
+			<p class="modal-auth__form-policy">
+				Нажимая кнопку «Регистрация», вы подтверждаете свое согласие с <a href="#">соглашением об использовании персональных данных</a>
+			</p>
+			<button class="button _outline">Зарегистрироваться</button>
+		</form>
+	</div>
+
+	<div id="modal-change-password" class="modal-auth">
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<h3 class="modal-auth__title">Изменить пароль</h3>
+		<form action="#" class="modal-auth__form">
+			<div class="modal-auth__form-item">
+				<div class="password-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+					</svg>
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-eye-off"></use>
+					</svg>
+				</div>
+				<input type="password" placeholder="Новый пароль" class="input _white" />
+			</div>
+			<div class="modal-auth__form-item">
+				<div class="password-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+					</svg>
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-eye-off"></use>
+					</svg>
+				</div>
+				<input type="password" placeholder="Повторите новый пароль" class="input _white" />
+			</div>
+			<p class="modal-auth__subcontent">
+				Минимальная длина пароля — 8 символов
+			</p>
+			<button class="button _outline">изменить</button>
+		</form>
+	</div>
 	<footer class="footer">
 		<img src="img/flower-opacity-left.png" alt="image" class="footer__flower-left">
 		<img src="img/flower-opacity-right.png" alt="image" class="footer__flower-right">
@@ -951,12 +1017,12 @@
 			</div>
 		</div>
 	</footer>
-	<script src="./files/js/swiper.min.js?_v=20250407105924"></script>
-	<script src="./files/js/spoller.js?_v=20250407105924"></script>
-	<script src="./files/js/fancybox.min.js?_v=20250407105924"></script>
-	<script src="./files/js/inputmask.min.js?_v=20250407105924"></script>
-	<script src="./files/js/shareon.min.js?_v=20250407105924"></script>
-	<script src="js/app.min.js?_v=20250407105924"></script>
+	<script src="./files/js/swiper.min.js?_v=20250407122543"></script>
+	<script src="./files/js/spoller.js?_v=20250407122543"></script>
+	<script src="./files/js/fancybox.min.js?_v=20250407122543"></script>
+	<script src="./files/js/inputmask.min.js?_v=20250407122543"></script>
+	<script src="./files/js/shareon.min.js?_v=20250407122543"></script>
+	<script src="js/app.min.js?_v=20250407122543"></script>
 </body>
 
 </html>

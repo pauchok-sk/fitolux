@@ -235,6 +235,11 @@ body {
   background-color: var(--red);
   color: #fff
 }
+.button._outline {
+  background-color: rgba(0,0,0,0);
+  color: #000;
+  border: 1px solid #000
+}
 .btn-stroke {
   display: flex;
   align-items: center;
@@ -354,6 +359,10 @@ body {
   font-size: 48px;
   font-weight: 700;
   margin: 0 0 50px 0
+}
+.t-title {
+  font-size: 40px;
+  font-weight: 500
 }
 ._scrollable {
   display: flex;
@@ -627,6 +636,37 @@ body {
 }
 textarea.input {
   resize: none
+}
+.input-check {
+  display: none
+}
+.input-check:checked+label::before {
+  background: url(../img/check.svg) center/12px auto no-repeat;
+  background-color: #000
+}
+.label-check {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 30px
+}
+.label-check::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid var(--light);
+  left: 0;
+  top: 0
+}
+.label-check a {
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px
 }
 .input-policy {
   display: none
@@ -1098,6 +1138,26 @@ a.tag:hover {
   -webkit-transform: translateX(4px);
   transform: translateX(4px)
 }
+.password-btn {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px
+}
+.password-btn._active svg:nth-child(1) {
+  display: none
+}
+.password-btn._active svg:nth-child(2) {
+  display: block
+}
+.password-btn svg {
+  width: 100%;
+  height: 100%
+}
+.password-btn svg:nth-child(2) {
+  display: none
+}
 .burger {
   position: fixed;
   display: flex;
@@ -1337,6 +1397,9 @@ a.tag:hover {
 .modal__form-btn {
   width: 100%
 }
+.fancybox__backdrop {
+  background: rgba(3,55,47,.7)!important
+}
 .choose-products {
   display: flex;
   flex-direction: column;
@@ -1374,6 +1437,87 @@ a.tag:hover {
 }
 .choose-products__item-price {
   font-size: 24px
+}
+.modal-auth {
+  position: relative;
+  display: none;
+  width: 650px;
+  max-width: 100%;
+  padding: 60px;
+  border-radius: 8px;
+  background-color: var(--light-gray);
+  margin: 90px auto 0 auto
+}
+.modal-auth__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0 0 40px 0
+}
+.modal-auth__form .label-check {
+  margin: 30px 0
+}
+.modal-auth__form .button {
+  width: 100%
+}
+.modal-auth__form-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px
+}
+.modal-auth__form-item .input {
+  padding-right: 50px
+}
+.modal-auth__forgot {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 15px auto 0 auto;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+  transition: color .2s ease
+}
+.modal-auth__footer {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #f0f0f0
+}
+.modal-auth__footer-content {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 10px 0
+}
+.modal-auth__footer-btn {
+  font-size: 16px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 2px
+}
+.modal-auth__form-policy {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 30px 0
+}
+.modal-auth__form-policy a {
+  font-weight: 400;
+  text-decoration: underline;
+  transition: color .2s ease
+}
+.modal-auth__subcontent {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--silver);
+  margin: 0 0 30px 0
 }
 .header {
   position: fixed;
@@ -4137,6 +4281,150 @@ a.tag:hover {
   height: 24px;
   color: var(--green)
 }
+.s-auth {
+  padding-top: 130px!important
+}
+.s-auth__body {
+  position: relative;
+  width: 650px;
+  max-width: 100%;
+  padding: 60px;
+  border-radius: 8px;
+  background-color: var(--light-gray);
+  margin: 90px auto 0 auto
+}
+.s-auth__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0 0 40px 0
+}
+.s-auth__form .label-check {
+  margin: 30px 0
+}
+.s-auth__form .button {
+  width: 100%
+}
+.s-auth__form-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px
+}
+.s-auth__form-item .input {
+  padding-right: 50px
+}
+.s-auth__forgot {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 15px auto 0 auto;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+  transition: color .2s ease
+}
+.s-auth__footer {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #f0f0f0
+}
+.s-auth__footer-content {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 10px 0
+}
+.s-auth__footer-btn {
+  font-size: 16px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 2px
+}
+.s-auth__form-policy {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 30px 0
+}
+.s-auth__form-policy a {
+  font-weight: 400;
+  text-decoration: underline;
+  transition: color .2s ease
+}
+.s-profile {
+  padding-top: 130px!important
+}
+.s-profile__wrapper {
+  display: flex;
+  align-items: start;
+  gap: 80px;
+  margin-top: 90px
+}
+.s-profile__aside {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 395px;
+  flex-shrink: 0;
+  top: 110px
+}
+.s-profile__aside-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--alabaster);
+  font-size: 18px;
+  transition: background-color .2s ease,color .2s ease
+}
+.s-profile__aside-btn._active {
+  background-color: var(--green);
+  color: #fff
+}
+.s-profile__aside-btn svg {
+  width: 30px;
+  height: 30px
+}
+.s-profile__main {
+  flex: 1
+}
+.s-profile__title {
+  margin: 0 0 50px 0
+}
+.s-profile__form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+  row-gap: 40px
+}
+.s-profile__form-item {
+  grid-column: 1 span
+}
+.s-profile__form-label {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--silver);
+  margin-bottom: 10px
+}
+.s-profile__form-nav {
+  grid-column: 2 span;
+  display: flex;
+  gap: 30px
+}
+.s-profile__form-nav .button {
+  flex: 1
+}
 .footer {
   position: relative;
   overflow: hidden;
@@ -4763,6 +5051,9 @@ a.tag:hover {
     display: flex;
     flex-wrap: wrap
   }
+  .s-profile__wrapper {
+    gap: 40px
+  }
 }
 @media (max-width:1199px) {
   .header__logo {
@@ -4901,6 +5192,23 @@ a.tag:hover {
   .s-get-info__title {
     font-size: 32px
   }
+  .s-profile__wrapper {
+    flex-direction: column-reverse
+  }
+  .s-profile__aside {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap
+  }
+  .s-profile__aside-btn {
+    flex: 1;
+    width: auto
+  }
+  .s-profile__main {
+    flex: none;
+    width: 100%
+  }
   .footer__flower-left {
     left: 0
   }
@@ -4941,6 +5249,9 @@ a.tag:hover {
   }
   .sect-title {
     font-size: 36px
+  }
+  .t-title {
+    font-size: 32px
   }
   .sect-p {
     padding: 70px 0
@@ -4999,6 +5310,9 @@ a.tag:hover {
     gap: 20px;
     width: 100%;
     justify-content: space-between
+  }
+  .modal-auth {
+    margin-top: 60px
   }
   .header__body {
     padding: 15px 20px
@@ -5206,6 +5520,15 @@ a.tag:hover {
   .s-get-info__footer {
     margin-top: 60px
   }
+  .s-auth__body {
+    margin-top: 60px
+  }
+  .s-profile__wrapper {
+    margin-top: 60px
+  }
+  .s-profile__aside-btn {
+    flex: 0 0 100%
+  }
   .footer__head {
     display: flex;
     flex-direction: column
@@ -5225,6 +5548,9 @@ a.tag:hover {
   }
   .sect-title {
     margin-bottom: 30px
+  }
+  .t-title {
+    font-size: 28px
   }
   .sect-p {
     padding: 40px 0
@@ -5281,6 +5607,9 @@ a.tag:hover {
   .slider-scrollbar {
     margin-top: 30px
   }
+  .input {
+    padding: 20px
+  }
   .decision-card {
     grid-column: 3 span
   }
@@ -5318,6 +5647,13 @@ a.tag:hover {
   }
   .modal__title {
     margin-bottom: 20px
+  }
+  .modal-auth {
+    margin-top: 30px
+  }
+  .modal-auth__title {
+    margin-bottom: 20px;
+    font-size: 32px
   }
   .intro {
     padding-top: 110px;
@@ -5643,6 +5979,25 @@ a.tag:hover {
   .s-get-info__footer {
     margin-top: 40px
   }
+  .s-auth__body {
+    margin-top: 30px
+  }
+  .s-auth__title {
+    margin-bottom: 20px;
+    font-size: 32px
+  }
+  .s-profile__wrapper {
+    margin-top: 40px
+  }
+  .s-profile__title {
+    margin-bottom: 30px
+  }
+  .s-profile__form {
+    gap: 25px
+  }
+  .s-profile__form-item {
+    grid-column: 2 span
+  }
   .footer__flower-right {
     bottom: auto;
     top: 0;
@@ -5709,6 +6064,13 @@ a.tag:hover {
   .choose-products__item {
     flex-direction: column;
     text-align: center
+  }
+  .modal-auth {
+    padding: 20px
+  }
+  .modal-auth__footer {
+    margin-top: 25px;
+    padding-top: 25px
   }
   .s-products__slider .product-card {
     width: 340px!important
@@ -5834,6 +6196,20 @@ a.tag:hover {
     font-size: 20px;
     gap: 15px
   }
+  .s-auth__body {
+    padding: 20px
+  }
+  .s-auth__footer {
+    margin-top: 25px;
+    padding-top: 25px
+  }
+  .s-profile__form-nav {
+    gap: 20px;
+    flex-wrap: wrap
+  }
+  .s-profile__form-nav .button {
+    flex: 0 0 100%
+  }
   .footer__nav {
     flex-direction: column;
     align-items: center;
@@ -5955,6 +6331,10 @@ a.tag:hover {
   .button._red:hover {
     background-color: var(--red-dark)
   }
+  .button._outline:hover {
+    color: #fff;
+    background-color: #000
+  }
   .btn-stroke:hover {
     color: #fff;
     background-color: #000
@@ -5981,6 +6361,9 @@ a.tag:hover {
   .slider-btn:hover {
     background-color: #000;
     color: #fff
+  }
+  .label-check a:hover {
+    text-decoration: none
   }
   .label-policy a:hover {
     text-decoration: none
@@ -6037,6 +6420,17 @@ a.tag:hover {
   }
   .choose-products__item-title:hover {
     color: var(--green)
+  }
+  .modal-auth__forgot:hover {
+    text-decoration: none;
+    color: var(--green)
+  }
+  .modal-auth__footer-btn:hover {
+    text-decoration: none
+  }
+  .modal-auth__form-policy a:hover {
+    color: var(--green);
+    text-decoration: none
   }
   .header__list a:hover::before {
     right: 0
@@ -6168,6 +6562,21 @@ a.tag:hover {
   .s-get-info__footer-contacts-btn:hover {
     color: var(--green)
   }
+  .s-auth__forgot:hover {
+    text-decoration: none;
+    color: var(--green)
+  }
+  .s-auth__footer-btn:hover {
+    text-decoration: none
+  }
+  .s-auth__form-policy a:hover {
+    color: var(--green);
+    text-decoration: none
+  }
+  .s-profile__aside-btn:hover {
+    background-color: var(--green);
+    color: #fff
+  }
   .footer__social-btn:hover {
     opacity: .6
   }
@@ -6200,6 +6609,10 @@ a.tag:hover {
   .button._red:active {
     background-color: var(--red-dark)
   }
+  .button._outline:active {
+    color: #fff;
+    background-color: #000
+  }
   .btn-stroke:active {
     color: #fff;
     background-color: #000
@@ -6226,6 +6639,9 @@ a.tag:hover {
   .slider-btn:active {
     background-color: #000;
     color: #fff
+  }
+  .label-check a:active {
+    text-decoration: none
   }
   .label-policy a:active {
     text-decoration: none
@@ -6282,6 +6698,17 @@ a.tag:hover {
   }
   .choose-products__item-title:active {
     color: var(--green)
+  }
+  .modal-auth__forgot:active {
+    text-decoration: none;
+    color: var(--green)
+  }
+  .modal-auth__footer-btn:active {
+    text-decoration: none
+  }
+  .modal-auth__form-policy a:active {
+    color: var(--green);
+    text-decoration: none
   }
   .header__list a:active::before {
     right: 0
@@ -6412,6 +6839,21 @@ a.tag:hover {
   }
   .s-get-info__footer-contacts-btn:active {
     color: var(--green)
+  }
+  .s-auth__forgot:active {
+    text-decoration: none;
+    color: var(--green)
+  }
+  .s-auth__footer-btn:active {
+    text-decoration: none
+  }
+  .s-auth__form-policy a:active {
+    color: var(--green);
+    text-decoration: none
+  }
+  .s-profile__aside-btn:active {
+    background-color: var(--green);
+    color: #fff
   }
   .footer__social-btn:active {
     opacity: .6
